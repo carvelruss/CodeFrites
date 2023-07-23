@@ -1,1355 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>CodeFrites</title>
-  <meta content="" name="description">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assets/favicon/favicon.png" type="image/x-icon" />
 
-  <meta content="" name="keywords">
+  <!-- Map CSS -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
 
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Title -->
+  <title>Carvel Russ | Website Designer</title>
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  <!-- MODALS -->
+  <!-- Example -->
+  <div class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="modalExampleTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span><code>Code</code><strong>Frites</strong></span>
-      </a>
+          <!-- Close -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+          <!-- Image -->
+          <div class="text-center">
+            <img src="./assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3"
+              style="width: 200px;">
+          </div>
 
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap
+          <!-- Heading -->
+          <h2 class="fw-bold text-center mb-1" id="modalExampleTitle">
+            Schedule a demo with us
           </h2>
-          <div data-aos="fade-up" data-aos-delay="600">
-            <div class="text-center text-lg-start">
-              <a href="#about"
-                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Get Started</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
 
-  </section><!-- End Hero -->
+          <!-- Text -->
+          <p class="fs-lg text-center text-muted mb-6 mb-md-8">
+            We can help you solve company communication.
+          </p>
 
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+          <!-- Form -->
+          <form>
+            <div class="row">
+              <div class="col-12 col-md-6">
 
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
+                <!-- First name -->
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal"
+                    placeholder="First name">
+                  <label for="registrationFirstNameModal">First name</label>
+                </div>
 
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3>Who We Are</h3>
-              <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti
-                reprehenderit.</h2>
-              <p>
-                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur
-                itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="#"
-                  class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Read More</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
               </div>
-            </div>
-          </div>
+              <div class="col-12 col-md-6">
 
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-
-        </div>
-      </div>
-
-    </section><!-- End About Section -->
-
-    <!-- ======= Values Section ======= -->
-    <section id="values" class="values">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Our Values</h2>
-          <p>Odit est perspiciatis laborum et dicta</p>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/values-1.png" class="img-fluid" alt="">
-              <h3>Ad cupiditate sed est odio</h3>
-              <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/img/values-2.png" class="img-fluid" alt="">
-              <h3>Voluptatem voluptatum alias</h3>
-              <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="600">
-              <img src="assets/img/values-3.png" class="img-fluid" alt="">
-              <h3>Fugit cupiditate alias nobis.</h3>
-              <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Values Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>Projects</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-headset" style="color: #15be56;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-people" style="color: #bb0852;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>Hard Workers</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Features</h2>
-          <p>Laboriosam et omnis fuga quis dolor direda fara</p>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <img src="assets/img/features.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-            <div class="row align-self-center gy-4">
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Eos aspernatur rem</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Facilis neque ipsa</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Volup amet voluptas</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Rerum omnis sint</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Alias possimus</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Repellendus mollitia</h3>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div> <!-- / row -->
-
-        <!-- Feature Tabs -->
-        <div class="row feture-tabs" data-aos="fade-up">
-          <div class="col-lg-6">
-            <h3>Neque officiis dolore maiores et exercitationem quae est seda lidera pat claero</h3>
-
-            <!-- Tabs -->
-            <ul class="nav nav-pills mb-3">
-              <li>
-                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</a>
-              </li>
-              <li>
-                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Voluptates</a>
-              </li>
-              <li>
-                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Corrupti</a>
-              </li>
-            </ul><!-- End Tabs -->
-
-            <!-- Tab Content -->
-            <div class="tab-content">
-
-              <div class="tab-pane fade show active" id="tab1">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque
-                  consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non
-                  eveniet magni quaerat nemo et.</p>
-                <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure
-                  molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et
-                  perferendis.</p>
-              </div><!-- End Tab 1 Content -->
-
-              <div class="tab-pane fade show" id="tab2">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque
-                  consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non
-                  eveniet magni quaerat nemo et.</p>
-                <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure
-                  molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et
-                  perferendis.</p>
-              </div><!-- End Tab 2 Content -->
-
-              <div class="tab-pane fade show" id="tab3">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque
-                  consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non
-                  eveniet magni quaerat nemo et.</p>
-                <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure
-                  molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et
-                  perferendis.</p>
-              </div><!-- End Tab 3 Content -->
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-            <img src="assets/img/features-2.png" class="img-fluid" alt="">
-          </div>
-
-        </div><!-- End Feature Tabs -->
-
-        <!-- Feature Icons -->
-        <div class="row feature-icons" data-aos="fade-up">
-          <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3>
-
-          <div class="row">
-
-            <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/features-3.png" class="img-fluid p-4" alt="">
-            </div>
-
-            <div class="col-xl-8 d-flex content">
-              <div class="row align-self-center gy-4">
-
-                <div class="col-md-6 icon-box" data-aos="fade-up">
-                  <i class="ri-line-chart-line"></i>
-                  <div>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="ri-stack-line"></i>
-                  <div>
-                    <h4>Ullamco laboris nisi</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="ri-brush-4-line"></i>
-                  <div>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="ri-magic-line"></i>
-                  <div>
-                    <h4>Beatae veritatis</h4>
-                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="ri-command-line"></i>
-                  <div>
-                    <h4>Molestiae dolor</h4>
-                    <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                  <i class="ri-radar-line"></i>
-                  <div>
-                    <h4>Explicabo consectetur</h4>
-                    <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                  </div>
+                <!-- Last name -->
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-flush" id="registrationLastNameModal"
+                    placeholder="Last name">
+                  <label for="registrationLastNameModal">Last name</label>
                 </div>
 
               </div>
             </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
 
-          </div>
-
-        </div><!-- End Feature Icons -->
-
-      </div>
-
-    </section><!-- End Features Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Services</h2>
-          <p>Veritatis et dolores facere numquam et praesentium</p>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box blue">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Nesciunt Mete</h3>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis
-                tempore et consequatur.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box orange">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Eosle Commodi</h3>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
-                nesciunt dolorem.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-box green">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Ledo Markt</h3>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci
-                eos earum corrupti.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-box red">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Asperiores Commodi</h3>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
-                adipisci neque.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-box purple">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Velit Doloremque.</h3>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem
-                alias eius labore.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="service-box pink">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Dolori Architecto</h3>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti
-                recusandae ducimus enim.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Services Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Pricing</h2>
-          <p>Check our Pricing</p>
-        </header>
-
-        <div class="row gy-4" data-aos="fade-left">
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="box">
-              <h3 style="color: #07d5c0;">Free Plan</h3>
-              <div class="price"><sup>$</sup>0<span> / mo</span></div>
-              <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <span class="featured">Featured</span>
-              <h3 style="color: #65c600;">Starter Plan</h3>
-              <div class="price"><sup>$</sup>19<span> / mo</span></div>
-              <img src="assets/img/pricing-starter.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="box">
-              <h3 style="color: #ff901c;">Business Plan</h3>
-              <div class="price"><sup>$</sup>29<span> / mo</span></div>
-              <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="box">
-              <h3 style="color: #ff0071;">Ultimate Plan</h3>
-              <div class="price"><sup>$</sup>49<span> / mo</span></div>
-              <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Pricing Section -->
-
-    <!-- ======= F.A.Q Section ======= -->
-    <section id="faq" class="faq">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>F.A.Q</h2>
-          <p>Frequently Asked Questions</p>
-        </header>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <!-- F.A.Q List 1-->
-            <div class="accordion accordion-flush" id="faqlist1">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq-content-1">
-                    Non consectetur a erat nam at lectus urna duis?
-                  </button>
-                </h2>
-                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                    gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </div>
+                <!-- Email -->
+                <div class="form-floating">
+                  <input type="email" class="form-control form-control-flush" id="registrationEmailModal"
+                    placeholder="Email">
+                  <label for="registrationEmailModal">Email</label>
                 </div>
+
               </div>
+              <div class="col-12 col-md-6">
 
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq-content-2">
-                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
-                  </button>
-                </h2>
-                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                    donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </div>
+                <!-- Password -->
+                <div class="form-floating">
+                  <input type="password" class="form-control form-control-flush" id="registrationPasswordModal"
+                    placeholder="Password">
+                  <label for="registrationPasswordModal">Password</label>
                 </div>
-              </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq-content-3">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
-                  </button>
-                </h2>
-                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                    elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
-                    eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
-                    sed odio morbi quis
-                  </div>
-                </div>
               </div>
-
             </div>
-          </div>
+            <div class="row">
+              <div class="col-12">
 
-          <div class="col-lg-6">
+                <!-- Submit -->
+                <button class="btn w-100 btn-primary mt-3 lift">
+                  Request a demo
+                </button>
 
-            <!-- F.A.Q List 2-->
-            <div class="accordion accordion-flush" id="faqlist2">
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq2-content-1">
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                  </button>
-                </h2>
-                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                    donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq2-content-2">
-                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                  </button>
-                </h2>
-                <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in.
-                    Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.
-                    Purus gravida quis blandit turpis cursus in
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq2-content-3">
-                    Varius vel pharetra vel turpis nunc eget lorem dolor?
-                  </button>
-                </h2>
-                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
-                    nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut
-                    venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas
-                    egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End F.A.Q Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Portfolio</h2>
-          <p>Check our latest work</p>
-        </header>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
               </div>
             </div>
-          </div>
+          </form>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                    class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Testimonials</h2>
-          <p>What they are saying about us</p>
-        </header>
-
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Team</h2>
-          <p>Our hard working team</p>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
-                  exercitationem iure minima enim corporis et voluptate.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis.
-                  Voluptate sed quas reiciendis animi neque sapiente.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut
-                  architecto porro aspernatur molestiae modi.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque
-                  ut possimus ipsum officia.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Team Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Our Clients</h2>
-          <p>Temporibus omnis officia</p>
-        </header>
-
-        <div class="clients-slider swiper-container">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-
-    </section><!-- End Clients Section -->
-
-    <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Blog</h2>
-          <p>Recent posts form our Blog</p>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Tue, September 15</span>
-              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Fri, August 28</span>
-              <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Mon, July 11</span>
-              <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Recent Blog Posts Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street,<br>New York, NY 535022</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-clock"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          </div>
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="">
-              <span>FlexStart</span>
-            </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies
-              darta donna mare fermentum iaculis eu non diam phasellus.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a>
+  <!-- Signup: Horizontal  -->
+  <div class="modal fade" id="modalSignupHorizontal" tabindex="-1" role="dialog"
+    aria-labelledby="modalSignupHorizontalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="card card-row">
+          <div class="row gx-0">
+            <div class="col-12 col-md-6 bg-cover card-img-start"
+              style="background-image: url(./assets/img/photos/photo-8.jpg);">
+
+              <!-- Image (placeholder) -->
+              <img src="./assets/img/photos/photo-8.jpg" alt="..." class="img-fluid d-md-none invisible">
+
+              <!-- Shape -->
+              <div class="shape shape-end shape-fluid-y text-white d-none d-md-block">
+                <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor" />
+                </svg>
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card-body">
+
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <!-- Heading -->
+                <h2 class="mb-0 fw-bold text-center" id="modalSignupHorizontalTitle">
+                  Sign Up
+                </h2>
+
+                <!-- Text -->
+                <p class="mb-6 text-center text-muted">
+                  Simplify your workflow in minutes.
+                </p>
+
+                <!-- Form -->
+                <form class="mb-6">
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label class="visually-hidden" for="modalSignupHorizontalEmail">
+                      Your email
+                    </label>
+                    <input type="email" class="form-control" id="modalSignupHorizontalEmail" placeholder="Your email">
+                  </div>
+
+                  <!-- Password -->
+                  <div class="form-group mb-5">
+                    <label class="visually-hidden" for="modalSignupHorizontalPassword">
+                      Create a password
+                    </label>
+                    <input type="password" class="form-control" id="modalSignupHorizontalPassword"
+                      placeholder="Create a password">
+                  </div>
+
+                  <!-- Submit -->
+                  <button class="btn w-100 btn-primary" type="submit">
+                    Sign up
+                  </button>
+
+                </form>
+
+                <!-- Text -->
+                <p class="mb-0 fs-sm text-center text-muted">
+                  Already have an account? <a href="./signin-illustration.html">Log in</a>.
+                </p>
+
+              </div>
+            </div>
+
+          </div> <!-- / .row -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup: Vertical  -->
+  <div class="modal fade" id="modalSignupVertical" tabindex="-1" role="dialog"
+    aria-labelledby="modalSignupVerticalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="card">
+
+          <!-- Close -->
+          <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <!-- Image -->
+          <img src="./assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x text-white">
+              <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z"
+                  fill="currentColor" />
+              </svg>
             </div>
           </div>
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
+          <!-- Body -->
+          <div class="card-body">
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
+            <!-- Heading -->
+            <h2 class="mb-0 fw-bold text-center" id="modalSignupVerticalTitle">
+              Sign Up
+            </h2>
 
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+            <!-- Text -->
+            <p class="mb-6 text-center text-muted">
+              Simplify your workflow in minutes.
+            </p>
+
+            <!-- Form -->
+            <form class="mb-6">
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="modalSignupVerticalEmail">
+                  Your email
+                </label>
+                <input type="email" class="form-control" id="modalSignupVerticalEmail" placeholder="Your email">
+              </div>
+
+              <!-- Password -->
+              <div class="form-group mb-5">
+                <label class="visually-hidden" for="modalSignupVerticalPassword">
+                  Create a password
+                </label>
+                <input type="password" class="form-control" id="modalSignupVerticalPassword"
+                  placeholder="Create a password">
+              </div>
+
+              <!-- Submit -->
+              <button class="btn w-100 btn-primary" type="submit">
+                Sign up
+              </button>
+
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 fs-sm text-center text-muted">
+              Already have an account? <a href="./signin-illustration.html">Log in</a>.
             </p>
 
           </div>
@@ -1357,35 +264,1563 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  <!-- Signin: Horizontal  -->
+  <div class="modal fade" id="modalSigninHorizontal" tabindex="-1" role="dialog"
+    aria-labelledby="modalSigninHorizontalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="card card-row">
+          <div class="row gx-0">
+            <div class="col-12 col-md-6 bg-cover card-img-start"
+              style="background-image: url(./assets/img/photos/photo-1.jpg);">
+
+              <!-- Image (placeholder) -->
+              <img src="./assets/img/photos/photo-1.jpg" alt="..." class="img-fluid d-md-none invisible">
+
+              <!-- Shape -->
+              <div class="shape shape-end shape-fluid-y text-white d-none d-md-block">
+                <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor" />
+                </svg>
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card-body">
+
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <!-- Heading -->
+                <h2 class="mb-0 fw-bold text-center" id="modalSigninHorizontalTitle">
+                  Sign In
+                </h2>
+
+                <!-- Text -->
+                <p class="mb-6 text-center text-muted">
+                  Simplify your workflow in minutes.
+                </p>
+
+                <!-- Form -->
+                <form class="mb-6">
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label class="visually-hidden" for="modalSigninHorizontalEmail">
+                      Your email
+                    </label>
+                    <input type="email" class="form-control" id="modalSigninHorizontalEmail" placeholder="Your email">
+                  </div>
+
+                  <!-- Password -->
+                  <div class="form-group mb-5">
+                    <label class="visually-hidden" for="modalSigninHorizontalPassword">
+                      Enter your password
+                    </label>
+                    <input type="password" class="form-control" id="modalSigninHorizontalPassword"
+                      placeholder="Enter your password">
+                  </div>
+
+                  <!-- Submit -->
+                  <button class="btn w-100 btn-primary" type="submit">
+                    Sign in
+                  </button>
+
+                </form>
+
+                <!-- Text -->
+                <p class="mb-0 fs-sm text-center text-muted">
+                  Don't have an account yet? <a href="./signin-illustration.html">Sign up</a>.
+                </p>
+
+              </div>
+            </div>
+
+          </div> <!-- / .row -->
+        </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </div>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <!-- Signin: Vertical  -->
+  <div class="modal fade" id="modalSigninVertical" tabindex="-1" role="dialog"
+    aria-labelledby="modalSigninVerticalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="card">
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+          <!-- Close -->
+          <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+          <!-- Image -->
+          <img src="./assets/img/photos/photo-21.jpg" alt="..." class="card-img-top">
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x text-white">
+              <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+
+            <!-- Heading -->
+            <h2 class="mb-0 fw-bold text-center" id="modalSigninVerticalTitle">
+              Sign In
+            </h2>
+
+            <!-- Text -->
+            <p class="mb-6 text-center text-muted">
+              Simplify your workflow in minutes.
+            </p>
+
+            <!-- Form -->
+            <form class="mb-6">
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="modalSigninVerticalEmail">
+                  Your email
+                </label>
+                <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Your email">
+              </div>
+
+              <!-- Password -->
+              <div class="form-group mb-5">
+                <label class="visually-hidden" for="modalSigninVerticalPassword">
+                  Enter your password
+                </label>
+                <input type="password" class="form-control" id="modalSigninVerticalPassword"
+                  placeholder="Enter your password">
+              </div>
+
+              <!-- Submit -->
+              <button class="btn w-100 btn-primary" type="submit">
+                Sign in
+              </button>
+
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 fs-sm text-center text-muted">
+              Don't have an account yet? <a href="./signin-illustration.html">Sign up</a>.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment -->
+  <div class="modal fade" id="modalPayment" tabindex="-1" role="dialog" aria-labelledby="modalPaymentTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <!-- Close -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <!-- Heading -->
+          <h2 class="fw-bold text-center mb-1" id="modalPaymentTitle">
+            Add Payment
+          </h2>
+
+          <!-- Text -->
+          <p class="fs-lg text-center text-muted mb-6 mb-md-8">
+            Simplify your workflow in minutes.
+          </p>
+
+          <!-- Form -->
+          <form>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="modalPaymentName">Name on card</label>
+              <input class="form-control" id="modalPaymentName" type="text" placeholder="First Last">
+            </div>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="modalPaymentNumbber">Card number</label>
+              <input class="form-control" id="modalPaymentNumbber" type="number" placeholder="4242 4242 4242 4242">
+            </div>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="modalPaymentDate">Exp. Date</label>
+              <input class="form-control" id="modalPaymentDate" type="text" placeholder="03/2023">
+            </div>
+
+            <!-- Submit -->
+            <button class="btn w-100 btn-primary mt-3 lift">
+              Add Payment Method
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="brand-logo">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarLandings" data-bs-toggle="dropdown" href="#"
+              aria-haspopup="true" aria-expanded="false">
+              What We Do
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
+              <div class="row gx-0">
+                <div class="col-12 col-lg-6">
+                  <div class="dropdown-img-start" style="background-image: url(./assets/img/photos/photo-3.jpg);">
+
+                    <!-- Heading -->
+                    <h4 class="fw-bold text-white mb-0">
+                      Want to see an overview?
+                    </h4>
+
+                    <!-- Text -->
+                    <p class="fs-sm text-white">
+                      See all the pages at once.
+                    </p>
+
+                    <!-- Button -->
+                    <a href="./overview.html" class="btn btn-sm btn-white shadow-dark fonFt-size-sm">
+                      View all pages
+                    </a>
+
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="dropdown-body">
+                    <div class="row gx-0">
+                      <div class="col-6">
+
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                          Services
+                        </h6>
+
+                        <!-- List -->
+                        <a class="dropdown-item" href="./coworking.html">
+                          Coworking
+                        </a>
+                        <a class="dropdown-item" href="./rental.html">
+                          Rental
+                        </a>
+                        <a class="dropdown-item mb-5" href="./job.html">
+                          Job Listing
+                        </a>
+
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                          Apps
+                        </h6>
+
+                        <!-- List -->
+                        <a class="dropdown-item" href="./desktop-app.html">
+                          Desktop
+                        </a>
+                        <a class="dropdown-item" href="./mobile-app.html">
+                          Mobile
+                        </a>
+
+                      </div>
+                      <div class="col-6">
+
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                          Web
+                        </h6>
+
+                        <!-- List -->
+                        <a class="dropdown-item" href="./index.html">
+                          Basic
+                        </a>
+                        <a class="dropdown-item" href="./startup.html">
+                          Startup
+                        </a>
+                        <a class="dropdown-item" href="./enterprise.html">
+                          Enterprise
+                        </a>
+                        <a class="dropdown-item" href="./service.html">
+                          Service
+                        </a>
+                        <a class="dropdown-item" href="./cloud.html">
+                          Cloud Hosting
+                        </a>
+                        <a class="dropdown-item" href="./agency.html">
+                          Agency
+                        </a>
+                        <a class="dropdown-item" href="./framework.html">
+                          Framework
+                        </a>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Pages
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+              <div class="row gx-0">
+                <div class="col-6">
+                  <div class="row gx-0">
+                    <div class="col-12 col-lg-6">
+
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Career
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="./careers.html">
+                        Listing
+                      </a>
+                      <a class="dropdown-item mb-5" href="./career-single.html">
+                        Opening
+                      </a>
+
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Company
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="./about.html">
+                        About
+                      </a>
+                      <a class="dropdown-item" href="./pricing.html">
+                        Pricing
+                      </a>
+                      <a class="dropdown-item mb-5 mb-lg-0" href="./terms-of-service.html">
+                        Terms
+                      </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6">
+
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Help center
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="./help-center.html">
+                        Overview
+                      </a>
+                      <a class="dropdown-item mb-5" href="./help-center-article.html">
+                        Article
+                      </a>
+
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Contact
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="./contact.html">
+                        Basic
+                      </a>
+                      <a class="dropdown-item" href="./contact-alt.html">
+                        Cover
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row gx-0">
+                    <div class="col-12 col-lg-6">
+
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Blog
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="./blog.html">
+                        Rich View
+                      </a>
+                      <a class="dropdown-item" href="./blog-post.html">
+                        Article
+                      </a>
+                      <a class="dropdown-item" href="./blog-showcase.html">
+                        Showcase
+                      </a>
+                      <a class="dropdown-item mb-5 mb-lg-0" href="./blog-search.html">
+                        Search
+                      </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6">
+
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Portfolio
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="./portfolio-masonry.html">
+                        Masonry
+                      </a>
+                      <a class="dropdown-item" href="./portfolio-grid-rows.html">
+                        Grid Rows
+                      </a>
+                      <a class="dropdown-item" href="./portfolio-parallax.html">
+                        Parallax
+                      </a>
+                      <a class="dropdown-item" href="./portfolio-case-study.html">
+                        Case Study
+                      </a>
+                      <a class="dropdown-item" href="./portfolio-sidebar.html">
+                        Sidebar
+                      </a>
+                      <a class="dropdown-item" href="./portfolio-sidebar-fluid.html">
+                        Sidebar: Fluid
+                      </a>
+                      <a class="dropdown-item" href="./portfolio-grid.html">
+                        Basic Grid
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- / .row -->
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarAccount" data-bs-toggle="dropdown" href="#"
+              aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarAccount">
+              <li class="dropdown-item dropend">
+                <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                  Settings
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./account-general.html">
+                    General
+                  </a>
+                  <a class="dropdown-item" href="./account-security.html">
+                    Security
+                  </a>
+                  <a class="dropdown-item" href="./account-notifications.html">
+                    Notifications
+                  </a>
+                  <a class="dropdown-item" href="./billing-plans-and-payment.html">
+                    Plans & Payment
+                  </a>
+                  <a class="dropdown-item" href="./billing-users.html">
+                    Users
+                  </a>
+                </div>
+              </li>
+              <li class="dropdown-item dropend">
+                <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                  Sign In
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./signin-cover.html">
+                    Side Cover
+                  </a>
+                  <a class="dropdown-item" href="./signin-illustration.html">
+                    Illustration
+                  </a>
+                  <a class="dropdown-item" href="./signin.html">
+                    Basic
+                  </a>
+                  <a class="dropdown-item" data-bs-toggle="modal" href="#modalSigninHorizontal">
+                    Modal Horizontal
+                  </a>
+                  <a class="dropdown-item" data-bs-toggle="modal" href="#modalSigninVertical">
+                    Modal Vertical
+                  </a>
+                </div>
+              </li>
+              <li class="dropdown-item dropend">
+                <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                  Sign Up
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./signup-cover.html">
+                    Side Cover
+                  </a>
+                  <a class="dropdown-item" href="./signup-illustration.html">
+                    Illustration
+                  </a>
+                  <a class="dropdown-item" href="./signup.html">
+                    Basic
+                  </a>
+                  <a class="dropdown-item" data-bs-toggle="modal" href="#modalSignupHorizontal">
+                    Modal Horizontal
+                  </a>
+                  <a class="dropdown-item" data-bs-toggle="modal" href="#modalSignupVertical">
+                    Modal Vertical
+                  </a>
+                </div>
+              </li>
+              <li class="dropdown-item dropend">
+                <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                  Password Reset
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./password-reset-cover.html">
+                    Side Cover
+                  </a>
+                  <a class="dropdown-item" href="./password-reset-illustration.html">
+                    Illustration
+                  </a>
+                  <a class="dropdown-item" href="./password-reset.html">
+                    Basic
+                  </a>
+                </div>
+              </li>
+              <li class="dropdown-item dropend">
+                <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                  Error
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./error-cover.html">
+                    Side Cover
+                  </a>
+                  <a class="dropdown-item" href="./error-illustration.html">
+                    Illustration
+                  </a>
+                  <a class="dropdown-item" href="./error.html">
+                    Basic
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#"
+              aria-haspopup="true" aria-expanded="false">
+              Documentation
+            </a>
+            <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+              <div class="list-group list-group-flush">
+                <a class="list-group-item" href="./docs/index.html">
+
+                  <!-- Icon -->
+                  <div class="icon icon-sm text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h24v24H0z" />
+                        <path
+                          d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z"
+                          fill="#335EEA" opacity=".3" />
+                        <path
+                          d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z"
+                          fill="#335EEA" />
+                        <rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2" rx="1" />
+                        <rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2" rx="1" />
+                      </g>
+                    </svg>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="ms-4">
+
+                    <!-- Heading -->
+                    <h6 class="fw-bold text-uppercase text-primary mb-0">
+                      Documentation
+                    </h6>
+
+                    <!-- Text -->
+                    <p class="fs-sm text-gray-700 mb-0">
+                      Customizing and building
+                    </p>
+
+                  </div>
+
+                </a>
+                <a class="list-group-item" href="./docs/alerts.html">
+
+                  <!-- Icon -->
+                  <div class="icon icon-sm text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h24v24H0z" />
+                        <rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5" />
+                        <path
+                          d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z"
+                          fill="#335EEA" opacity=".3" />
+                      </g>
+                    </svg>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="ms-4">
+
+                    <!-- Heading -->
+                    <h6 class="fw-bold text-uppercase text-primary mb-0">
+                      Components
+                    </h6>
+
+                    <!-- Text -->
+                    <p class="fs-sm text-gray-700 mb-0">
+                      Full list of components
+                    </p>
+
+                  </div>
+
+                </a>
+                <a class="list-group-item" href="./docs/changelog.html">
+
+                  <!-- Icon -->
+                  <div class="icon icon-sm text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h24v24H0z" />
+                        <path
+                          d="M5.857 2h7.88a1.5 1.5 0 01.968.355l4.764 4.029A1.5 1.5 0 0120 7.529v12.554c0 1.79-.02 1.917-1.857 1.917H5.857C4.02 22 4 21.874 4 20.083V3.917C4 2.127 4.02 2 5.857 2z"
+                          fill="#335EEA" opacity=".3" />
+                        <rect fill="#335EEA" x="6" y="11" width="9" height="2" rx="1" />
+                        <rect fill="#335EEA" x="6" y="15" width="5" height="2" rx="1" />
+                      </g>
+                    </svg>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="ms-4">
+
+                    <!-- Heading -->
+                    <h6 class="fw-bold text-uppercase text-primary mb-0">
+                      Changelog
+                    </h6>
+
+                    <!-- Text -->
+                    <p class="fs-sm text-gray-700 mb-0">
+                      Keep track of changes
+                    </p>
+
+                  </div>
+
+                  <!-- Badge -->
+                  <span class="badge rounded-pill bg-primary-soft ms-auto">
+                    2.2.0
+                  </span>
+
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Button -->
+        <a class="navbar-btn btn btn-sm btn-primary lift ms-auto"
+          href="https://themes.getbootstrap.com/product/landkit/" target="_blank">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- WELCOME -->
+  <section class="border-bottom">
+    <div class="container">
+      <div class="row align-items-stretch">
+        <div class="col-12 col-md-6 offset-md-1 order-md-2">
+
+          <!-- Slider (mobile) -->
+          <div class="d-md-none img-cover"
+            data-flickity='{"imagesLoaded": true, "wrapAround": true, "prevNextButtons": false, "pageDots": false}'>
+            <div class="w-100">
+
+              <!-- Image -->
+              <img src="assets/img/covers/cover-12.jpg" alt="image" class="img-fluid">
+
+            </div>
+            <div class="w-100">
+
+              <!-- Image -->
+              <img src="assets/img/covers/cover-2.jpg" alt="image" class="img-fluid">
+
+            </div>
+          </div>
+
+          <!-- Slider -->
+          <div class="position-relative h-100 vw-50 d-none d-md-block" data-aos="fade-left">
+
+            <!-- Slider -->
+            <div class="flickity-button-bottom flickity-button-white h-100 w-100"
+              data-flickity='{"imagesLoaded": true, "setGallerySize": false, "wrapAround": true, "pageDots": false}'>
+              <div class="w-100 h-100 bg-cover" style="background-image: url(assets/img/covers/cover-9.jpg);"></div>
+              <div class="w-100 h-100 bg-cover" style="background-image: url(assets/img/covers/cover-2.jpg);"></div>
+            </div>
+
+            <!-- Shape -->
+            <div class="shape shape-start shape-fluid-y svg-shim text-white">
+              <svg viewBox="0 0 100 1544" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h100v386l-50 772v386H0V0z" fill="currentColor" />
+              </svg>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-5 py-8 py-md-14 order-md-1" data-aos="fade-right">
+
+          <!-- Heading -->
+          <h1 class="display-3">
+            High-converting websites built for <span class="text-success">startups.</span>
+          </h1>
+
+          <!-- Text -->
+          <p class="lead text-muted mb-6 mb-md-8">
+            We design and build websites tailored to the needs of growing business.
+          </p>
+
+          <!-- Text -->
+          <p>
+            We can help you build fully-responsive website.
+          </p>
+
+          <!-- Form -->
+          <form>
+            <div class="row gx-4">
+              <div class="col-12 col-lg">
+
+                <!-- Search -->
+                <div class="form-group mb-lg-0">
+                  <input type="email" class="form-control" placeholder="Enter email *">
+                </div>
+
+              </div>
+              <div class="col-12 col-lg-auto">
+
+                <!-- Button -->
+                <button type="submit" class="btn w-100 btn-primary shadow lift">
+                  Request a demo
+                </button>
+
+              </div>
+            </div> <!-- / .form-row -->
+          </form>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SERVICES -->
+  <section class="pt-8 pt-md-11 bg-gradient-light-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Badge -->
+          <span class="badge rounded-pill bg-success-soft mb-3">
+            <span class="h6 text-uppercase">SERVICES</span>
+          </span>
+
+          <!-- Heading -->
+          <h1>
+            We design high-converting websites for any type of business.
+          </h1>
+
+          <!-- Text -->
+          <p class="fs-lg text-gray-700 mb-7 mb-md-9">
+            Websites are a necessity in today's business world. They're the first impression that people get of your
+            company, and they can be a powerful tool to help you grow your business.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row">
+        <div class="col-12 col-md-4" data-aos="fade-up">
+
+          <!-- Card -->
+          <div class="card shadow-light-lg mb-6 mb-md-0 lift lift-lg">
+
+            <!-- Image -->
+            <img src="assets/img/photos/website-mockup.png" alt="image" class="card-img-top">
+
+            <!-- Shape -->
+            <div class="position-relative">
+              <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <div class="card-body position-relative">
+
+              <!-- Badge -->
+              <div class="position-relative text-end mt-n8 me-n4 mb-3">
+                <span class="badge rounded-pill bg-success">
+                  <span class="h6 text-uppercase">$495/one-time</span>
+                </span>
+              </div>
+
+              <!-- Heading -->
+              <h3>
+                UI/UX Design
+              </h3>
+
+              <!-- Text -->
+              <p class="text-muted">
+                Let us help you create a better user experience with our UI/UX design services.
+              </p>
+
+              <!-- Link -->
+              <a href="/uiux.html" class="fw-bold text-decoration-none" target="_blank">
+                Learn more <i class="fe fe-arrow-right ms-3"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Card -->
+          <div class="card shadow-light-lg mb-6 mb-md-0 lift lift-lg">
+
+            <!-- Image -->
+            <img src="assets/img/photos/company-website.png" alt="image" class="card-img-top">
+
+            <!-- Shape -->
+            <div class="position-relative">
+              <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <div class="card-body position-relative">
+
+              <!-- Badge -->
+              <div class="position-relative text-end mt-n8 me-n4 mb-3">
+                <span class="badge rounded-pill bg-warning">
+                  <span class="h6 text-uppercase">$745/one-time</span>
+                </span>
+              </div>
+
+              <!-- Heading -->
+              <h3>
+                Company Website
+              </h3>
+
+              <!-- Text -->
+              <p class="text-muted">
+                We will create an attractive, modern website that reflects your brand.
+              </p>
+
+              <!-- Link -->
+              <a href="company-website.html" class="fw-bold text-decoration-none" target="_blank">
+                Learn more <i class="fe fe-arrow-right ms-3"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Card -->
+          <div class="card shadow-light-lg lift lift-lg">
+
+            <!-- Image -->
+            <img src="assets/img/photos/ecommerce-store.png" alt="image" class="card-img-top">
+
+            <!-- Shape -->
+            <div class="position-relative">
+              <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <div class="card-body position-relative">
+
+              <!-- Badge -->
+              <div class="position-relative text-end mt-n8 me-n4 mb-3">
+                <span class="badge rounded-pill bg-success">
+                  <span class="h6 text-uppercase">$1,195/one-time</span>
+                </span>
+              </div>
+
+              <!-- Heading -->
+              <h3>
+                E-commerce Store
+              </h3>
+
+              <!-- Text -->
+              <p class="text-muted">
+                We offer comprehensive e-commerce solutions for your retail store.
+              </p>
+
+              <!-- Link -->
+              <a href="ecommerce-store.html" class="fw-bold text-decoration-none" target="_blank">
+                Learn more <i class="fe fe-arrow-right ms-3"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-8 py-md-11 border-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 order-md-2">
+
+          <!-- Image -->
+          <img src="assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-6 mb-md-0">
+
+        </div>
+        <div class="col-12 col-md-6 order-md-1">
+
+          <!-- Badge -->
+          <span class="badge rounded-pill bg-primary-soft mb-3">
+            <span class="h6 text-uppercase">Features</span>
+          </span>
+
+          <!-- Heading -->
+          <h2>
+            Powerful features for your <br>
+            <span class="text-primary">new website</span>.
+          </h2>
+
+          <!-- Text -->
+          <p class="fs-lg text-gray-700 mb-6 mb-md-6">
+            We are confident that our website design services will meet your expectations and help you achieve
+            success.
+          </p>
+
+          <!-- List -->
+          <div class="row">
+            <div class="col-12 col-lg-6">
+
+              <!-- Item -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <div class="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  Well designed and functional
+                </p>
+
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <div class="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  Optimized for mobile
+                </p>
+
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <div class="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  Easy to use
+                </p>
+
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <div class="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <p class="mb-lg-0">
+                  Optimized for search engine
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="col-12 col-lg-6">
+
+              <!-- Item -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <span class="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </span>
+
+                <!-- Text -->
+                <p>
+                  Readily accessible contact and location
+                </p>
+
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <span class="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </span>
+
+                <!-- Text -->
+                <p>
+                  Fresh quality content
+                </p>
+
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <span class="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </span>
+
+                <!-- Text -->
+                <p>
+                  Clear calls to action
+                </p>
+
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <div class="badge badge-rounded-circle bg-primary-soft me-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p class="mb-0">
+                  Optimized for loading speed
+                </p>
+
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- LOCATION -->
+  <section class="pt-8 pt-md-0 border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+
+          <!-- Map (mobile) -->
+          <div class="ratio ratio-1x1 d-md-none">
+            <div data-map='{"center": [-118.244615, 34.052979], "zoom": 12}'>
+              <img src="/assets/img/photos/world-map.png" alt="world-map">
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="position-relative h-100 vw-50 float-end d-none d-md-block">
+
+            <!-- Map -->
+            <div class="w-100 h-100" data-map='{"center": [-118.244615, 34.052979], "zoom": 12}'>
+              <img src="/assets/img/photos/world-map.png" alt="world-map">
+            </div>
+
+            <!-- Shape -->
+            <div class="shape shape-end shape-fluid-y svg-shim text-white">
+              <svg viewBox="0 0 100 1544" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 386V0h100v1544H50v-386L0 386z" fill="currentColor" />
+              </svg>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 offset-lg-1 py-8 py-md-11 py-lg-12">
+
+          <!-- Heading -->
+          <h2>
+            More than <span data-countup='{"startVal": 0}' data-to="60" data-aos data-aos-id="countup:in">100</span>% of
+            small businesses worldwide are already using a website<br>
+            <span class="text-success">as of the year 2022</span>.
+          </h2>
+
+          <!-- Text -->
+          <p class="fs-lg text-gray-700 mb-6 mb-md-6">
+            That's right – more than half of all small businesses have a website and are using it to reach more
+            customers and grow their business.
+          </p>
+
+          <!-- Stats -->
+          <div class="d-flex">
+            <div class="pe-5">
+              <h3 class="text-success mb-0">
+                <span data-countup='{"startVal": 0}' data-to="195" data-aos data-aos-id="countup:in">100</span>
+              </h3>
+              <p class="text-gray-700 mb-0">
+                Countries
+              </p>
+            </div>
+            <div class="border-start"></div>
+            <div class="px-5">
+              <h3 class="text-success mb-0">
+                <span data-countup='{"startVal": 0}' data-to="10000" data-aos data-aos-id="countup:in">100</span>
+              </h3>
+              <p class="text-gray-700 mb-0">
+                Cities
+              </p>
+            </div>
+            <div class="border-start"></div>
+            <div class="ps-5">
+              <h3 class="text-success mb-0">
+                <span data-countup='{"startVal": 0}' data-to="50000" data-aos data-aos-id="countup:in">100</span>+
+              </h3>
+              <p class="text-gray-700 mb-0">
+                Business Owners
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- FAQS -->
+  <section class="py-8 py-md-11 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h2>
+            <span class="text-primary">Frequently</span> Asked Questions
+          </h2>
+
+          <!-- Text -->
+          <p class="fs-lg text-muted mb-7 mb-md-9 px-md-9">
+            We understand that you may have a few questions about our services and products. To help answer any queries
+            you may have, we've created a list of Frequently Asked Questions (FAQ) by our customers.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+
+          <!-- Card -->
+          <div class="accordion" id="featuresAccordion">
+            <div class="accordion-item">
+
+              <!-- Button -->
+              <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#featuresOne"
+                aria-expanded="true" aria-controls="featuresOne">
+                <div class="me-auto">
+
+                  <!-- Title -->
+                  <p class="fw-bold mb-0" id="featuresOneHeading">
+                    Why should I choose your company over other options?
+                  </p>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-muted mb-0">
+                    Frequently Asked Question #1
+                  </p>
+
+                </div>
+
+              </div>
+
+              <!-- Collapse -->
+              <div class="accordion-collapse collapse show" id="featuresOne" aria-labelledby="featuresOneHeading"
+                data-bs-parent="#featuresAccordion">
+                <div class="accordion-body">
+                  <p>
+                    Good question! We believe that our team of experienced professionals is one of the key reasons why
+                    you should choose us. Our team has a wealth of knowledge and expertise in website design and
+                    development, and we're dedicated to providing our clients with the best possible service. We also
+                    believe in keeping our prices affordable, so you an get the quality website you need without
+                    breaking the bank.
+                  </p>
+                  <a href="#!" class="fw-bold text-decoration-none">
+                    Check it out <i class="fe fe-arrow-right ms-3"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="accordion-item">
+
+              <!-- Button -->
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                data-bs-target="#featuresTwo" aria-expanded="false" aria-controls="featuresTwo">
+                <div class="me-auto">
+
+                  <!-- Title -->
+                  <p class="fw-bold mb-0" id="featuresTwoHeading">
+                    What kind of websites do you design and develop?
+                  </p>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-muted mb-0">
+                    Frequently Asked Question #2
+                  </p>
+
+                </div>
+
+              </div>
+
+              <!-- Collapse -->
+              <div class="accordion-collapse collapse" id="featuresTwo" aria-labelledby="featuresTwoHeading"
+                data-bs-parent="#featuresAccordion">
+                <div class="accordion-body">
+                  <p>
+                    We specialize in designing and developing websites that are both attractive and functional. Our team
+                    can create a website that fits your unique needs, no matter what your business or industry is. We
+                    also have experience developing e-ommerce websites and can help you start or improve your online
+                    store.
+                  </p>
+                  <a href="#!" class="fw-bold text-decoration-none">
+                    Check it out <i class="fe fe-arrow-right ms-3"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="accordion-item">
+
+              <!-- Button -->
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                data-bs-target="#featuresThree" aria-expanded="false" aria-controls="featuresThree">
+                <div class="me-auto">
+
+                  <!-- Title -->
+                  <p class="fw-bold mb-0" id="featuresThreeHeading">
+                    Do you offer any other services?
+                  </p>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-muted mb-0">
+                    Frequently Asked Question #3
+                  </p>
+
+                </div>
+
+              </div>
+
+              <!-- Collapse -->
+              <div class="accordion-collapse collapse" id="featuresThree" aria-labelledby="featuresThreeHeading"
+                data-bs-parent="#featuresAccordion">
+                <div class="accordion-body">
+                  <p>
+                    Yes! In addition to website design and development, we offer a variety of other services, including
+                    logo design, online marketing, and search engine optimization. We also have a team of experts who
+                    can help you create or improve your existing website for mobile devices. So whatever your needs may
+                    be, we likely have a solution for you.
+                  </p>
+                  <a href="#!" class="fw-bold text-decoration-none">
+                    Check it out <i class="fe fe-arrow-right ms-3"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE -->
+  <div class="position-relative mt-n16">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <section class="pt-16 bg-dark">
+    <footer class="py-8 py-md-11 bg-dark border-top border-gray-800-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+
+            <!-- Brand -->
+            <img src="./assets/img/brand.svg" alt="brand-logo" class="footer-brand img-fluid mb-2">
+
+            <!-- Text -->
+            <p class="text-gray-700 mb-2">
+              A better way to build.
+            </p>
+
+            <!-- Social -->
+            <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+
+            <!-- Heading -->
+            <h6 class="fw-bold text-uppercase text-gray-700">
+              Products
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Page Builder
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Styleguide
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+
+            <!-- Heading -->
+            <h6 class="fw-bold text-uppercase text-gray-700">
+              Services
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+
+            <!-- Heading -->
+            <h6 class="fw-bold text-uppercase text-gray-700">
+              Connect
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Page Builder
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Styleguide
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+
+            <!-- Heading -->
+            <h6 class="fw-bold text-uppercase text-gray-700">
+              Legal
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+  </section>
+
+  <!-- JAVASCRIPT -->
+  <!-- Map JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.bundle.js"></script>
 
 </body>
 
