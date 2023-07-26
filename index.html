@@ -52,8 +52,8 @@
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img id="logoImg" src="assets/img/logo.png" alt="CodeFrites">
+      <a href="index.html" class="logo d-flex align-items-center" id="logo">
+        <img src="assets/img/logo.png" alt="CodeFrites" id="logoImg">
         <span id="brandName"></span>
       </a>
 
@@ -61,7 +61,7 @@
         <ul id="navLinks">
           <!-- Navigation links will be populated dynamically -->
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle" id="mobileNavToggle"></i>
       </nav><!-- .navbar -->
 
     </div>
@@ -71,13 +71,13 @@
   <section id="hero" class="hero d-flex align-items-center">
 
     <div class="container">
-      <div class="row">
+      <div class="row mb-5">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
+          <h1 data-aos="fade-up">We offer modern website solutions for growing your business</h1>
           <div class="mt-5" data-aos="fade-up" data-aos-delay="500">
             <span><i class="bi bi-check-circle-fill me-2"></i>Unbeatable Quality</span>
-            <span class="ms-4"><i class="bi bi-check-circle-fill me-2"></i>Unbeatable Quality</span>
-            <span class="ms-4"><i class="bi bi-check-circle-fill me-2"></i>Unbeatable Quality</span>
+            <span class="ms-4"><i class="bi bi-check-circle-fill me-2"></i>Fast Turnarounds</span>
+            <span class="ms-4"><i class="bi bi-check-circle-fill me-2"></i>Reasonable Pricing</span>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="600">
@@ -98,6 +98,36 @@
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
           <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+        </div>
+      </div>
+
+      <div class="row text-center mt-5">
+        <div class="col-md-12">
+          <p>Trusted by 100+ businesses and creative agencies worldwide from all shapes and sizes.</p>
+        </div>
+
+        <div class="col-md-2">
+          <img src="assets/img/pricing-business.png" width="70" alt="">
+        </div>
+
+        <div class="col-md-2">
+          <img src="assets/img/pricing-business.png" width="70" alt="">
+        </div>
+
+        <div class="col-md-2">
+          <img src="assets/img/pricing-business.png" width="70" alt="">
+        </div>
+
+        <div class="col-md-2">
+          <img src="assets/img/pricing-business.png" width="70" alt="">
+        </div>
+
+        <div class="col-md-2">
+          <img src="assets/img/pricing-business.png" width="70" alt="">
+        </div>
+
+        <div class="col-md-2">
+          <img src="assets/img/pricing-business.png" width="70" alt="">
         </div>
       </div>
     </div>
@@ -1301,6 +1331,7 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/dynamic-header-and-footer/dynamic-header.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
