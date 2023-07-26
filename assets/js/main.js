@@ -8,6 +8,80 @@
   "use strict";
 
   /**
+   * Dynamic Header
+   */
+  const navLinks = [
+    { text: 'Home', url: '#hero' },
+    { text: 'Services', url: '#', dropdown: true, subLinks: [
+      { text: 'HTML/CSS/JavaScript Front-End', url: '#' },
+      { text: 'WordPress Website', url: '#' },
+      { text: 'WooCommerce Store', url: '#' },
+      { text: 'Website Development', url: '#', dropdown: true, subLinks: [
+        { text: 'Front-End Development (HTML/CSS/JavaScript)', url: '#' },
+        { text: 'Back-End Development', url: '#' },
+      ]},
+    ]},
+    { text: 'About', url: '#about' },
+    { text: 'Portfolio', url: '#portfolio' },
+    { text: 'Blog', url: 'blog.html' },
+    { text: 'Contact', url: '#contact' },
+    { text: 'Get Started', url: '#about', class: 'scrollto' },
+  ];
+
+  const brandName = 'Carvel Russ';
+  const newLogoSrc = 'https://carvelruss.com/img/carvelruss.png'; // Replace with the new logo source URL
+
+  // Function to populate the navigation links
+  function populateNavLinks(linksArray, container) {
+    let linksHTML = '';
+
+    linksArray.forEach(link => {
+      const linkClass = link.class ? ` class="${link.class}"` : '';
+
+      if (link.dropdown) {
+        linksHTML += `
+          <li class="dropdown">
+            <a href="#"><span>${link.text}</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              ${populateNavLinks(link.subLinks)}
+            </ul>
+          </li>
+        `;
+      } else {
+        linksHTML += `<li><a${linkClass} href="${link.url}">${link.text}</a></li>`;
+      }
+    });
+
+    return linksHTML;
+  }
+
+  // Function to update the brand name
+  function updateBrandName() {
+    const brandNameElement = document.getElementById('brandName');
+    brandNameElement.textContent = brandName;
+  }
+
+  // Function to change the logo dynamically
+  function updateLogo() {
+    const logoImg = document.getElementById('logoImg');
+    logoImg.src = newLogoSrc;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinksContainer = document.getElementById('navLinks');
+    navLinksContainer.innerHTML = populateNavLinks(navLinks);
+    updateBrandName();
+    updateLogo();
+
+    // Toggle mobile navigation on menu icon click
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const navbar = document.getElementById('navbar');
+    mobileNavToggle.addEventListener('click', function() {
+      navbar.classList.toggle('show');
+    });
+  });
+
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {

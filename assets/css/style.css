@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Futura', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #444444;
 }
 
@@ -30,13 +30,6 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
-
-@font-face {
-  font-family: 'Futura', sans-serif;
-  src: url('/assets/vendor/fonts/Futura-Extra-Black-font.woff2') format('woff2'),
-       url('/assets/vendor/fonts/Futura-Extra-Black-font.woff') format('woff');
-}
-
 
 /*--------------------------------------------------------------
 # Sections
@@ -200,7 +193,7 @@ section {
   font-weight: 700;
   letter-spacing: 1px;
   color: #012970;
-  font-family: 'Futura', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-top: 3px;
 }
 
@@ -480,6 +473,19 @@ section {
 
 .hero .hero-img {
   text-align: right;
+}
+
+.hero-cta-features span {
+  position: relative;
+  align-items: center;
+}
+
+.hero-cta-features span::before {
+  content: "\2022";
+  position: absolute;
+  top: -10px;
+  left: -15px;
+  font-size: 25px;
 }
 
 @media (min-width: 1024px) {
