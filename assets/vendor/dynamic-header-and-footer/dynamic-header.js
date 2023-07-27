@@ -6,6 +6,16 @@ const navLinks = [
   { text: 'Blog', url: 'blog.html' },
   { text: 'Contact', url: '#contact' },
   { text: 'Get Started', url: '#about' },
+  // Dropdown Menu Links
+  // { text: 'Services', dropdown: true, subLinks: [
+  //   { text: 'HTML/CSS/JavaScript Front-End', url: '#' },
+  //   { text: 'WordPress Website', url: '#' },
+  //   { text: 'WooCommerce Store', url: '#' },
+  //   { text: 'Website Development', dropdown: true, subLinks: [
+  //     { text: 'Front-End Development (HTML/CSS/JavaScript)', url: '#' },
+  //     { text: 'Back-End Development', url: '#' },
+  //   ]},
+  // ]},
 ];
 
 const brandName = 'CodeFrites';
