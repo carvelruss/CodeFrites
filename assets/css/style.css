@@ -2294,6 +2294,7 @@ section {
 .footer .footer-top .footer-info .logo img {
   max-height: 40px;
   margin-right: 6px;
+  box-shadow: 0 2px 5px #ddd;
 }
 
 .footer .footer-top .footer-info .logo span {
