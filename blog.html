@@ -43,40 +43,16 @@
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span>FlexStart</span>
+      <a href="index.html" class="logo d-flex align-items-center" id="logo">
+        <img src="assets/img/logo.png" alt="CodeFrites" id="logoImg">
+        <span id="brandName"></span>
       </a>
 
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto " href="https://codefrites.com/#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="https://codefrites.com/#about">About</a></li>
-          <li><a class="nav-link scrollto" href="https://codefrites.com/#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="https://codefrites.com/#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="https://codefrites.com/#team">Team</a></li>
-          <li><a class="active" href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        <ul id="navLinks">
+          <!-- Navigation links will be populated dynamically -->
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle" id="mobileNavToggle"></i>
       </nav><!-- .navbar -->
 
     </div>
@@ -444,6 +420,8 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/dynamic-header-and-footer/dynamic-header.js"></script>
+  <script src="assets/vendor/dynamic-header-and-footer/dynamic-footer.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
