@@ -9,7 +9,7 @@ const navLinks = [
 ];
 
 const brandName = 'CodeFrites';
-const newLogoSrc = 'assets/img/logo.png';
+const newLogoSrc = 'assets/img/codefrites-temporary-logo.svg';
 
 // Function to recursively populate the navigation links (including nested sub-menus)
 function populateNavLinks(linksArray) {

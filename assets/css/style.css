@@ -2055,9 +2055,15 @@ section {
 }
 
 .blog .sidebar {
-  padding: 30px;
+  /* padding: 30px; */
   margin: 0 0 60px 20px;
+  /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); */
+}
+
+.blog .sidebar .card {
+  border: 1px solid #ececec;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .blog .sidebar .sidebar-title {
