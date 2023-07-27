@@ -425,7 +425,7 @@ section {
 .hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/hero-bg.png) top center no-repeat;
+  /* background: url(../img/hero-bg.png) top center no-repeat; */
   background-size: cover;
 }
 
@@ -485,6 +485,10 @@ section {
   top: -10px;
   left: -15px;
   font-size: 25px;
+}
+
+.hero .clients-slider .swiper-wrapper .swiper-slide img {
+  filter: grayscale(100%) brightness(80%);
 }
 
 @media (min-width: 1024px) {
@@ -1708,9 +1712,11 @@ section {
   padding: 30px;
   margin-bottom: 60px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .blog .entry .entry-img {
+  border-radius: 10px 10px 0 0;
   max-height: 440px;
   margin: -30px -30px 20px -30px;
   overflow: hidden;
@@ -2294,7 +2300,6 @@ section {
 .footer .footer-top .footer-info .logo img {
   max-height: 40px;
   margin-right: 6px;
-  box-shadow: 0 2px 5px #ddd;
 }
 
 .footer .footer-top .footer-info .logo span {
@@ -2327,6 +2332,7 @@ section {
 }
 
 .footer .footer-top h4 {
+  display: block;
   font-size: 16px;
   font-weight: bold;
   color: #012970;

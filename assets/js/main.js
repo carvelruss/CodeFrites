@@ -127,7 +127,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with ofset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -185,8 +185,8 @@
         spaceBetween: 80
       },
       992: {
-        slidesPerView: 6,
-        spaceBetween: 120
+        slidesPerView: 7,
+        spaceBetween: 120,
       }
     }
   });
