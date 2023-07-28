@@ -1,102 +1,111 @@
-  const footerConfig = {
-    brandLogoSrc: 'assets/img/codefrites-temporary-logo.svg',
-    brandName: 'CodeFrites',
-    brandDescription: "At CodeFrites, we're not just your ordinary website development company; we bring a unique and personal touch to every project we undertake.",
+// Footer data object with dynamic content
+const footerData = {
+  brandLogo: 'assets/img/codefrites-temp-logo.svg',
+  brandName: 'CodeFrites',
+  brandDescription: "At CodeFrites, we're not just your ordinary website development company; we bring a unique and personal touch to every project we undertake.",
+  companyNumber: '+63 909 135 2732',
+  companyEmail: 'friesquad@codefrites.com',
+  socialLinks: [
+    { platform: 'twitter', url: '#' },
+    { platform: 'facebook', url: '#' },
+    { platform: 'instagram', url: '#' },
+    { platform: 'linkedin', url: '#' },
+  ],
+  usefulLinks: [
+    { title: 'Home', url: '#' },
+    { title: 'About us', url: '#' },
+    { title: 'Services', url: '#' },
+    { title: 'Terms of service', url: '#' },
+    { title: 'Privacy policy', url: '#' }
+  ],
+  ourServices: [
+    { title: 'Web Design', url: '#' },
+    { title: 'Web Development', url: '#' },
+    { title: 'Product Management', url: '#' },
+    { title: 'Marketing', url: '#' },
+    { title: 'Graphic Design', url: '#' }
+  ]
+};
 
-    // Contact Info
-    companyAddress: "We don't have a physical office yet.",
-    companyNumber: '+63 909 135 2732',
-    companyEmail: 'friesquad@codefrites.com',
-
-    socialLinks: [
-      { icon: 'bi bi-facebook', url: '#' },
-      { icon: 'bi bi-instagram bx bxl-instagram', url: '#' },
-    ],
-    usefulLinks: [
-      { text: 'Home', url: '#' },
-      { text: 'About us', url: '#' },
-      { text: 'Services', url: '#' },
-      { text: 'Terms of service', url: '#' },
-      { text: 'Privacy policy', url: '#' },
-    ],
-    ourServices: [
-      { text: 'Web Design', url: '#' },
-      { text: 'Web Development', url: '#' },
-      { text: 'Product Management', url: '#' },
-      { text: 'Marketing', url: '#' },
-      { text: 'Graphic Design', url: '#' },
-    ],
-  };
-
-  // Function to update the footer brand name and logo
-  function updateFooterBrand() {
-    const brandNameElement = document.getElementById('brandName');
-    const brandLogoElement = document.getElementById('brandLogo');
-    const brandLinkElement = document.getElementById('brandLink');
-
-    brandNameElement.textContent = footerConfig.brandName;
-    brandLogoElement.src = footerConfig.brandLogoSrc;
-    brandLinkElement.href = 'index.html'; // Update the 'href' attribute with your desired URL
+// Function to set content dynamically
+function setContent(elementId, content) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.innerHTML = content;
   }
+}
 
-  // Function to update the footer brand description
-  function updateFooterBrandDescription() {
-    const footerBrandDescriptionElement = document.getElementById('brandDescription');
-    footerBrandDescriptionElement.textContent = footerConfig.brandDescription;
+// Function to set link dynamically
+function setLink(elementId, url) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.setAttribute('href', url);
   }
+}
 
-  // Function to populate footer links dynamically
-  function populateFooterLinks(linksArray, containerId) {
-    const container = document.getElementById(containerId);
-    let linksHTML = '';
-
-    linksArray.forEach(link => {
-      linksHTML += `<li><i class="bi bi-chevron-right"></i> <a href="${link.url}">${link.text}</a></li>`;
+// Function to set social network links dynamically
+function setSocialLinks(socialLinks) {
+  const socialLinksContainer = document.getElementById('social-links');
+  if (socialLinksContainer) {
+    socialLinksContainer.innerHTML = ''; // Clear existing links
+    socialLinks.forEach(link => {
+      const { platform, url } = link;
+      const platformClass = platform.toLowerCase();
+      const listItem = document.createElement('li');
+      const socialLink = document.createElement('a');
+      socialLink.href = url;
+      socialLink.className = platformClass;
+      const icon = document.createElement('i');
+      icon.className = `bi bi-${platformClass}`;
+      socialLink.appendChild(icon);
+      listItem.appendChild(socialLink);
+      socialLinksContainer.appendChild(listItem);
     });
-
-    container.querySelector('ul').innerHTML = linksHTML;
   }
+}
 
-  // Function to populate social links
-  function populateSocialLinks() {
-    const socialLinksContainer = document.querySelector('.social-links');
-    let socialLinksHTML = '';
-
-    footerConfig.socialLinks.forEach(link => {
-      socialLinksHTML += `<a href="${link.url}" class="${link.icon}"></a>`;
+// Function to set useful links dynamically
+function setUsefulLinks(usefulLinks) {
+  const linksContainer = document.getElementById('useful-links');
+  if (linksContainer) {
+    let linksHtml = '';
+    usefulLinks.forEach(link => {
+      linksHtml += `<li><i class="bx bx-chevron-right"></i> <a href="${link.url}">${link.title}</a></li>`;
     });
-
-    socialLinksContainer.innerHTML = socialLinksHTML;
+    linksContainer.innerHTML = linksHtml;
   }
+}
 
-  // Function to get the current year
-  function getCurrentYear() {
-    return new Date().getFullYear();
+// Function to set our services links dynamically
+function setOurServices(ourServices) {
+  const servicesContainer = document.getElementById('our-services');
+  if (servicesContainer) {
+    let servicesHtml = '';
+    ourServices.forEach(service => {
+      servicesHtml += `<li><i class="bx bx-chevron-right"></i> <a href="${service.url}">${service.title}</a></li>`;
+    });
+    servicesContainer.innerHTML = servicesHtml;
   }
+}
 
-  // Function to update the current year in the footer
-  function updateCurrentYear() {
-    const currentYearElement = document.getElementById('currentYear');
-    currentYearElement.textContent = getCurrentYear();
-  }
+// Function to initialize dynamic content
+function initFooter() {
+  // Set footer content
+  setContent('logo', `<img src="${footerData.brandLogo}" alt="${footerData.brandName}" id="logo">`);
+  setContent('brandName', footerData.brandName);
+  setContent('brandDescription', footerData.brandDescription);
+  setContent('companyNumber', `<strong>Phone:</strong> <a href="#">${footerData.companyNumber}</a>`);
+  setContent('companyEmail', `<strong>Email:</strong> <a href="#">${footerData.companyEmail}</a>`);
 
-  // Function to update the company address, number, and email
-  function updateCompanyInfo() {
-    const companyAddressElement = document.getElementById('companyAddress');
-    const companyNumberElement = document.getElementById('companyNumber');
-    const companyEmailElement = document.getElementById('companyEmail');
+  // Set social links
+  setSocialLinks(footerData.socialLinks);
 
-    companyAddressElement.textContent = footerConfig.companyAddress;
-    companyNumberElement.innerHTML = `<strong>Phone:</strong> <a href="tel:${footerConfig.companyNumber}">${footerConfig.companyNumber}</a>`;
-    companyEmailElement.innerHTML = `<strong>Email:</strong> <a href="mailto:${footerConfig.companyEmail}">${footerConfig.companyEmail}</a>`;
-  }
+  // Set useful links
+  setUsefulLinks(footerData.usefulLinks);
 
-  document.addEventListener('DOMContentLoaded', function() {
-    updateFooterBrand();
-    updateFooterBrandDescription();
-    populateFooterLinks(footerConfig.usefulLinks, 'usefulLinks');
-    populateFooterLinks(footerConfig.ourServices, 'ourServices');
-    populateSocialLinks();
-    updateCurrentYear();
-    updateCompanyInfo();
-  });
+  // Set our services links
+  setOurServices(footerData.ourServices);
+}
+
+// Call the initFooter function when the page loads
+window.onload = initFooter;

@@ -1,81 +1,158 @@
-const navLinks = [
-  { text: 'Home', url: '#hero' },
-  { text: 'Services', url: '#services' },
-  { text: 'About', url: '#about' },
-  { text: 'Portfolio', url: '#portfolio' },
-  { text: 'Blog', url: 'blog.html' },
-  { text: 'Contact', url: '#contact' },
-  // Dropdown Menu Links
-  // { text: 'Services', dropdown: true, subLinks: [
-  //   { text: 'HTML/CSS/JavaScript Front-End', url: '#' },
-  //   { text: 'WordPress Website', url: '#' },
-  //   { text: 'WooCommerce Store', url: '#' },
-  //   { text: 'Website Development', dropdown: true, subLinks: [
-  //     { text: 'Front-End Development (HTML/CSS/JavaScript)', url: '#' },
-  //     { text: 'Back-End Development', url: '#' },
-  //   ]},
-  // ]},
-];
-
-const brandName = 'CodeFrites';
-const newLogoSrc = 'assets/img/codefrites-temporary-logo.svg';
-
-// Function to recursively populate the navigation links (including nested sub-menus)
-function populateNavLinks(linksArray) {
-  let linksHTML = '';
-
-  linksArray.forEach(link => {
-    if (link.dropdown) {
-      linksHTML += `
-        <li class="dropdown">
-          <a href="javascript:void(0);" class="nav-link scrollto"><span>${link.text}</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            ${populateNavLinks(link.subLinks)}
-          </ul>
-        </li>
-      `;
-    } else {
-      linksHTML += `<li><a href="${link.url}">${link.text}</a></li>`;
-    }
-  });
-
-  return linksHTML;
-}
-
-// Function to update the brand name
-function updateBrandName() {
-  const brandNameElement = document.getElementById('brandName');
-  brandNameElement.textContent = brandName;
-}
-
-// Function to change the logo dynamically
-function updateLogo() {
-  const logoImg = document.getElementById('logoImg');
-  logoImg.src = newLogoSrc;
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-  const navLinksContainer = document.getElementById('navLinks');
-  navLinksContainer.innerHTML = populateNavLinks(navLinks);
-  updateBrandName();
-  updateLogo();
+  // Header Data
+  const headerData = {
+    logoSrc: 'assets/img/codefrites-temp-logo.svg',
+    brandName: 'CodeFrites',
+    navLinks: [
+      { text: 'Home', href: '#hero' },
+      { text: 'About', href: '#about' },
+      { text: 'Services', href: '#services' },
+      { text: 'Portfolio', href: '#portfolio' },
+      { text: 'Team', href: '#team' },
+      // Add more navigation links as needed
+      // Example for a dropdown link:
+    //   {
+    //     text: 'Drop Down',
+    //     href: '#',
+    //     subLinks: [
+    //       { text: 'Drop Down 1', href: '#' },
+    //       {
+    //         text: 'Deep Drop Down',
+    //         subLinks: [
+    //           { text: 'Deep Drop Down 1', href: '#' },
+    //           { text: 'Deep Drop Down 2', href: '#' },
+    //           { text: 'Deep Drop Down 3', href: '#' },
+    //           { text: 'Deep Drop Down 4', href: '#' },
+    //           { text: 'Deep Drop Down 5', href: '#' },
+    //         ],
+    //       },
+    //       { text: 'Drop Down 2', href: '#' },
+    //       { text: 'Drop Down 3', href: '#' },
+    //       { text: 'Drop Down 4', href: '#' },
+    //     ],
+    //   },
+      { text: 'Contact', href: '#contact' },
+    ],
+  };
 
-  // Toggle mobile navigation on menu icon click
-  const mobileNavToggle = document.getElementById('mobileNavToggle');
-  const navbar = document.getElementById('navbar');
-  mobileNavToggle.addEventListener('click', function() {
-    navbar.classList.toggle('show');
-  });
+  // Topbar Data
+  const topbarData = {
+    contactInfo: [
+      { iconClass: 'bi-envelope', text: 'friesquad@codefrites.com', link: 'mailto:contact@example.com' },
+      { iconClass: 'bi-phone', text: '+1 5589 55488 55' },
+      // Add more contact information as needed
+    ],
+    socialLinks: [
+      { iconClass: 'bi-twitter', link: '#' },
+      { iconClass: 'bi-facebook', link: '#' },
+      { iconClass: 'bi-instagram', link: '#' },
+      { iconClass: 'bi-linkedin', link: '#' },
+      // Add more social links as needed
+    ],
+  };
 
-  // Toggle dropdown sub-menu on click for mobile mode
-  const dropdownLinks = document.querySelectorAll('.dropdown > a');
-  dropdownLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-      if (navbar.classList.contains('show')) {
-        event.preventDefault();
-        const parentListItem = this.parentElement;
-        parentListItem.classList.toggle('active');
-      }
+  // Functions for Header
+  function toggleDropdown(dropdown) {
+    dropdown.classList.toggle('active');
+  }
+
+  function closeDropdowns() {
+    const dropdowns = document.querySelectorAll('.navbar .dropdown ul');
+    dropdowns.forEach(dropdown => {
+      dropdown.classList.remove('active');
     });
-  });
+  }
+
+  function handleDropdownClick(event) {
+    event.preventDefault();
+    const dropdown = event.target.nextElementSibling;
+    closeDropdowns();
+    toggleDropdown(dropdown);
+  }
+
+  function handleDropdownHover(event) {
+    const dropdown = event.target.nextElementSibling;
+    toggleDropdown(dropdown);
+  }
+
+  function createContactItem(contact) {
+    const contactItem = document.createElement('i');
+    contactItem.classList.add('bi', contact.iconClass, 'd-flex', 'align-items-center');
+    if (contact.link) {
+      const link = document.createElement('a');
+      link.href = contact.link;
+      link.textContent = contact.text;
+      contactItem.appendChild(link);
+    } else {
+      contactItem.textContent = contact.text;
+    }
+    return contactItem;
+  }
+
+  function createSocialLink(social) {
+    const socialLink = document.createElement('a');
+    socialLink.href = social.link;
+    const socialIcon = document.createElement('i');
+    socialIcon.classList.add('bi', social.iconClass);
+    socialLink.appendChild(socialIcon);
+    return socialLink;
+  }
+
+  function populateHeader() {
+    // Header
+    const headerTitle = document.getElementById('brandName');
+    const logo = document.getElementById('logo');
+    const navLinksContainer = document.getElementById('navLinks');
+
+    logo.src = headerData.logoSrc;
+    headerTitle.textContent = headerData.brandName;
+
+    navLinksContainer.innerHTML = '';
+    headerData.navLinks.forEach(link => {
+      const listItem = document.createElement('li');
+      const anchor = document.createElement('a');
+      anchor.textContent = link.text;
+      anchor.href = link.href;
+      listItem.appendChild(anchor);
+
+      if (link.subLinks && link.subLinks.length > 0) {
+        listItem.classList.add('dropdown');
+        const dropdown = document.createElement('ul');
+        dropdown.classList.add('dropdown-menu');
+        link.subLinks.forEach(subLink => {
+          const subListItem = document.createElement('li');
+          const subLinkAnchor = document.createElement('a');
+          subLinkAnchor.textContent = subLink.text;
+          subLinkAnchor.href = subLink.href;
+          subListItem.appendChild(subLinkAnchor);
+          dropdown.appendChild(subListItem);
+        });
+
+        listItem.addEventListener('click', handleDropdownClick);
+        listItem.addEventListener('mouseenter', handleDropdownHover);
+        listItem.addEventListener('mouseleave', handleDropdownHover);
+
+        listItem.appendChild(dropdown);
+      }
+
+      navLinksContainer.appendChild(listItem);
+    });
+
+    // Topbar
+    const contactInfoContainer = document.getElementById('contact-info');
+    topbarData.contactInfo.forEach(contact => {
+      const contactItem = createContactItem(contact);
+      contactInfoContainer.appendChild(contactItem);
+    });
+
+    const socialLinksContainer = document.getElementById('social-links');
+    topbarData.socialLinks.forEach(social => {
+      const socialLink = createSocialLink(social);
+      socialLinksContainer.appendChild(socialLink);
+    });
+  }
+
+  populateHeader();
+
+  // Rest of your script for mobile navigation and any other functionality.
 });

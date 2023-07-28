@@ -224,6 +224,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
   margin-left: 5px;
 }
+
 .navbar > ul > li > a:before {
   content: "";
   position: absolute;
@@ -1456,26 +1457,34 @@ section {
   border-radius: 0 4px 4px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
+
 #footer .footer-newsletter form input[type=submit]:hover {
   background: #0d58ba;
 }
+
 #footer .footer-top {
   padding: 60px 0 30px 0;
   background: #fff;
 }
+
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
-#footer .footer-top .footer-contact h3 {
-  font-size: 24px;
-  margin: 0 0 15px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
+
+#footer .footer-top .footer-contact .footer-logo img {
+  width: 40px;
+}
+
+#footer .footer-top .footer-contact .footer-logo span {
+  position: relative;
+  font-size: 25px;
   font-weight: 700;
 }
+
 #footer .footer-top .footer-contact h3 span {
   color: #106eea;
 }
+
 #footer .footer-top .footer-contact p {
   font-size: 14px;
   line-height: 24px;
@@ -1483,6 +1492,7 @@ section {
   font-family: "Roboto", sans-serif;
   color: #777777;
 }
+
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
@@ -1490,38 +1500,46 @@ section {
   position: relative;
   padding-bottom: 12px;
 }
+
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
 }
+
 #footer .footer-top .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
   color: #106eea;
   font-size: 18px;
   line-height: 1;
 }
+
 #footer .footer-top .footer-links ul li {
   padding: 10px 0;
   display: flex;
   align-items: center;
 }
+
 #footer .footer-top .footer-links ul li:first-child {
   padding-top: 0;
 }
+
 #footer .footer-top .footer-links ul a {
   color: #777777;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
+
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
   color: #106eea;
 }
+
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
@@ -1536,21 +1554,25 @@ section {
   height: 36px;
   transition: 0.3s;
 }
+
 #footer .footer-top .social-links a:hover {
   background: #3b8af2;
   color: #fff;
   text-decoration: none;
 }
+
 #footer .copyright {
   text-align: center;
   float: left;
 }
+
 #footer .credits {
   float: right;
   text-align: center;
   font-size: 13px;
   color: #444444;
 }
+
 @media (max-width: 768px) {
   #footer .copyright, #footer .credits {
     float: none;
