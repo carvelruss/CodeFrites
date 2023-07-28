@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Header Data
   const headerData = {
-    logoSrc: 'assets/img/codefrites-temp-logo.svg',
-    brandName: 'CodeFrites',
+    logoSrc: 'assets/img/official-logo.svg',
+    brandName: '',
     navLinks: [
       { text: 'Home', href: '#hero' },
       { text: 'About', href: '#about' },
