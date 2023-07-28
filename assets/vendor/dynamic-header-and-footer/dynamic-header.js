@@ -5,7 +5,6 @@ const navLinks = [
   { text: 'Portfolio', url: '#portfolio' },
   { text: 'Blog', url: 'blog.html' },
   { text: 'Contact', url: '#contact' },
-  { text: 'Get Started', url: '#about' },
   // Dropdown Menu Links
   // { text: 'Services', dropdown: true, subLinks: [
   //   { text: 'HTML/CSS/JavaScript Front-End', url: '#' },
