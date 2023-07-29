@@ -11,41 +11,35 @@ function generatePageTitleAndBreadcrumbs() {
   const breadcrumbListElement = document.getElementById('breadcrumbList');
 
   const currentPageName = getPageNameFromURL();
-  const breadcrumbMapping = {
-    index: { text: 'Home', url: 'index.html' },
-    about: { text: 'About Us', url: 'about.html' },
-    services: { text: 'Services', url: 'services.html' },
+  const breadcrumbMapping = [
+    { pageName: 'index', text: 'Home', url: 'index.html' },
+    { pageName: 'about', text: 'About Us', url: 'about.html' },
+    { pageName: 'services', text: 'Services', url: 'services.html' },
+    { pageName: 'portfolio', text: 'Portfolio', url: 'portfolio.html' },
+    { pageName: 'portfolio-details', text: 'Portfolio Details', url: 'portfolio-details.html' },
     // Add more pages here as needed
-  };
+  ];
 
   // Set the <h2> title based on the page name
-  switch (currentPageName) {
-    case 'index':
-      pageTitleElement.textContent = 'Home';
-      break;
-    case 'about':
-      pageTitleElement.textContent = 'About Us';
-      break;
-    case 'services':
-      pageTitleElement.textContent = 'Services';
-      break;
-    // Add more cases here for other pages
-    default:
-      pageTitleElement.textContent = 'Inner Page';
-  }
+  const currentPageInfo = breadcrumbMapping.find((item) => item.pageName === currentPageName);
+  pageTitleElement.textContent = currentPageInfo ? currentPageInfo.text : 'Inner Page';
 
   // Generate the breadcrumbs based on the page name
-  const breadcrumbs = [];
-  const breadcrumbInfo = breadcrumbMapping[currentPageName];
-  if (breadcrumbInfo) {
-    breadcrumbs.push(breadcrumbInfo);
+  const breadcrumbs = [breadcrumbMapping.find((item) => item.pageName === 'index')]; // Always include the "Home" link
+  if (currentPageInfo) {
+    breadcrumbs.push(currentPageInfo);
   }
 
-  const breadcrumbLinks = breadcrumbs.map((item) => {
-    return `<li><a href="${item.url}">${item.text}</a></li>`;
+  const breadcrumbLinks = breadcrumbs.map((item, index) => {
+    // Check if it's the "Home" link or other pages
+    if (index === 0) {
+      return `<li><a href="${item.url}">${item.text}</a></li>`;
+    } else {
+      return `<li>${item.text}</li>`;
+    }
   });
 
-  breadcrumbListElement.innerHTML = breadcrumbLinks.join(' > ');
+  breadcrumbListElement.innerHTML = breadcrumbLinks.join('');
 }
 
 // Call the function to generate the <h2> title and breadcrumbs

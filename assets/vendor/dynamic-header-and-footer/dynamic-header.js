@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     logoSrc: 'assets/img/official-logo.svg',
     brandName: '',
     navLinks: [
-      { text: 'Home', href: '#hero' },
-      { text: 'About', href: '#about' },
-      { text: 'Services', href: '#services' },
-      { text: 'Portfolio', href: '#portfolio' },
-      { text: 'Team', href: '#team' },
+      { text: 'Home', href: 'index.html' },
+      { text: 'About', href: 'about.html' },
+      { text: 'Services', href: 'services.html' },
+      { text: 'Portfolio', href: 'portfolio.html' },
+      { text: 'Team', href: 'team.html' },
       // Add more navigation links as needed
       // Example for a dropdown link:
     //   {
