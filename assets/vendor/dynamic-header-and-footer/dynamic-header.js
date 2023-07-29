@@ -39,14 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const topbarData = {
     contactInfo: [
       { iconClass: 'bi-envelope', text: 'friesquad@codefrites.com', link: 'mailto:contact@example.com' },
-      { iconClass: 'bi-phone', text: '+1 5589 55488 55' },
+      { iconClass: 'bi-phone', text: '+63 909 135 2732', link: 'tel:+639091352732' },
       // Add more contact information as needed
     ],
     socialLinks: [
-      { iconClass: 'bi-twitter', link: '#' },
       { iconClass: 'bi-facebook', link: '#' },
       { iconClass: 'bi-instagram', link: '#' },
-      { iconClass: 'bi-linkedin', link: '#' },
       // Add more social links as needed
     ],
   };
@@ -77,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function createContactItem(contact) {
     const contactItem = document.createElement('i');
-    contactItem.classList.add('bi', contact.iconClass, 'd-flex', 'align-items-center');
+    contactItem.classList.add('bi', contact.iconClass, 'd-flex', 'align-items-center', 'me-3');
     if (contact.link) {
       const link = document.createElement('a');
       link.href = contact.link;

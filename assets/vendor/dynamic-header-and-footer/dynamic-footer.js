@@ -1,17 +1,15 @@
 // Footer data object with dynamic content
 const footerData = {
-  brandLogo: 'assets/img/official-logo.svg',
+  brandLogo: 'assets/img/codefrites-temp-logo.svg',
   brandName: '',
   brandDescription: "At CodeFrites, we're not just your ordinary website development company; we bring a unique and personal touch to every project we undertake.",
   companyNumber: '+63 909 135 2732',
   companyEmail: 'friesquad@codefrites.com',
-  socialLinks: [
-    { platform: 'twitter', url: '#' },
-    { platform: 'facebook', url: '#' },
-    { platform: 'instagram', url: '#' },
-    { platform: 'linkedin', url: '#' },
+  socialLinks: {
+    facebook: '#',
+    instagram: '#',
     // Add or remove social links here as needed
-  ],
+  },
   usefulLinks: [
     { title: 'Home', url: '#' },
     { title: 'About us', url: '#' },
@@ -46,13 +44,13 @@ function setLink(elementId, url) {
 
 // Function to set social network links dynamically
 function setSocialLinks(socialLinks) {
-  const socialLinksContainer = document.getElementById('social-links');
+  const socialLinksContainer = document.getElementById('footer-social-links');
   if (socialLinksContainer) {
-    let linksHtml = '';
-    socialLinks.forEach(link => {
-      linksHtml += `<li><a href="${link.url}" class="${link.platform}"><i class="bi bi-${link.platform}"></i></a></li>`;
-    });
-    socialLinksContainer.innerHTML = linksHtml;
+    let socialLinksHtml = '';
+    for (const platform in socialLinks) {
+      socialLinksHtml += `<a href="${socialLinks[platform]}" class="${platform}"><i class="bx bxl-${platform}"></i></a>`;
+    }
+    socialLinksContainer.innerHTML = socialLinksHtml;
   }
 }
 
@@ -83,7 +81,7 @@ function setOurServices(ourServices) {
 // Function to initialize dynamic content
 function initFooter() {
   // Set footer content
-  setContent('footerLogo', `<img src="${footerData.brandLogo}" alt="${footerData.brandName}" id="footerLogo">`);
+  setContent('footer-logo', `<img src="${footerData.brandLogo}" alt="${footerData.brandName}">`);
   setContent('footer-brandName', footerData.brandName);
   setContent('brandDescription', footerData.brandDescription);
   setContent('companyNumber', `<strong>Phone:</strong> <a href="#">${footerData.companyNumber}</a>`);
