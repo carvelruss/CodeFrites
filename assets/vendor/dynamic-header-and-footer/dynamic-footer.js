@@ -11,17 +11,17 @@ const footerData = {
     // Add or remove social links here as needed
   },
   usefulLinks: [
-    { title: 'Home', url: '#' },
-    { title: 'About us', url: '#' },
-    { title: 'Services', url: '#' },
-    { title: 'Terms of service', url: '#' },
-    { title: 'Privacy policy', url: '#' }
+    { title: 'Home', url: 'index.html' },
+    { title: 'About us', url: 'about.html' },
+    { title: 'Services', url: 'services.html' },
+    { title: 'Terms of service', url: 'terms-of-service.html' },
+    { title: 'Privacy policy', url: 'privacy-policy.html' }
   ],
   ourServices: [
     { title: 'Web Design', url: '#' },
     { title: 'Web Development', url: '#' },
     { title: 'Product Management', url: '#' },
-    { title: 'Marketing', url: '#' },
+    { title: 'Video Editing', url: '#' },
     { title: 'Graphic Design', url: '#' }
   ]
 };

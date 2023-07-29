@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #f5edcb;
+  background: #fff;
   transition: all 0.5s;
   z-index: 997;
   height: 86px;
@@ -511,7 +511,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f6f9fe;
+  background-color: #f5edcb;
 }
 
 .section-title {

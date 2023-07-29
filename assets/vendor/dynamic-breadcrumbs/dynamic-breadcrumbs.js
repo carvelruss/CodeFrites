@@ -22,7 +22,7 @@ function generatePageTitleAndBreadcrumbs() {
 
   // Set the <h2> title based on the page name
   const currentPageInfo = breadcrumbMapping.find((item) => item.pageName === currentPageName);
-  pageTitleElement.textContent = currentPageInfo ? currentPageInfo.text : 'Inner Page';
+  pageTitleElement.textContent = currentPageInfo ? currentPageInfo.text : 'Undefined - Please fix the error!';
 
   // Generate the breadcrumbs based on the page name
   const breadcrumbs = [breadcrumbMapping.find((item) => item.pageName === 'index')]; // Always include the "Home" link
