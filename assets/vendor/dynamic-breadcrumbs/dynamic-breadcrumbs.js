@@ -1,7 +1,7 @@
 /**
-* Website Name: CodeFrites v1.0.0
-* Author: carvelruss.com
-*/
+ * Website Name: CodeFrites v1.0.0
+ * Author: carvelruss.com
+ */
 
 // Function to extract the page name from the URL
 function getPageNameFromURL() {
@@ -21,8 +21,8 @@ function generatePageTitleAndBreadcrumbs() {
     { pageName: 'about', text: 'About Us', url: 'about.html' },
     { pageName: 'services', text: 'Services', url: 'services.html' },
     { pageName: 'portfolio', text: 'Portfolio', url: 'portfolio.html' },
-    { pageName: 'portfolio-details', text: 'Portfolio Details', url: 'portfolio-details.html' },
-    // Add more pages here as needed
+    { pageName: 'concept-first', text: 'Concept First', url: 'concept-first.html', parentPage: 'portfolio' },
+    // Add more pages link here as needed
   ];
 
   // Set the <h2> title based on the page name
@@ -30,14 +30,25 @@ function generatePageTitleAndBreadcrumbs() {
   pageTitleElement.textContent = currentPageInfo ? currentPageInfo.text : 'Undefined - Please fix the error!';
 
   // Generate the breadcrumbs based on the page name
-  const breadcrumbs = [breadcrumbMapping.find((item) => item.pageName === 'index')]; // Always include the "Home" link
+  const breadcrumbs = [];
+
+  // Always include the "Home" link
+  breadcrumbs.push(breadcrumbMapping.find((item) => item.pageName === 'index'));
+
+  // Add the current page and its parent pages to the breadcrumbs
   if (currentPageInfo) {
+    if (currentPageInfo.parentPage) {
+      const parentPageInfo = breadcrumbMapping.find((item) => item.pageName === currentPageInfo.parentPage);
+      if (parentPageInfo) {
+        breadcrumbs.push(parentPageInfo);
+      }
+    }
     breadcrumbs.push(currentPageInfo);
   }
 
-  const breadcrumbLinks = breadcrumbs.map((item, index) => {
+  const breadcrumbLinks = breadcrumbs.map((item, index, array) => {
     // Check if it's the "Home" link or other pages
-    if (index === 0) {
+    if (index === 0 || index === array.length - 2) {
       return `<li><a href="${item.url}">${item.text}</a></li>`;
     } else {
       return `<li>${item.text}</li>`;
