@@ -1,4 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+/**
+* Website Name: CodeFrites v1.0.0
+* Author: carvelruss.com
+*/
+
+document.addEventListener('DOMContentLoaded', function () {
   // Header Data
   const headerData = {
     logoSrc: 'assets/img/official-logo.svg',
@@ -38,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Topbar Data
   const topbarData = {
     contactInfo: [
-      { iconClass: 'bi-envelope', text: 'friesquad@codefrites.com', link: 'mailto:contact@example.com' },
+      { iconClass: 'bi-envelope', text: 'friesquad@codefrites.com', link: 'mailto:friesquad@codefrites.com' },
       { iconClass: 'bi-phone', text: '+63 909 135 2732', link: 'tel:+639091352732' },
       // Add more contact information as needed
     ],

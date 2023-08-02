@@ -1,3 +1,8 @@
+/**
+* Website Name: CodeFrites v1.0.0
+* Author: carvelruss.com
+*/
+
 // Footer data object with dynamic content
 const footerData = {
   brandLogo: 'assets/img/codefrites-temp-logo.svg',
@@ -5,24 +10,27 @@ const footerData = {
   brandDescription: "At CodeFrites, we're not just your ordinary website development company; we bring a unique and personal touch to every project we undertake.",
   companyNumber: '+63 909 135 2732',
   companyEmail: 'friesquad@codefrites.com',
+  storysetAttribute: 'https://storyset.com/online',
   socialLinks: {
-    facebook: '#',
+    facebook: 'https://www.facebook.com',
     instagram: '#',
     // Add or remove social links here as needed
   },
   usefulLinks: [
-    { title: 'Home', url: 'index.html' },
+    { title: 'Home', url: 'https://codefrites.com/home' },
     { title: 'About us', url: 'about.html' },
     { title: 'Services', url: 'services.html' },
     { title: 'Terms of service', url: 'terms-of-service.html' },
-    { title: 'Privacy policy', url: 'privacy-policy.html' }
+    { title: 'Privacy policy', url: 'privacy-policy.html' },
+    // Add or links here as needed
   ],
   ourServices: [
     { title: 'Web Design', url: '#' },
     { title: 'Web Development', url: '#' },
     { title: 'Product Management', url: '#' },
     { title: 'Video Editing', url: '#' },
-    { title: 'Graphic Design', url: '#' }
+    { title: 'Graphic Design', url: '#' },
+    // Add or remove links here as needed
   ]
 };
 
@@ -84,8 +92,9 @@ function initFooter() {
   setContent('footer-logo', `<img src="${footerData.brandLogo}" alt="${footerData.brandName}">`);
   setContent('footer-brandName', footerData.brandName);
   setContent('brandDescription', footerData.brandDescription);
-  setContent('companyNumber', `<strong>Phone:</strong> <a href="#">${footerData.companyNumber}</a>`);
-  setContent('companyEmail', `<strong>Email:</strong> <a href="#">${footerData.companyEmail}</a>`);
+  setContent('companyNumber', `<strong>Phone:</strong> <a href="tel:${footerData.companyNumber}">${footerData.companyNumber}</a>`);
+  setContent('companyEmail', `<strong>Email:</strong> <a href="mailto:${footerData.companyEmail}">${footerData.companyEmail}</a>`);
+  setContent('storysetAttribute', `<strong>Storyset:</strong> <a href="${footerData.storysetAttribute}">${footerData.storysetAttribute}</a>`);
 
   // Set social links
   setSocialLinks(footerData.socialLinks);

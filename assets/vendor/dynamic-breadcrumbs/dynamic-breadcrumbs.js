@@ -1,3 +1,8 @@
+/**
+* Website Name: CodeFrites v1.0.0
+* Author: carvelruss.com
+*/
+
 // Function to extract the page name from the URL
 function getPageNameFromURL() {
   const path = window.location.pathname; // Get the current URL path
