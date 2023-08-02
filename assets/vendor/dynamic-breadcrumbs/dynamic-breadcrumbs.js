@@ -22,6 +22,8 @@ function generatePageTitleAndBreadcrumbs() {
     { pageName: 'services', text: 'Services', url: 'services.html' },
     { pageName: 'portfolio', text: 'Portfolio', url: 'portfolio.html' },
     { pageName: 'concept-first', text: 'Concept First', url: 'concept-first.html', parentPage: 'portfolio' },
+    { pageName: 'achievers-dream', text: 'Achievers Dream', url: 'achievers-dream.html', parentPage: 'portfolio' },
+    { pageName: 'team', text: 'Team', url: 'team.html' },
     // Add more pages link here as needed
   ];
 

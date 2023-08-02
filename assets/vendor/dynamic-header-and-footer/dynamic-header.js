@@ -16,26 +16,26 @@ document.addEventListener('DOMContentLoaded', function () {
       { text: 'Team', href: 'team.html' },
       // Add more navigation links as needed
       // Example for a dropdown link:
-    //   {
-    //     text: 'Drop Down',
-    //     href: '#',
-    //     subLinks: [
-    //       { text: 'Drop Down 1', href: '#' },
-    //       {
-    //         text: 'Deep Drop Down',
-    //         subLinks: [
-    //           { text: 'Deep Drop Down 1', href: '#' },
-    //           { text: 'Deep Drop Down 2', href: '#' },
-    //           { text: 'Deep Drop Down 3', href: '#' },
-    //           { text: 'Deep Drop Down 4', href: '#' },
-    //           { text: 'Deep Drop Down 5', href: '#' },
-    //         ],
-    //       },
-    //       { text: 'Drop Down 2', href: '#' },
-    //       { text: 'Drop Down 3', href: '#' },
-    //       { text: 'Drop Down 4', href: '#' },
-    //     ],
-    //   },
+      //   {
+      //     text: 'Drop Down',
+      //     href: '#',
+      //     subLinks: [
+      //       { text: 'Drop Down 1', href: '#' },
+      //       {
+      //         text: 'Deep Drop Down',
+      //         subLinks: [
+      //           { text: 'Deep Drop Down 1', href: '#' },
+      //           { text: 'Deep Drop Down 2', href: '#' },
+      //           { text: 'Deep Drop Down 3', href: '#' },
+      //           { text: 'Deep Drop Down 4', href: '#' },
+      //           { text: 'Deep Drop Down 5', href: '#' },
+      //         ],
+      //       },
+      //       { text: 'Drop Down 2', href: '#' },
+      //       { text: 'Drop Down 3', href: '#' },
+      //       { text: 'Drop Down 4', href: '#' },
+      //     ],
+      //   },
       { text: 'Contact', href: 'contact.html' },
     ],
   };

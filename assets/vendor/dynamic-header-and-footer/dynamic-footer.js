@@ -5,14 +5,14 @@
 
 // Footer data object with dynamic content
 const footerData = {
-  brandLogo: 'assets/img/codefrites-temp-logo.svg',
-  brandName: '',
+  brandLogo: 'assets/img/official-logo.svg',
+  brandName: 'CodeFrites',
   brandDescription: "At CodeFrites, we're not just your ordinary website development company; we bring a unique and personal touch to every project we undertake.",
   companyNumber: '+63 909 135 2732',
   companyEmail: 'friesquad@codefrites.com',
   storysetAttribute: 'https://storyset.com/online',
   socialLinks: {
-    facebook: 'https://www.facebook.com',
+    facebook: '#',
     instagram: '#',
     // Add or remove social links here as needed
   },
@@ -20,6 +20,8 @@ const footerData = {
     { title: 'Home', url: 'https://codefrites.com/home' },
     { title: 'About us', url: 'about.html' },
     { title: 'Services', url: 'services.html' },
+    { title: 'Portfolio', url: 'portfolio.html' },
+    { title: 'Team', url: 'team.html' },
     { title: 'Terms of service', url: 'terms-of-service.html' },
     { title: 'Privacy policy', url: 'privacy-policy.html' },
     // Add or links here as needed
@@ -89,12 +91,13 @@ function setOurServices(ourServices) {
 // Function to initialize dynamic content
 function initFooter() {
   // Set footer content
-  setContent('footer-logo', `<img src="${footerData.brandLogo}" alt="${footerData.brandName}">`);
+  setContent('footer-logo-container', `<img src="${footerData.brandLogo}" alt="${footerData.brandName}">`);
   setContent('footer-brandName', footerData.brandName);
   setContent('brandDescription', footerData.brandDescription);
   setContent('companyNumber', `<strong>Phone:</strong> <a href="tel:${footerData.companyNumber}">${footerData.companyNumber}</a>`);
   setContent('companyEmail', `<strong>Email:</strong> <a href="mailto:${footerData.companyEmail}">${footerData.companyEmail}</a>`);
-  setContent('storysetAttribute', `<strong>Storyset:</strong> <a href="${footerData.storysetAttribute}">${footerData.storysetAttribute}</a>`);
+  setContent('storysetAttribute', `<p>Storyset: <a href="${footerData.storysetAttribute}">${footerData.storysetAttribute}</a></p>`);
+  setContent('creditbrandName', `<strong>${footerData.brandName}</strong>`)
 
   // Set social links
   setSocialLinks(footerData.socialLinks);
