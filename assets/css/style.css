@@ -1021,11 +1021,6 @@ section {
   transition: 0.3s!important;
 }
 
-.testimonials .card:hover {
-  cursor: pointer;
-  transform: translate3d(0, -5px, 0);
-}
-
 .testimonials .card .card-body {
   padding: 50px 25px;
 }
@@ -1091,9 +1086,63 @@ section {
   position: relative;
   top: 10px;
 }
+
+.testimonials .card-ui {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonials .card-ui {
+    display: none;
+  }
+}
+
+.testimonials .testimonials-slider {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .testimonials .testimonials-slider {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonials .testimonials-slider {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .testimonials .testimonials-slider {
+    display: block;
+  }
+}
+
+.testimonials .testimonials-slider .swiper-wrapper .swiper-slide .card {
+  border: 1px solid #ececec;
+  box-shadow: none;
+}
+
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #c6a004;
 }
 
 @media (min-width: 992px) {
