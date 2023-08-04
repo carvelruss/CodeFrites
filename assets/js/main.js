@@ -205,6 +205,13 @@
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true,
+    },
+    breakpoints: {
+      // When window width is >= 768px (tablet)
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
     }
   });
 
