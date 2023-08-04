@@ -1041,7 +1041,7 @@ section {
   width: 80px;
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 1px 2px 5px #ddd;
+  box-shadow: 1px 2px 15px #ddd;
   margin: 0 auto;
 }
 
