@@ -1124,16 +1124,6 @@ section {
   width: 95%;
 }
 
-@media screen and (max-width: 300px) {
-  .testimonials .testimonials-slider .swiper-wrapper .swiper-slide .card .card-body .testimonial-item p {
-    font-size: 14px;
-  }
-
-  .testimonials .testimonials-slider .swiper-wrapper .swiper-slide .card .card-body .testimonial-item .client h4 {
-    font-size: 12px;
-  }
-}
-
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
