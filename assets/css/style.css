@@ -1035,9 +1035,11 @@ section {
 }
 
 .services a .card {
+  padding: 25px 25px 10px;
   background: #fff;
   border-radius: 10px;
   border: 1px solid #ececec;
+  box-shadow: 1px 5px 15px #ddd;
   transition: all ease-in-out 0.3s;
 }
 
