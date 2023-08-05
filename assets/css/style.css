@@ -743,7 +743,6 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
-
 .why-us h3 {
   font-size: 50px;
   font-weight: 900;
@@ -758,6 +757,10 @@ section {
   display: inline;
   font-weight: inherit;
   transition: background-size .6s cubic-bezier(.45,0,.55,1);
+}
+
+.why-us .why-img img {
+  width: 50%;
 }
 
 .why-us .accordion .accordion-item {
@@ -836,165 +839,12 @@ section {
   border-bottom-right-radius: 10px;
 }
 
-
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #222222;
-}
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-.skills .progress-bar-wrap {
-  background: #e2eefd;
-  height: 10px;
-}
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #106eea;
-}
-
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts {
-  padding: 70px 0 60px;
-}
-.counts .count-box {
-  padding: 30px 30px 25px 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background: #f1f6fe;
-}
-.counts .count-box i {
-  position: absolute;
-  top: -28px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  background: #106eea;
-  color: #fff;
-  width: 56px;
-  height: 56px;
-  line-height: 0;
-  border-radius: 50px;
-  border: 5px solid #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.counts .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #062b5b;
-}
-.counts .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
-# Clients
---------------------------------------------------------------*/
-.clients {
-  padding: 15px 0;
-  text-align: center;
-}
-
-.clients img {
-  max-width: 80%;
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  padding: 15px 0;
-  filter: grayscale(100%);
-  opacity: .5;
-}
-
-@media (max-width: 768px) {
-  .clients img {
-    max-width: 40%;
-  }
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  border: 1px solid #e2eefd;
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-}
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: #f1f6fe;
-  border-radius: 4px;
-  border: 1px solid #deebfd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: ease-in-out 0.3s;
-}
-.services .icon-box .icon i {
-  color: #3b8af2;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-.services .icon-box h4 a {
-  color: #222222;
-  transition: ease-in-out 0.3s;
-}
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
-}
-.services .icon-box:hover h4 a, .services .icon-box:hover .icon i {
-  color: #106eea;
-}
-.services .icon-box:hover .icon {
-  border-color: #106eea;
-}
-
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: #ececec;
+  background: #f4f4f4;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1148,6 +998,124 @@ section {
 @media (min-width: 992px) {
   .testimonials .testimonial-item p {
     width: 80%;
+  }
+}
+
+/*--------------------------------------------------------------
+# CTA One
+--------------------------------------------------------------*/
+.cta-one {
+  color: #242424;
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 48px 0;
+}
+
+.cta-one .img {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.cta-one .img img {
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
+}
+
+.cta-one h3 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services {
+  background: #f4f4f4;
+}
+
+.services a .card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+  transition: all ease-in-out 0.3s;
+}
+
+.services a .card:hover {
+  transform: translate3d(0, -5px, 0);
+}
+
+.services a .card:hover .card-body .card-title {
+  color: #c6a004;
+}
+
+.services a .card .card-body p {
+  color: #555C45;
+}
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  padding: 70px 0 60px;
+}
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #f1f6fe;
+}
+.counts .count-box i {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #106eea;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  line-height: 0;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #062b5b;
+}
+.counts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.clients img {
+  max-width: 80%;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+  filter: grayscale(100%);
+  opacity: .5;
+}
+
+@media (max-width: 768px) {
+  .clients img {
+    max-width: 40%;
   }
 }
 

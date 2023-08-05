@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     socialLinks: [
       { iconClass: 'bi-facebook', link: '#' },
       { iconClass: 'bi-instagram', link: '#' },
+      { iconClass: 'bi-linkedin', link: '#' },
       // Add more social links as needed
     ],
   };
