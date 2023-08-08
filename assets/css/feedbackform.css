@@ -1,0 +1,642 @@
+/*--------------------------------------------------------------
+# Feedback Chatbox
+--------------------------------------------------------------*/
+/* Chatbox Button */
+#chatbox-btn {
+  position: fixed;
+  bottom: 48%;
+  right: 0;
+  transform: translate(0, 50%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#chatbox-btn .open-chatbox {
+  position: relative;
+  right: -54.2%;
+  background: #ffc107;
+  color: #333;
+  font-weight: 600;
+  padding: 5px 10px 5px 30px;
+  border-top-right-radius: 5px;
+  transform: rotate(-90deg);
+}
+
+#chatbox-btn .circle {
+  position: relative;
+  top: 48px;
+  right: -1px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  z-index: 1;
+}
+
+#chatbox-btn .circle:hover {
+  background: #fff;
+  color: #333 !important;
+  transition: .5s;
+}
+
+#chatbox-btn .circle i {
+  color: #fff;
+  font-size: 13px;
+}
+
+
+#chatbox-btn .circle:hover i {
+  color: #333 !important;
+}
+
+@media (max-width: 767px) {
+  #chatbox-btn {
+    right: 0;
+  }
+}
+
+/* Chatbox */
+#chatbox {
+  position: fixed;
+  bottom: 475px;
+  right: 365px;
+  z-index: 9999;
+  display: none;
+}
+
+#chatbox .card {
+  position: fixed;
+  width: 350px !important;
+  height: 100%;
+  max-height: 445px;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+/* Chatbox Header */
+#chatbox .card .card-header {
+  background: #fff;
+  height: 65px;
+}
+
+#chatbox .card .card-header .support {
+  position: relative;
+  top: -3px;
+  left: 5px;
+}
+
+#chatbox .card .card-header .support img {
+  box-shadow: 0px 2px 10px #cec8c8;
+}
+
+#chatbox .card .card-header .support .name {
+  margin-left: 50px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  margin-top: -41px;
+  font-size: 18px;
+  color: #051761;
+  font-weight: 800;
+}
+
+#chatbox .card .card-header .support .role {
+  margin-top: -8px;
+  margin-left: 51px;
+  font-size: 10.5px;
+  font-weight: 400;
+}
+
+#chatbox .card .card-header .btn-close {
+  position: relative;
+  top: -10px;
+  left: 145px;
+  font-size: 25px;
+}
+
+#chatbox .card .card-header .feedback-close:hover {
+  background: #ddd;
+}
+
+#chatbox .card .card-header .feedback-close i {
+  position: relative;
+  top: 1px;
+}
+
+/* Conversation Area */
+#chatbox .card .card-body {
+  background-image: url('/assets/img/whatsapp-bg.jpg');
+  box-shadow: 0px 2px 15px #ddd;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  scroll-behavior: smooth;
+}
+
+#chatbox .card .card-body .conversation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+
+#chatbox .card .card-body .conversation .message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#chatbox .card .card-body .conversation .agent .message-content {
+  background-color: #fff;
+  box-shadow: 1px 2px 15px #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: auto;
+  word-wrap: break-word;
+}
+
+#chatbox .card .card-body .conversation .customer .message-content {
+  background-color: #ffc107;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  margin-left: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* Input Area */
+#chatbox .card .card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  padding: 10px;
+}
+
+#chatbox .card .card-footer .write-message {
+  margin-top: -90px !important;
+  padding: 10px;
+}
+
+#chatbox .card .card-footer .input-group textarea {
+  margin-top: -4.52px;
+  height: 20px;
+  overflow-y: scroll;
+  border: 1px solid #fff;
+  resize: none;
+}
+
+#chatbox .card .card-footer .input-group textarea:focus {
+  color: #333;
+  background-color: #fff;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+
+#chatbox .card .card-footer .input-group button {
+  margin-top: -10px;
+  margin-left: 10px;
+  font-size: 20px !important;
+}
+
+#chatbox .card .card-footer .input-group button:focus {
+  border-color: transparent;
+}
+
+/* Start Conversation Button */
+#chatbox .card .start-conversation-btn {
+  position: relative;
+  top: -20px;
+}
+
+#chatbox .card .start-conversation-btn a {
+  background: #ffc107;
+  border: 1px solid #ffc107;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+#chatbox .card .start-conversation-btn a:hover {
+  background-image: linear-gradient(165deg, #fca113, #ffc107);
+  box-shadow: 1px 2px 15px#ffc107;
+  border: 1px solid #fca113;
+  color: #333;
+}
+
+.credits {
+  position: relative;
+  margin-top: -11px;
+}
+
+/*--------------------------------------------------------------
+# AI Chatbot
+--------------------------------------------------------------*/
+/* Chatbot button */
+.chatbot-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  z-index: 9;
+}
+
+/* Chatbot message dialog */
+.chatbot-btn .message-dialog {
+  position: absolute;
+  top: -120px;
+  right: -23px;
+  width: 150px;
+  height: 68px;
+  background: #ffc107;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 25px #e6e6e6;
+  margin-bottom: 40px;
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.chatbot-btn .message-dialog.shake-once {
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+}
+
+.chatbot-btn .message-dialog::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: 30px;
+  border-top: 10px solid #ffc107;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  10%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  80% {
+    transform: translateX(5px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateX(-5px);
+  }
+
+  40%,
+  60% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.chatbot-btn .message-dialog-header .btn-close {
+  position: relative;
+  top: -10px;
+  left: 105px;
+  right: 20px;
+  font-size: 25px;
+}
+
+.chatbot-btn .message-dialog-body p {
+  position: relative;
+  top: -40px;
+  width: 95px;
+}
+
+.chatbot-btn img {
+  border-radius: 50px;
+  box-shadow: 1px 2px 15px #aaa;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 576px) {
+
+  /* Chatbot button */
+  .chatbot-btn {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* Chatbot message dialog */
+  .chatbot-btn .message-dialog {
+    top: -85px;
+    right: -10px;
+    width: 130px;
+    height: 60px;
+  }
+
+  .chatbot-btn .message-dialog-body p {
+    position: relative;
+    top: -32px;
+    width: 95px;
+    font-size: 0.8rem;
+  }
+
+  .chatbot-btn .message-dialog::before {
+    right: 15px;
+    bottom: -16px;
+    border-top: 8px solid #ffc107;
+  }
+
+  .chatbot-btn .message-dialog-header .btn-close {
+    top: -8px;
+    left: 90px;
+    font-size: 20px;
+  }
+
+  .chatbot-btn img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* AI Chatbox */
+#ai-chatbox {
+  position: fixed;
+  bottom: 475px;
+  right: 365px;
+  z-index: 9999;
+  display: none;
+}
+
+#ai-chatbox .card {
+  position: fixed;
+  width: 350px !important;
+  height: 100%;
+  max-height: 445px;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+/* Chatbox Header */
+#ai-chatbox .card .card-header {
+  background: #fff;
+  height: 65px;
+}
+
+#ai-chatbox .card .card-header .support {
+  position: relative;
+  top: -3px;
+  left: 5px;
+}
+
+#ai-chatbox .card .card-header .support img {
+  box-shadow: 0px 2px 10px #cec8c8;
+}
+
+#ai-chatbox .card .card-header .support .name {
+  margin-left: 50px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  margin-top: -41px;
+  font-size: 18px;
+  color: #051761;
+  font-weight: 800;
+}
+
+#ai-chatbox .card .card-header .support .role {
+  margin-top: -8px;
+  margin-left: 51px;
+  font-size: 10.5px;
+  font-weight: 400;
+}
+
+#ai-chatbox .card .card-header .btn-close {
+  position: relative;
+  top: -10px;
+  left: 145px;
+  font-size: 25px;
+}
+
+#ai-chatbox .card .card-header .feedback-close:hover {
+  background: #ddd;
+}
+
+#ai-chatbox .card .card-header .feedback-close i {
+  position: relative;
+  top: 1px;
+}
+
+/* Conversation Area */
+#ai-chatbox .card .card-body {
+  background-image: url('/assets/img/whatsapp-bg.jpg');
+  box-shadow: 0px 2px 15px #ddd;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  scroll-behavior: smooth;
+}
+
+#ai-chatbox .card .card-body .conversation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+
+#ai-chatbox .card .card-body .conversation .message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.carousel {
+  position: relative;
+  z-index: 999;
+}
+
+#ai-chatbox .card .card-body .conversation .agent .message-content {
+  background-color: #fff;
+  box-shadow: 1px 2px 15px #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: auto;
+  word-wrap: break-word;
+}
+
+#ai-chatbox .card .card-body .conversation .customer .message-content {
+  background-color: #ffc107;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  margin-left: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* Input Area */
+#ai-chatbox .card .card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  padding: 10px;
+}
+
+#ai-chatbox .card .card-footer .write-message {
+  margin-top: -90px !important;
+  padding: 10px;
+}
+
+#ai-chatbox .card .card-footer .input-group textarea {
+  margin-top: -4.52px;
+  height: 20px;
+  overflow-y: scroll;
+  border: 1px solid #fff;
+  resize: none;
+}
+
+#ai-chatbox .card .card-footer .input-group textarea:focus {
+  color: #333;
+  background-color: #fff;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+
+#ai-chatbox .card .card-footer .input-group button {
+  margin-top: -10px;
+  margin-left: 10px;
+  font-size: 20px !important;
+}
+
+#ai-chatbox .card .card-footer .input-group button:focus {
+  border-color: transparent;
+}
+
+/* Start Conversation Button */
+#ai-chatbox .card .start-conversation-btn {
+  position: relative;
+  top: -20px;
+}
+
+#ai-chatbox .card .start-conversation-btn a {
+  background: #ffc107;
+  border: 1px solid #ffc107;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+#ai-chatbox .card .start-conversation-btn a:hover {
+  background-image: linear-gradient(165deg, #fca113, #ffc107);
+  box-shadow: 1px 2px 15px#ffc107;
+  border: 1px solid #fca113;
+  color: #333;
+}
+
+.credits {
+  position: relative;
+  margin-top: -11px;
+}
+
+/* Card List */
+.card-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(212, 212, 212, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-list-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+.card-list-footer {
+  margin-top: -10px;
+  display: flex;
+  gap: 10px;
+  padding: 7px 0 0 0 !important;
+  background: #f1f1f1 !important;
+  align-items: center;
+  justify-content: center;
+  border-top: none !important;
+}
+
+.card-list-footer .btn {
+  position: relative;
+  margin-top: -5px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  background: #ffffff;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  color: #aaa;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.card-list-footer .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.card-list-footer .btn:hover {
+  background: #ffc107;
+  color: #333;
+}
+
+.card-footer .input-group .end-chat-btn {
+  display: grid;
+  place-items: center;
+  margin-top: -1px;
+  background: red;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px!important;
+  width: 40px;
+  height: 30px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.card-footer .input-group .end-chat-btn:hover {
+  box-shadow: inset 2px 2px 3px #940000;
+  color: #fff;
+}
+
+#ai-chatbox .card .card-body .slider .slider-item {
+  position: relative;
+  display: inline-block!important;
+  width: 200px;
+  cursor: grab;
+  z-index: 999;
+}
