@@ -2,7 +2,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #555C45;
 }
 
@@ -396,13 +396,15 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 75vh;
-  background-size: cover;
   position: relative;
 }
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.6);
+  background: #f5edcb;
+  background-image: url("https://cdn.dashnexpages.net/assets/2.39.1/angular/assets/editor/block-designs/dist/imgs/shapes/8.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -617,6 +619,12 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.col-fill-left {
+  background-image: url('/assets/img/about.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 56px;
@@ -799,6 +807,7 @@ section {
   background-position: center center;
   background-size: cover;
   position: relative;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* .testimonials::before {
@@ -975,7 +984,16 @@ section {
 
 .cta-one h3 {
   font-size: 36px;
+  font-weight: 1000;
+}
+
+.cta-one a.btn {
+  background: #000;
+  padding: 11px 24px;
+  font-size: 16px;
   font-weight: 800;
+  border-radius: 10px;
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
@@ -1032,7 +1050,7 @@ section {
   background: #f4f4f4;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  box-shadow: inset 0 -1px 0 #ececec;
+  box-shadow: inset 0 -1px 0 #f4f4f4;
 }
 
 .faq .accordion .accordion-item .accordion-button:focus {
@@ -1090,7 +1108,7 @@ section {
 --------------------------------------------------------------*/
 .cta-two {
   position: relative;
-  padding: 100px 0;
+  padding: 100px 0 70px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1192,6 +1210,12 @@ section {
   padding: 15px 0;
   filter: grayscale(100%);
   opacity: .5;
+}
+
+.clients img:hover {
+  filter: none;
+  opacity: 1;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
