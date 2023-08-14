@@ -27,11 +27,12 @@ const footerData = {
     // Add or links here as needed
   ],
   ourServices: [
-    { title: 'Web Design', url: '#' },
-    { title: 'Web Development', url: '#' },
-    { title: 'Product Management', url: '#' },
-    { title: 'Video Editing', url: '#' },
-    { title: 'Graphic Design', url: '#' },
+    { title: 'White-Label Web Development', url: 'white-label-web-development.html' },
+    { title: 'CMS Integration', url: 'cms-integration.html' },
+    { title: 'E-commerce Development', url: 'ecommerce-development.html' },
+    { title: 'Front-End Development', url: 'frontend-development.html' },
+    { title: 'Back-End Development', url: 'backend-development.html' },
+    { title: 'Affiliates Services', url: 'affiliates-services.html' },
     // Add or remove links here as needed
   ]
 };

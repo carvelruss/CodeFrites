@@ -17,13 +17,26 @@ function generatePageTitleAndBreadcrumbs() {
 
   const currentPageName = getPageNameFromURL();
   const breadcrumbMapping = [
+    //Header
     { pageName: 'index', text: 'Home', url: 'index.html' },
     { pageName: 'about', text: 'About Us', url: 'about.html' },
     { pageName: 'services', text: 'Services', url: 'services.html' },
     { pageName: 'portfolio', text: 'Portfolio', url: 'portfolio.html' },
-    { pageName: 'concept-first', text: 'Concept First', url: 'concept-first.html', parentPage: 'portfolio' },
-    { pageName: 'achievers-dream', text: 'Achievers Dream', url: 'achievers-dream.html', parentPage: 'portfolio' },
-    { pageName: 'team', text: 'Team', url: 'team.html' },
+      { pageName: 'concept-first', text: 'Concept First', url: 'concept-first.html', parentPage: 'portfolio' },
+      { pageName: 'achievers-dream', text: 'Achievers Dream', url: 'achievers-dream.html', parentPage: 'portfolio' },
+      
+    //Other Pages
+    { pageName: 'start-conversation', text: 'Start Conversation', url: 'start-conversation.html' },
+    { pageName: 'free-quote', text: 'Free Project Quotation', url: 'free-quote.html' },
+    { pageName: 'thank-you', text: 'Thank You', url: 'thank-you.html' },
+      
+    //Services
+    { pageName: 'white-label-web-development', text: 'White-Label Web Development', url: 'white-label-web-development.html' },
+    { pageName: 'cms-integration', text: 'CMS Integration', url: 'cms-integration.html' },
+    { pageName: 'ecommerce-development', text: 'E-commerce Development', url: 'ecommerce-development.html' },
+    { pageName: 'frontend-development', text: 'Front-End Development', url: 'frontend-development.html' },
+    { pageName: 'backend-development', text: 'Back-End Development', url: 'backend-development.html' },
+    { pageName: 'affiliates-services', text: 'Affiliates Services', url: 'affiliates-services.html' },
     // Add more pages link here as needed
   ];
 
