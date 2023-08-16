@@ -196,6 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   padding: 0;
 }
+
 .navbar ul {
   margin: 0;
   padding: 0;
@@ -203,26 +204,32 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   align-items: center;
 }
+
 .navbar li {
   position: relative;
 }
+
 .navbar > ul > li {
   white-space: nowrap;
   padding: 10px 0 10px 28px;
 }
-.navbar a, .navbar a:focus {
+
+.navbar a,
+.navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 3px;
   font-size: 15px;
-  font-weight: 600!important;
+  font-weight: 400!important;
   color: #555c45;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
 }
-.navbar a i, .navbar a:focus i {
+
+.navbar a i,
+.navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
@@ -235,17 +242,24 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #106eea;
+  background-color: #c6a004;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
 }
-.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+
+.navbar a:hover:before,
+.navbar li:hover > a:before,
+.navbar .active:before {
   visibility: visible;
   width: 100%;
 }
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #106eea;
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: #c6a004;
 }
 .navbar .dropdown ul {
   display: block;
@@ -271,8 +285,10 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .dropdown ul a i {
   font-size: 12px;
 }
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #106eea;
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
+  color: #c6a004;
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -363,7 +379,7 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
 }
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #106eea;
+  color: #c6a004;
 }
 .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
   margin: 15px;
@@ -389,7 +405,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #106eea;
+  color: #c6a004;
 }
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
@@ -404,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-#hero:before {
+/* #hero:before {
   content: "";
   background: #f5edcb;
   background-image: url("https://cdn.dashnexpages.net/assets/2.39.1/angular/assets/editor/block-designs/dist/imgs/shapes/8.svg");
@@ -415,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 
 #hero .container {
   position: relative;
@@ -624,15 +640,19 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.col-fill-left {
-  background-image: url('/assets/img/about.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .about .content h3 {
   font-weight: 600;
   font-size: 56px;
+  color: #000;
+}
+
+.about a.btn {
+  background: #000;
+  padding: 11px 24px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 8px;
+  text-transform: uppercase;
 }
 
 .about .content ul {
@@ -739,10 +759,59 @@ section {
   font-size: 24px!important;
   font-weight: 700;
   background: #fff;
-  color: #555C45;
+  color: #111;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   transition: 0.01s ease-in-out;
+}
+
+/* Custom Icons */
+.why-us .accordion .accordion-item h2 button i.creative-design {
+  background-image: url("/assets/img/custom-icons/creative-design.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+  filter: grayscale(100%);
+}
+
+.why-us .accordion .accordion-item h2 button i.innovative-solutions {
+  background-image: url("/assets/img/custom-icons/innovative-solutions.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+  filter: grayscale(100%);
+}
+
+.why-us .accordion .accordion-item h2 button i.technical-expertise {
+  background-image: url("/assets/img/custom-icons/technical-expertise.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+  filter: grayscale(100%);
+}
+
+.why-us .accordion .accordion-item h2 button i.transparent-communication {
+  background-image: url("/assets/img/custom-icons/transparent-communication.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+  filter: grayscale(100%);
+}
+
+.why-us .accordion .accordion-item h2 button i.timely-delivery {
+  background-image: url("/assets/img/custom-icons/timely-manner.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+  filter: grayscale(100%);
+}
+
+.why-us .accordion .accordion-item h2 button i.customer-centric {
+  background-image: url("/assets/img/custom-icons/customer-centric.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+  filter: grayscale(100%);
 }
 
 .why-us .accordion .accordion-item .accordion-button:not(.collapsed) {
@@ -1001,7 +1070,7 @@ section {
   padding: 11px 24px;
   font-size: 16px;
   font-weight: 800;
-  border-radius: 10px;
+  border-radius: 8px;
   text-transform: uppercase;
 }
 
