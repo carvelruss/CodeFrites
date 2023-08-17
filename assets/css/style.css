@@ -1730,6 +1730,276 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Our Process
+--------------------------------------------------------------*/
+
+#our-process .our-process-list {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+#por-process .our-process-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  margin-left: -1.5px;
+  background-color: #F6A113;
+}
+
+.our-process-list > li {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 50px;
+}
+
+.our-process-list > li:after, .our-process-list > li:before {
+  display: table;
+  content: "";
+}
+
+.our-process-list > li:after {
+  clear: both;
+}
+
+#our-process .box {
+  margin-top: 5%;
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+}
+
+#our-process .box:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#our-process .box:nth-child(2) {
+  animation-delay: 1s;
+}
+
+#our-process .box:nth-child(3) {
+  animation-delay: 2s;
+}
+
+#our-process .box:nth-child(4) {
+  animation-delay: 3s;
+}
+
+#our-process .box:nth-child(5) {
+  animation-delay: 4s;
+}
+
+#our-process .box:nth-child(6) {
+  animation-delay: 5s;
+}
+
+#our-process .box:nth-child(7) {
+  animation-delay: 6s;
+}
+
+#our-process .content-box {
+  padding: 20px 30px;
+  background: #111111;
+  border: 3px solid #F6A113;
+  position: relative;
+  border-radius: 10px;
+  margin-top: -25px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+#our-process .content-box:hover {
+  transform: scale(1.05);
+}
+
+#our-process .content-box h2 {
+  color: #F6A113;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+#our-process .content-box small {
+  color: #ececec;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+#our-process .content-box p {
+  color: #e6e6e6;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+#our-process .left-content-box {
+  left: 0;
+}
+
+#our-process .right-content-box {
+  left: 50%;
+}
+
+#our-process .left-content-box .figure span.circle {
+  content: "";
+  position: absolute;
+  top: 13%;
+  left: 96%;
+  width: 50px;
+  height: 50px;
+  background-color: #f6a113;
+  border-radius: 50%;
+}
+
+#our-process .left-content-box .figure span.circle::after {
+  content: "01";
+  position: absolute;
+  top: 15%;
+  left: 23%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-weight: 900;
+  font-size: 22px;
+  color: #fff;
+}
+
+#our-process .left-content-box .figure img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 1;
+}
+
+#our-process .right-content-box .figure img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  left: -20px;
+  top: 32px;
+  z-index: 1;
+}
+
+#our-process .timeline {
+  position: relative;
+}
+
+#our-process .timeline::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #F6A113;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: moveline 5s linear forwards;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+#our-process .timeline .left-content-box .content-box .left-content-box-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #F6A113;
+  right: -15px;
+}
+
+#our-process .timeline .right-content-box .content-box .right-content-box-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #F6A113;
+  left: -15px;
+}
+
+@media screen and (max-width: 600px) {
+  #our-process .timeline {
+    margin: 50px auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #our-process .timeline::after {
+    position: absolute;
+    top: 0 !important;
+    left: 31px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #our-process .timeline .box {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #our-process .timeline .box .content-box h2 {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #our-process .timeline .box .content-box small {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #our-process .timeline .right-content-box {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #our-process .timeline .left-content-box img, #our-process .timeline .right-content-box img {
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #our-process .timeline .left-content-box .left-content-box-arrow, #our-process .timeline .right-content-box .right-content-box-arrow {
+    border-right: 15px solid #F6A113 !important;
+    border-left: 0 !important;
+    left: -15px !important;
+  }
+}
+
+/*--------------------------------------------------------------
 # CodeFrites Standalone Chatbox
 --------------------------------------------------------------*/
 .ai-chatbox .chat-bubble {
