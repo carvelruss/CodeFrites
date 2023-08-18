@@ -778,6 +778,16 @@ section {
   transform: rotate(45deg);
 }
 
+@media screen and (max-width: 991px) {
+  .why-us h3 {
+    font-size: 30px;
+  }
+
+  .why-us .card.manager-one p.lead {
+    font-size: 16px;
+  }
+}
+
 .why-us .card.manager-two {
   position: relative;
   margin-top: -140px!important;
@@ -851,14 +861,6 @@ section {
 }
 
 /* Custom Icons */
-.why-us .accordion .accordion-item h2 button i.creative-design {
-  background-image: url("/assets/img/custom-icons/creative-design.png");
-  background-repeat: no-repeat;
-  height: 20px;
-  width: 30px;
-  filter: grayscale(100%);
-}
-
 .why-us .accordion .accordion-item h2 button i.innovative-solutions {
   background-image: url("/assets/img/custom-icons/innovative-solutions.png");
   background-repeat: no-repeat;
@@ -867,8 +869,24 @@ section {
   filter: grayscale(100%);
 }
 
+.why-us .accordion .accordion-item h2 button i.creative-design {
+  background-image: url("/assets/img/custom-icons/creative-design.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+  filter: grayscale(100%);
+}
+
 .why-us .accordion .accordion-item h2 button i.technical-expertise {
   background-image: url("/assets/img/custom-icons/technical-expertise.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+  filter: grayscale(100%);
+}
+
+.why-us .accordion .accordion-item h2 button i.personalized-approach {
+  background-image: url("/assets/img/custom-icons/personalized-approach.png");
   background-repeat: no-repeat;
   height: 20px;
   width: 30px;
@@ -959,6 +977,16 @@ section {
   font-size: 18px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .why-us .accordion .accordion-item h2 button {
+    font-size: 18px!important;
+  }
+
+  .why-us .accordion .accordion-item .accordion-collapse .accordion-body {
+    font-size: 16px;
+  }
 }
 
 /*--------------------------------------------------------------
