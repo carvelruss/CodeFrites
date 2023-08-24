@@ -29,7 +29,7 @@ function generatePageTitleAndBreadcrumbs() {
       
     //Other Pages
     { pageName: 'start-conversation', text: 'Start Conversation', url: 'start-conversation.html' },
-    { pageName: 'free-quote', text: 'Free Project Quotation', url: 'free-quote.html' },
+    { pageName: 'free-quote', text: 'Project Quotation', url: 'free-quote.html' },
     { pageName: 'thank-you', text: 'Thank You', url: 'thank-you.html' },
       
     //Services

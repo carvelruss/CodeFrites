@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - BizLand Bootstrap Template</title>
+  <title>Request Quotation - CodeFrites</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -78,11 +78,142 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page">
+    <section id="quotation" class="quotation">
       <div class="container">
-        <p>
-          Example inner page template
-        </p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h1>
+              <span class="small">Submit Your Project &</span><br>
+              <strong>Get A Precise Quotation</strong>
+            </h1>
+
+            <p>Let's bring your vision to life. Provide us with the details of your project, and we'll craft a tailored
+              quotation that aligns with your needs and goals.</p>
+
+            <img src="/assets/img/illustrations/quotation.svg" width="550" alt="CodeFrites">
+          </div>
+
+          <div class="col-md-6 quotation-card">
+            <div class="card">
+              <div class="card-body">
+                <script type="text/javascript" data-ve-id="50">var submitted = false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+                  onload="if(submitted){window.location='https://codefrites.com/thank-you';}" data-ve-id="51"></iframe>
+
+                <form id="quotation-form" class="quotation-form"
+                  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYAIA1hI6UijmgGFW7k41X6cvDxILKM9nmmLl1Kzz8mmEA0g/formResponse"
+                  target="hidden_iframe" onsubmit="submitted=true" method="POST">
+                  <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="300" data-bs-toggle="tooltip"
+                    data-bs-placement="top" data-bs-title="Write your full name">
+                    <input type="name" class="form-control" name="entry.198872545" id="floatingInput"
+                      placeholder="Carvel Russ" required>
+                    <label for="floatingInput">Full Name</label>
+                  </div><!-- End Full Name -->
+
+                  <div class="row g-2 mb-2">
+                    <div class="col-md" data-aos="fade-left" data-aos-delay="400">
+                      <div class="form-floating" data-bs-toggle="tooltip" data-bs-placement="top"
+                        data-bs-title="Please enter an email address for communication">
+                        <input type="email" class="form-control" name="entry.1698283312" id="floatingInput"
+                          placeholder="name@example.com" required>
+                        <label for="floatingInput">Email address</label>
+                      </div>
+                    </div><!-- Email Address -->
+
+                    <div class="col-md" data-aos="fade-left" data-aos-delay="500">
+                      <div class="form-floating" data-bs-toggle="tooltip" data-bs-placement="top"
+                        data-bs-title="Please enter your WhatsApp number here for a better communication if ever we can't reach via email">
+                        <input type="telephone" class="form-control" name="entry.454182055" id="floatingInputGrid"
+                          placeholder="Please enter your WhatsApp number here for a better communication if ever we can't reach your thru email.">
+                        <label for="floatingInputGrid">WhatsApp</label>
+                      </div>
+                    </div><!-- Phone Number -->
+                  </div>
+
+                  <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="600" data-bs-toggle="tooltip"
+                    data-bs-placement="top" data-bs-title="Please enter your company name or organization name">
+                    <input type="name" class="form-control" name="entry.973677858" id="floatingInput"
+                      placeholder="Company Name" required>
+                    <label for="floatingInput">Company/Organization Name</label>
+                  </div><!-- Company/Organization Name -->
+
+                  <div class="form-floating mb-md-2" data-aos="fade-left" data-aos-delay="700" data-bs-toggle="tooltip"
+                    data-bs-placement="top" data-bs-title="Please select your desired service for your project">
+                    <select class="form-select form-select-md" name="entry.1291442338"
+                      aria-label="Large select example">
+                      <option selected disabled></option>
+                      <option data-value="HTML/CSS/JS Development" role="option">HTML/CSS/JS Development</option>
+                      <option data-value="Vue/React/Angular Development" role="option">Vue/React/Angular Development
+                      </option>
+                      <option data-value="WordPress Development" role="option">WordPress Development</option>
+                      <option data-value="Webflow Development" role="option">Webflow Development</option>
+                      <option data-value="Squarespace Development" role="option">Squarespace Development</option>
+                      <option data-value="Website Maintenance" role="option">Website Maintenance</option>
+                      <option data-value="Video Editing" role="option">Video Editing</option>
+                      <option data-value="Graphics Design" role="option">Graphics Design</option>
+                      <option data-value="Search Engine Optimization" role="option">Search Engine Optimization</option>
+                      <option data-value="Social Media Management" role="option">Social Media Management</option>
+                      <option data-value="Anything Else" role="option">Anything Else</option>
+                    </select>
+                    <label for="floatingInput">What services are you looking for?</label>
+                  </div>
+
+                  <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="700" data-bs-toggle="tooltip"
+                    data-bs-placement="top" data-bs-title="Please select your desired timeframe">
+                    <select class="form-select form-select-md" name="entry.580212112" aria-label="Large select example">
+                      <option selected disabled></option>
+                      <option data-value="I need it ASAP" role="option">I need it ASAP</option>
+                      <option data-value="I'm not in a rush" role="option">I'm not in a rush</option>
+                    </select>
+                    <label for="floatingInput">How time sensitive is your project?</label>
+                  </div>
+
+                  <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="900" data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    data-bs-title="Please share your files here using Google Drive link. Make sure it is in public">
+                    <input type="name" class="form-control" name="entry.678089305" id="floatingInput"
+                      placeholder="https://carvelruss.com" pattern="https?://.+">
+                    <label for="floatingInput">Share your files here (Google Drive link)</label>
+                  </div><!-- Website URL -->
+
+                  <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="1000" data-bs-toggle="tooltip"
+                    data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                    data-bs-title="Please describe your project requirements in as much detail as possible. What kind of website do you need? What features and functionality do you require? What is your budget and timeline for completion?">
+                    <textarea class="form-control" name="entry.1087455567" placeholder="Leave a comment here"
+                      id="floatingTextarea" style="height: 150px;"></textarea>
+                    <label for="floatingTextarea">Project Description</label>
+                  </div><!-- Project Description -->
+
+                  <div class="d-grid text-center" data-aos="fade-left" data-aos-delay="1100">
+                    <!-- <button type="submit" value="submit" class="btn btn-lg">Get Quote</button> -->
+                    <button type="submit" value="submit" class="btn btn-dark btn-lg" id="submit-button">Get
+                      Quote</button>
+                    <span class="form-text mt-3">
+                      <i class="bi bi-lock-fill me-1"></i>Your data is safe with us. Read our <a class="link"
+                        href="#"><u>Privacy
+                          Policy</u></a> to learn more.</span>
+
+                    <script>
+                      const submitButton = document.getElementById('submit-button');
+
+                      document.getElementById('quotation-form').addEventListener('submit', function () {
+                        // Disable the submit button and change the text to "Submitting"
+                        submitButton.disabled = true;
+                        submitButton.innerText = 'Submitting...';
+
+                        // Show a loading spinner
+                        submitButton.innerHTML += '<span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>';
+                      });
+                    </script><!-- Button Loading Screen When Submitting -->
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 

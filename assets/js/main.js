@@ -270,13 +270,21 @@
   });
 
   /**
+   * Initialize tooltips
+   */
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+
+  /**
    * Animation on scroll
    */
   window.addEventListener('load', () => {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
-      once: true,
+      once: false,
       mirror: false
     })
   });

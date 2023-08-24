@@ -560,6 +560,7 @@ section {
   text-align: center;
   padding-bottom: 30px;
 }
+
 .section-title h2 {
   font-size: 13px;
   letter-spacing: 1px;
@@ -572,22 +573,34 @@ section {
   text-transform: uppercase;
   border-radius: 50px;
 }
+
 .section-title h3 {
   margin: 15px 0 0 0;
   font-size: 32px;
   font-weight: 700;
 }
+
 .section-title h3 span {
   color: #C6A004;
 }
+
 .section-title p {
   margin: 15px auto 0 auto;
   font-weight: 600;
 }
+
 @media (min-width: 1024px) {
   .section-title p {
     width: 50%;
   }
+}
+
+.section-title .card {
+  width: 75%;
+  margin: auto;
+  padding: 50px;
+  border: 1px dashed green;
+  border-radius: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -595,7 +608,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 20px 0;
-  background-color: #f1f6fe;
+  background-color: #f8f8f8;
   min-height: 40px;
 }
 .breadcrumbs h2 {
@@ -970,13 +983,17 @@ section {
 }
 
 .why-us .accordion .accordion-item .accordion-collapse .accordion-body {
+  padding-top: 0;
   font-size: 18px;
   background: #f4f4f4;
-  padding-top: 0;
   color: #000;
   font-size: 18px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.why-us .accordion .accordion-item:hover {
+  background: #f9f9f9;
 }
 
 @media screen and (max-width: 991px) {
@@ -994,7 +1011,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: #f4f4f4;
+  background: #f8f8f8;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1190,11 +1207,18 @@ section {
   text-transform: uppercase;
 }
 
+.cta-two a i.coffee {
+  background-image: url("/assets/img/custom-icons/coffee.png");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services {
-  background: #f4f4f4;
+  background: #f8f8f8;
 }
 
 .services a .card {
@@ -1848,7 +1872,6 @@ section {
 /*--------------------------------------------------------------
 # Our Process
 --------------------------------------------------------------*/
-
 #our-process .our-process-list {
   position: relative;
   padding: 0;
@@ -1929,8 +1952,9 @@ section {
 
 #our-process .content-box {
   padding: 20px 30px;
-  background: #111111;
-  border: 3px solid #F6A113;
+  background: #FFFFFF;
+  box-shadow: 0 2px 15px #ddd;
+  border: 3px solid #FFFFFF;
   position: relative;
   border-radius: 10px;
   margin-top: -25px;
@@ -1938,24 +1962,20 @@ section {
   transition: 0.3s;
 }
 
-#our-process .content-box:hover {
-  transform: scale(1.05);
-}
-
 #our-process .content-box h2 {
-  color: #F6A113;
+  color: #000;
   font-size: 25px;
   font-weight: 900;
 }
 
 #our-process .content-box small {
-  color: #ececec;
+  color: #aaa;
   display: inline-block;
   margin-bottom: 15px;
 }
 
 #our-process .content-box p {
-  color: #e6e6e6;
+  color: #000;
   display: inline-block;
   margin-bottom: 15px;
 }
@@ -2036,28 +2056,64 @@ section {
   }
 }
 
-#our-process .timeline .left-content-box .content-box .left-content-box-arrow {
-  height: 0;
-  width: 0;
+#our-process .timeline .left-content-box .content-box .left-content-box-arrow::before {
+  content: '';
   position: absolute;
-  top: 28px;
-  z-index: 1;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 15px solid #F6A113;
-  right: -15px;
+  bottom: -15px;
+  top: 13%;
+  left: 97%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: #ececec;
+  border-radius: 0 8px 0 0;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 5px #ececec;
+  z-index: -1;
 }
 
-#our-process .timeline .right-content-box .content-box .right-content-box-arrow {
-  height: 0;
-  width: 0;
+#our-process .timeline .left-content-box .content-box .left-content-box-arrow::after {
+  content: '';
   position: absolute;
-  top: 28px;
-  z-index: 1;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid #F6A113;
-  left: -15px;
+  bottom: -14px;
+  top: 13%;
+  left: 97%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 0 0 8px 0;
+  transform: rotate(45deg);
+}
+
+#our-process .timeline .right-content-box .content-box .right-content-box-arrow::before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  top: 13%;
+  left: -2.6%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: #ececec;
+  border-radius: 0 0 0 8px;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 5px #ececec;
+  z-index: -1;
+}
+
+#our-process .timeline .right-content-box .content-box .right-content-box-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  top: 13%;
+  left: -2.5%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 0 0 8px 0;
+  transform: rotate(45deg);
 }
 
 @media screen and (max-width: 600px) {
@@ -2113,6 +2169,58 @@ section {
     border-left: 0 !important;
     left: -15px !important;
   }
+}
+
+/*--------------------------------------------------------------
+# Request Quotation Section
+--------------------------------------------------------------*/
+.quotation h1 {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.quotation h1 span.small {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.quotation h1 strong {
+  font-weight: 900;
+  color: #c6a004;
+}
+
+.quotation .quotation-card .card {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  box-shadow: 1px 2px 15px #ddd;
+  width: 80%;
+  margin: auto;
+  float: right;
+}
+
+@media screen and (max-width: 991px) {
+  .quotation .quotation-card .card {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.quotation .quotation-card .card .form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #c6a004;
+  outline: 0;
+  box-shadow: none;
+}
+
+.quotation .quotation-card .card .form-select:focus {
+  border-color: #c6a004;
+  outline: 0;
+  box-shadow: none;
+}
+
+.quotation .quotation-card .card .card-body form .form-floating label {
+  color: #aaa;
 }
 
 /*--------------------------------------------------------------
@@ -2329,7 +2437,7 @@ section {
 
 #footer .footer-newsletter {
   padding: 50px 0;
-  background: #f5f5f5;
+  background: #f8f8f8;
   text-align: center;
   font-size: 15px;
 }
