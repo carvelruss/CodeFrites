@@ -1,19 +1,19 @@
 /**
-* Website Name: CodeFrites v1.0.0
-* Author: carvelruss.com
-*/
+ * Website Name: CodeFrites v1.0.0
+ * Author: carvelruss.com
+ */
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Header Data
   const headerData = {
-    logoSrc: '/assets/img/official-logo.svg',
-    brandName: '',
+    logoSrc: "/assets/img/official-logo.svg",
+    brandName: "",
     navLinks: [
-      { text: 'Home', href: '/index.html' },
-      { text: 'About', href: '/pages/about.html' },
-      { text: 'Services', href: '/pages/services.html' },
-      { text: 'Portfolio', href: 'portfolio.html' },
-      { text: 'Articles', href: 'articles.html' },
+      { text: "Home", href: "/index.html" },
+      { text: "About", href: "/pages/about.html" },
+      { text: "Services", href: "/pages/services.html" },
+      { text: "Portfolio", href: "/pages/portfolio.html" },
+      { text: "Articles", href: "/pages/articles.html" },
       // Add more navigation links as needed
       // Example for a dropdown link:
       //   {
@@ -36,34 +36,42 @@ document.addEventListener('DOMContentLoaded', function () {
       //       { text: 'Drop Down 4', href: '#' },
       //     ],
       //   },
-      { text: 'Contact', href: 'contact.html' },
+      { text: "Contact", href: "contact.html" },
     ],
   };
 
   // Topbar Data
   const topbarData = {
     contactInfo: [
-      { iconClass: 'bi-envelope', text: 'friesquad@codefrites.com', link: 'mailto:friesquad@codefrites.com' },
-      { iconClass: 'bi-phone', text: '+63 909 135 2732', link: 'tel:+639091352732' },
+      {
+        iconClass: "bi-envelope",
+        text: "friesquad@codefrites.com",
+        link: "mailto:friesquad@codefrites.com",
+      },
+      {
+        iconClass: "bi-phone",
+        text: "+63 909 135 2732",
+        link: "tel:+639091352732",
+      },
       // Add more contact information as needed
     ],
     socialLinks: [
-      { iconClass: 'bi-facebook', link: '#' },
-      { iconClass: 'bi-instagram', link: '#' },
-      { iconClass: 'bi-linkedin', link: '#' },
+      { iconClass: "bi-facebook", link: "#" },
+      { iconClass: "bi-instagram", link: "#" },
+      { iconClass: "bi-linkedin", link: "#" },
       // Add more social links as needed
     ],
   };
 
   // Functions for Header
   function toggleDropdown(dropdown) {
-    dropdown.classList.toggle('active');
+    dropdown.classList.toggle("active");
   }
 
   function closeDropdowns() {
-    const dropdowns = document.querySelectorAll('.navbar .dropdown ul');
-    dropdowns.forEach(dropdown => {
-      dropdown.classList.remove('active');
+    const dropdowns = document.querySelectorAll(".navbar .dropdown ul");
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("active");
     });
   }
 
@@ -80,10 +88,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function createContactItem(contact) {
-    const contactItem = document.createElement('i');
-    contactItem.classList.add('bi', contact.iconClass, 'd-flex', 'align-items-center', 'me-3');
+    const contactItem = document.createElement("i");
+    contactItem.classList.add(
+      "bi",
+      contact.iconClass,
+      "d-flex",
+      "align-items-center",
+      "me-3"
+    );
     if (contact.link) {
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = contact.link;
       link.textContent = contact.text;
       contactItem.appendChild(link);
@@ -94,47 +108,47 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function createSocialLink(social) {
-    const socialLink = document.createElement('a');
+    const socialLink = document.createElement("a");
     socialLink.href = social.link;
-    const socialIcon = document.createElement('i');
-    socialIcon.classList.add('bi', social.iconClass);
+    const socialIcon = document.createElement("i");
+    socialIcon.classList.add("bi", social.iconClass);
     socialLink.appendChild(socialIcon);
     return socialLink;
   }
 
   function populateHeader() {
     // Header
-    const headerTitle = document.getElementById('brandName');
-    const logo = document.getElementById('logo');
-    const navLinksContainer = document.getElementById('navLinks');
+    const headerTitle = document.getElementById("brandName");
+    const logo = document.getElementById("logo");
+    const navLinksContainer = document.getElementById("navLinks");
 
     logo.src = headerData.logoSrc;
     headerTitle.textContent = headerData.brandName;
 
-    navLinksContainer.innerHTML = '';
-    headerData.navLinks.forEach(link => {
-      const listItem = document.createElement('li');
-      const anchor = document.createElement('a');
+    navLinksContainer.innerHTML = "";
+    headerData.navLinks.forEach((link) => {
+      const listItem = document.createElement("li");
+      const anchor = document.createElement("a");
       anchor.textContent = link.text;
       anchor.href = link.href;
       listItem.appendChild(anchor);
 
       if (link.subLinks && link.subLinks.length > 0) {
-        listItem.classList.add('dropdown');
-        const dropdown = document.createElement('ul');
-        dropdown.classList.add('dropdown-menu');
-        link.subLinks.forEach(subLink => {
-          const subListItem = document.createElement('li');
-          const subLinkAnchor = document.createElement('a');
+        listItem.classList.add("dropdown");
+        const dropdown = document.createElement("ul");
+        dropdown.classList.add("dropdown-menu");
+        link.subLinks.forEach((subLink) => {
+          const subListItem = document.createElement("li");
+          const subLinkAnchor = document.createElement("a");
           subLinkAnchor.textContent = subLink.text;
           subLinkAnchor.href = subLink.href;
           subListItem.appendChild(subLinkAnchor);
           dropdown.appendChild(subListItem);
         });
 
-        listItem.addEventListener('click', handleDropdownClick);
-        listItem.addEventListener('mouseenter', handleDropdownHover);
-        listItem.addEventListener('mouseleave', handleDropdownHover);
+        listItem.addEventListener("click", handleDropdownClick);
+        listItem.addEventListener("mouseenter", handleDropdownHover);
+        listItem.addEventListener("mouseleave", handleDropdownHover);
 
         listItem.appendChild(dropdown);
       }
@@ -143,14 +157,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Topbar
-    const contactInfoContainer = document.getElementById('contact-info');
-    topbarData.contactInfo.forEach(contact => {
+    const contactInfoContainer = document.getElementById("contact-info");
+    topbarData.contactInfo.forEach((contact) => {
       const contactItem = createContactItem(contact);
       contactInfoContainer.appendChild(contactItem);
     });
 
-    const socialLinksContainer = document.getElementById('social-links');
-    topbarData.socialLinks.forEach(social => {
+    const socialLinksContainer = document.getElementById("social-links");
+    topbarData.socialLinks.forEach((social) => {
       const socialLink = createSocialLink(social);
       socialLinksContainer.appendChild(socialLink);
     });
