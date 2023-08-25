@@ -6,14 +6,14 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Header Data
   const headerData = {
-    logoSrc: 'assets/img/official-logo.svg',
+    logoSrc: '/assets/img/official-logo.svg',
     brandName: '',
     navLinks: [
-      { text: 'Home', href: 'index.html' },
-      { text: 'About', href: 'about.html' },
-      { text: 'Services', href: 'services.html' },
+      { text: 'Home', href: '/index.html' },
+      { text: 'About', href: '/pages/about.html' },
+      { text: 'Services', href: '/pages/services.html' },
       { text: 'Portfolio', href: 'portfolio.html' },
-      { text: 'Team', href: 'team.html' },
+      { text: 'Articles', href: 'articles.html' },
       // Add more navigation links as needed
       // Example for a dropdown link:
       //   {

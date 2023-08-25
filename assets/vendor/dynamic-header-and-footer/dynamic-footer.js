@@ -17,11 +17,11 @@ const footerData = {
     // Add or remove social links here as needed
   },
   usefulLinks: [
-    { title: 'Home', url: 'https://codefrites.com/home' },
-    { title: 'About us', url: 'about.html' },
+    { title: 'Home', url: '/index.html' },
+    { title: 'About us', url: '/pages/useful-links/about.html' },
     { title: 'Services', url: 'services.html' },
     { title: 'Portfolio', url: 'portfolio.html' },
-    { title: 'Team', url: 'team.html' },
+    { title: 'Articles', url: 'articles.html' },
     { title: 'Terms of service', url: 'terms-of-service.html' },
     { title: 'Privacy policy', url: 'privacy-policy.html' },
     // Add or links here as needed

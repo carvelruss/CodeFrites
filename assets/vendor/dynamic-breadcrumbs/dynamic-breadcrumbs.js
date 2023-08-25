@@ -22,9 +22,7 @@ function generatePageTitleAndBreadcrumbs() {
     { pageName: 'about', text: 'About Us', url: 'about.html' },
     { pageName: 'services', text: 'Services', url: 'services.html' },
     { pageName: 'portfolio', text: 'Portfolio', url: 'portfolio.html' },
-      { pageName: 'concept-first', text: 'Concept First', url: 'concept-first.html', parentPage: 'portfolio' },
-      { pageName: 'achievers-dream', text: 'Achievers Dream', url: 'achievers-dream.html', parentPage: 'portfolio' },
-    { pageName: 'team', text: 'Team', url: 'team.html' },
+    { pageName: 'articles', text: 'Articles', url: 'articles.html' },
     { pageName: 'contact', text: 'Contact', url: 'contact.html' },
       
     //Other Pages
@@ -33,12 +31,23 @@ function generatePageTitleAndBreadcrumbs() {
     { pageName: 'thank-you', text: 'Thank You', url: 'thank-you.html' },
       
     //Services
-    { pageName: 'white-label-web-development', text: 'White-Label Web Development', url: 'white-label-web-development.html' },
-    { pageName: 'cms-integration', text: 'CMS Integration', url: 'cms-integration.html' },
-    { pageName: 'ecommerce-development', text: 'E-commerce Development', url: 'ecommerce-development.html' },
-    { pageName: 'frontend-development', text: 'Front-End Development', url: 'frontend-development.html' },
-    { pageName: 'backend-development', text: 'Back-End Development', url: 'backend-development.html' },
-    { pageName: 'affiliates-services', text: 'Affiliates Services', url: 'affiliates-services.html' },
+    { pageName: 'white-label-web-development', text: 'White-Label Web Development', url: 'white-label-web-development.html', parentPage: 'services' },
+    { pageName: 'cms-integration', text: 'CMS Integration', url: 'cms-integration.html', parentPage: 'services' },
+    { pageName: 'ecommerce-development', text: 'E-commerce Development', url: 'ecommerce-development.html', parentPage: 'services' },
+    { pageName: 'frontend-development', text: 'Front-End Development', url: 'frontend-development.html', parentPage: 'services' },
+    { pageName: 'backend-development', text: 'Back-End Development', url: 'backend-development.html', parentPage: 'services' },
+    { pageName: 'affiliates-services', text: 'Affiliates Services', url: 'affiliates-services.html', parentPage: 'services' },
+
+    //Portfolio
+    { pageName: 'concept-first', text: 'Concept First', url: 'concept-first.html', parentPage: 'portfolio' },
+    { pageName: 'achievers-dream', text: 'Achievers Dream', url: 'achievers-dream.html', parentPage: 'portfolio' },
+    { pageName: 'ad-plus', text: 'Achievers Dream Student Portal', url: 'ad-plus.html', parentPage: 'portfolio' },
+    { pageName: 'northern-realty', text: 'Northern Realty', url: 'northern-realty.html', parentPage: 'portfolio' },
+    { pageName: 'solar-x-charge', text: 'Solar X-Charge', url: 'solar-x-charge.html', parentPage: 'portfolio' },
+    { pageName: 'advantedge-films', text: 'AdvantEdge Films', url: 'advantedge-films.html', parentPage: 'portfolio' },
+    { pageName: 'thunderbeeva', text: 'Thunderbee VA', url: 'thunderbeeva.html', parentPage: 'portfolio' },
+    { pageName: 'grinders-choice', text: 'Grinder`s Choice', url: 'grinders-choice.html', parentPage: 'portfolio' },
+
     // Add more pages link here as needed
   ];
 
