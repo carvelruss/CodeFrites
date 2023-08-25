@@ -20,23 +20,35 @@ const footerData = {
   usefulLinks: [
     { title: "Home", url: "/index.html" },
     { title: "About us", url: "/pages/useful-links/about.html" },
-    { title: "Services", url: "/services.html" },
-    { title: "Portfolio", url: "/portfolio.html" },
-    { title: "Articles", url: "/articles.html" },
-    { title: "Terms of service", url: "/terms-of-service.html" },
-    { title: "Privacy policy", url: "/privacy-policy.html" },
+    { title: "Services", url: "/pages/services.html" },
+    { title: "Portfolio", url: "/pages/portfolio.html" },
+    { title: "Articles", url: "/pages/articles.html" },
+    { title: "Terms of service", url: "/pages/terms-of-service.html" },
+    { title: "Privacy policy", url: "/pages/privacy-policy.html" },
     // Add or links here as needed
   ],
   ourServices: [
     {
       title: "White-Label Web Development",
-      url: "white-label-web-development.html",
+      url: "/pages/services/white-label-web-development.html",
     },
-    { title: "CMS Integration", url: "cms-integration.html" },
-    { title: "E-commerce Development", url: "ecommerce-development.html" },
-    { title: "Front-End Development", url: "frontend-development.html" },
-    { title: "Back-End Development", url: "backend-development.html" },
-    { title: "Affiliates Services", url: "affiliates-services.html" },
+    { title: "CMS Integration", url: "/pages/services/cms-integration.html" },
+    {
+      title: "E-commerce Development",
+      url: "/pages/services/ecommerce-development.html",
+    },
+    {
+      title: "Front-End Development",
+      url: "/pages/services/frontend-development.html",
+    },
+    {
+      title: "Back-End Development",
+      url: "/pages/services/backend-development.html",
+    },
+    {
+      title: "Affiliates Services",
+      url: "/pages/services/affiliates-services.html",
+    },
     // Add or remove links here as needed
   ],
 };
