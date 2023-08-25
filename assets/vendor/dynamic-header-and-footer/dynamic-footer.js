@@ -12,6 +12,8 @@ const footerData = {
   companyNumber: "+63 909 135 2732",
   companyEmail: "friesquad@codefrites.com",
   storysetAttribute: "https://storyset.com/online",
+  socialNetworksDescription:
+    "To get more updated on latest promotion and more, follow our social media accounts.",
   socialLinks: {
     facebook: "#",
     instagram: "#",
@@ -114,6 +116,7 @@ function initFooter() {
   );
   setContent("footer-brandName", footerData.brandName);
   setContent("brandDescription", footerData.brandDescription);
+  setContent("socialNetworksDescription", footerData.socialNetworksDescription);
   setContent(
     "companyNumber",
     `<strong>Phone:</strong> <a href="tel:${footerData.companyNumber}">${footerData.companyNumber}</a>`
