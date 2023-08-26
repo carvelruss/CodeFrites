@@ -119,11 +119,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function populateHeader() {
     // Header
     const headerTitle = document.getElementById("brandName");
+    const logoContainer = document.getElementById("logo-container"); // Get the logo container element
     const logo = document.getElementById("logo");
     const navLinksContainer = document.getElementById("navLinks");
 
     logo.src = headerData.logoSrc;
     headerTitle.textContent = headerData.brandName;
+
+    // Populate the logo link
+    logoContainer.href = headerData.navLinks[0].href; // Set the logo link dynamically
 
     navLinksContainer.innerHTML = "";
     headerData.navLinks.forEach((link) => {
