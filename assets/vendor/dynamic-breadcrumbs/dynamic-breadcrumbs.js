@@ -32,9 +32,9 @@ function generatePageTitleAndBreadcrumbs() {
       url: "/pages/start-conversation.html",
     },
     {
-      pageName: "free-quote",
+      pageName: "request-quotation",
       text: "Project Quotation",
-      url: "/pages/free-quote.html",
+      url: "/pages/request-quotation.html",
     },
     { pageName: "thank-you", text: "Thank You", url: "/pages/thank-you.html" },
 

@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //       { text: 'Drop Down 4', href: '#' },
       //     ],
       //   },
-      { text: "Contact", href: "contact.html" },
+      { text: "Contact", href: "/pages/contact.html" },
     ],
   };
 
