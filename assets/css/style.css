@@ -1007,6 +1007,173 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Team Section
+--------------------------------------------------------------*/
+.team .team-member {
+  overflow: hidden;
+  background: #fff;
+}
+
+.team .team-member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .team-member .social {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .team-member .social a {
+  transition: color 0.3s;
+  color: #31547c;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .team-member .social a i {
+  line-height: 0;
+}
+
+.team .team-member .social a:hover {
+  color: var(--color-primary);
+}
+
+.team .team-member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.team .team-member .member-info {
+  padding: 25px 15px 0 15px;
+  text-align: center;
+}
+
+.team .team-member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: var(--color-secondary);
+}
+
+.team .team-member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.team .team-member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #6c757d;
+}
+
+.team .team-member:hover .social {
+  opacity: 1;
+}
+
+.team .card {
+  border: 1px solid #ececec;
+  box-shadow: 0px 2px 5px #ddd;
+  border-radius: 15px;
+  max-height: 350px;
+  transition: 0.3s ease-in-out;
+}
+
+.team .card:hover {
+  transform: translate3d(0, -5px, 0);
+}
+
+.team .card img {
+  border-bottom: 1px solid #ececec;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.team .card .card-body .team-info {
+  position: relative;
+  top: -70px;
+}
+
+.team .card .card-body .team-info img {
+  position: relative;
+  margin-top: 20px!important;
+  width: 80px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 1px 2px 15px #ddd;
+  margin: 0 auto;
+}
+
+.team .card .card-body .card-title {
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: var(--color-secondary);
+}
+
+.team .card .card-body span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.team .card .card-body .social {
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.team .card .card-body .social a {
+  transition: color 0.3s;
+  color: #31547c;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .card .card-body .social a i {
+  line-height: 0;
+}
+
+.team .card .card-body .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.team .card .card-body .see-profile-btn {
+  position: relative;
+  top: -100px;
+  border-radius: 50px;
+  width: 150px;
+  background: #c6a004;
+  border-color: #c6a004;
+  visibility: hidden;
+}
+
+.team .card .card-body:hover .see-profile-btn {
+  visibility: visible;
+}
+
+
+
+/*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials {
