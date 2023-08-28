@@ -313,13 +313,17 @@
     <section id="testimonials" class="testimonials">
       <div class="container-fluid" data-aos="zoom-in">
 
-        <div class="section-title mb-5">
-          <h2>Temporary Testimonials</h2>
-          <h3>What Our Clients Are <span>Saying</span></h3>
-          <p>At CodeFrites, our clients' satisfaction is the heart of our success. Discover the experiences
-            of those who entrusted us with their projects. From startups to established businesses, we take pride in
-            delivering exceptional web development solutions that make a difference. Read their stories and join the
-            growing list of satisfied CodeFrites clients.</p>
+        <div class="container">
+          <div class="section-title mb-5">
+            <h2>Temporary Testimonials</h2>
+            <h3>What Our Clients Are <span>Saying</span></h3>
+            <p>Discover the experiences of those who entrusted us with their projects. Read their stories and join the
+              growing list of satisfied clients.</p>
+            <p class="d-none">At CodeFrites, our clients' satisfaction is the heart of our success. Discover the
+              experiences of those who entrusted us with their projects. From startups to established businesses, we
+              take pride in delivering exceptional web development solutions that make a difference. Read their stories
+              and join the growing list of satisfied CodeFrites clients.</p>
+          </div>
         </div>
 
         <div class="row card-ui" data-aos="fade-down" data-aos-delay="200" data-masonry='{"percentPosition": true}'>
@@ -892,7 +896,6 @@
           <div class="col-sm-6 col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
             <a href="/white-label-web-development.html" class="text-dark">
               <div class="card h-100">
-                <img src="/assets/img/image-mockup.png" class="img-fluid mb-2" alt="CodeFrites">
                 <div class="card-body">
                   <h5 class="card-title mb-4">White-Label Web Development</h5>
                   <p>Experience seamless integration with our White-Label Web Development service. We deliver
@@ -906,7 +909,6 @@
           <div class="col-sm-6 col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
             <a href="/cms-integration.html" class="text-dark">
               <div class="card h-100">
-                <img src="/assets/img/image-mockup.png" class="img-fluid mb-2" alt="CodeFrites">
                 <div class="card-body">
                   <h5 class="card-title mb-4">CMS Integrations</h5>
                   <p>Effortlessly manage and update your content using our expert CMS Integrations. We ensure seamless
@@ -919,7 +921,6 @@
           <div class="col-sm-6 col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
             <a href="/ecommerce-development.html" class="text-dark">
               <div class="card h-100">
-                <img src="/assets/img/image-mockup.png" class="img-fluid mb-2" alt="CodeFrites">
                 <div class="card-body">
                   <h5 class="card-title mb-4">E-commerce Development</h5>
                   <p>Enter online commerce confidently with our E-commerce Store solutions. We craft engaging shopping
@@ -932,7 +933,6 @@
           <div class="col-sm-6 col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
             <a href="/frontend-development.html" class="text-dark">
               <div class="card h-100">
-                <img src="/assets/img/image-mockup.png" class="img-fluid mb-2" alt="CodeFrites">
                 <div class="card-body">
                   <h5 class="card-title mb-4">Front-End Development</h5>
                   <p>Turn design concepts into captivating user interfaces with our Front-End Coding expertise. Elevate
@@ -945,7 +945,6 @@
           <div class="col-sm-6 col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
             <a href="/backend-development.html" class="text-dark">
               <div class="card h-100">
-                <img src="/assets/img/image-mockup.png" class="img-fluid mb-2" alt="CodeFrites">
                 <div class="card-body">
                   <h5 class="card-title mb-4">Back-End Development</h5>
                   <p>Unleash the full potential of your website's functionality with our Back-End Development expertise.
@@ -958,7 +957,6 @@
           <div class="col-sm-6 col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="600">
             <a href="/affiliates-services.html" class="text-dark">
               <div class="card h-100">
-                <img src="/assets/img/image-mockup.png" class="img-fluid mb-2" alt="CodeFrites">
                 <div class="card-body">
                   <h5 class="card-title mb-4">Affiliates Services</h5>
                   <p>Discover specialized Partner Services through trusted affiliates, spanning SEO, Social Media,
@@ -1105,6 +1103,68 @@
       </div>
     </section><!-- End Frequently Asked Questions Section -->
 
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <h3>Explore Our <span>Portfolio</span></h3>
+          <p>Dive into our showcase of projects that exemplify our commitment to creativity and excellence. Discover how
+            we turn ideas into impactful digital solutions.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
     <!-- ======= Call To Action Two Section ======= -->
     <section id="cta-two" class="cta-two section-bg">
       <div class="container">
@@ -1176,134 +1236,6 @@
 
       </div>
     </section><!-- End Counts Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio d-none">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <h3>Check our <span>Portfolio</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae
-            autem.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg d-none">

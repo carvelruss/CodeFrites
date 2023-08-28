@@ -4,16 +4,26 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
+  // 404 ERROR
+  const custom404Link = "/pages/error/404-error.html";
+
+  function replaceEmptyLinks(elementContainer) {
+    const emptyLinks = elementContainer.querySelectorAll('a[href="#"]');
+    emptyLinks.forEach(function (link) {
+      link.href = custom404Link;
+    });
+  }
+
   // Header Data
   const headerData = {
     logoSrc: "/assets/img/official-logo.svg",
     brandName: "",
     navLinks: [
       { text: "Home", href: "/index.html" },
-      { text: "About", href: "/pages/about.html" },
-      { text: "Services", href: "/pages/services.html" },
-      { text: "Portfolio", href: "/pages/portfolio.html" },
-      { text: "Articles", href: "/pages/articles.html" },
+      { text: "About", href: "#" },
+      { text: "Services", href: "#" },
+      { text: "Portfolio", href: "#" },
+      { text: "Articles", href: "#" },
       // Add more navigation links as needed
       // Example for a dropdown link:
       //   {
@@ -36,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //       { text: 'Drop Down 4', href: '#' },
       //     ],
       //   },
-      { text: "Contact", href: "/pages/contact.html" },
+      { text: "Contact", href: "#" },
     ],
   };
 
@@ -172,6 +182,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const socialLink = createSocialLink(social);
       socialLinksContainer.appendChild(socialLink);
     });
+
+    // Call the function to replace empty links
+    replaceEmptyLinks(navLinksContainer);
   }
 
   populateHeader();
