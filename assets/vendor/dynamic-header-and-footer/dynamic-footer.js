@@ -4,6 +4,16 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
+  // 404 ERROR
+  const custom404Link = "/pages/404/not-found.html";
+
+  function replaceEmptyLinks(elementContainer) {
+    const emptyLinks = elementContainer.querySelectorAll('a[href="#"]');
+    emptyLinks.forEach(function (link) {
+      link.href = custom404Link;
+    });
+  }
+
   // Footer data object with dynamic content
   const footerData = {
     brandLogo: "/assets/img/official-logo.svg",
@@ -22,38 +32,38 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     usefulLinks: [
       { text: "Home", href: "/index.html" },
-      { text: "About us", href: "/pages/about.html" },
-      { text: "Services", href: "/pages/services.html" },
-      { text: "Portfolio", href: "/pages/portfolio.html" },
-      { text: "Articles", href: "/pages/articles.html" },
-      { text: "Terms of service", href: "/pages/terms-of-service.html" },
-      { text: "Privacy policy", href: "/pages/privacy-policy.html" },
+      { text: "About us", href: "#" },
+      { text: "Services", href: "#" },
+      { text: "Portfolio", href: "#" },
+      { text: "Articles", href: "#" },
+      { text: "Terms of service", href: "#" },
+      { text: "Privacy policy", href: "#" },
       // Add or links here as needed
     ],
     ourServices: [
       {
         text: "White-Label Web Development",
-        href: "/pages/services/white-label-web-development.html",
+        href: "#",
       },
       {
         text: "CMS Integration",
-        href: "/pages/services/cms-integration.html",
+        href: "#",
       },
       {
         text: "E-commerce Development",
-        href: "/pages/services/ecommerce-development.html",
+        href: "#",
       },
       {
         text: "Front-End Development",
-        href: "/pages/services/frontend-development.html",
+        href: "#",
       },
       {
         text: "Back-End Development",
-        href: "/pages/services/backend-development.html",
+        href: "#",
       },
       {
         text: "Affiliates Services",
-        href: "/pages/services/affiliates-services.html",
+        href: "#",
       },
       // Add or remove links here as needed
     ],
@@ -93,7 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (linksContainer) {
       let linksHtml = "";
       usefulLinks.forEach((link) => {
-        linksHtml += `<li><i class="bx bx-chevron-right"></i> <a href="${link.href}">${link.text}</a></li>`;
+        const href =
+          link.href === "#" ? "/pages/404/not-found.html" : link.href;
+        linksHtml += `<li><i class="bx bx-chevron-right"></i> <a href="${href}">${link.text}</a></li>`;
       });
       linksContainer.innerHTML = linksHtml;
     }
@@ -105,7 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (servicesContainer) {
       let servicesHtml = "";
       ourServices.forEach((service) => {
-        servicesHtml += `<li><i class="bx bx-chevron-right"></i> <a href="${service.href}">${service.text}</a></li>`;
+        const href =
+          service.href === "#" ? "/pages/404/not-found.html" : service.href;
+        servicesHtml += `<li><i class="bx bx-chevron-right"></i> <a href="${href}">${service.text}</a></li>`;
       });
       servicesContainer.innerHTML = servicesHtml;
     }
