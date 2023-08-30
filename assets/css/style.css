@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
 }
 
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
 ::selection {
   background-color: #f5edcb;
   color: #000;
@@ -2649,10 +2653,6 @@ section {
     font-size: 10px;
     color: #fff;
   }
-}
-
-body.page-not-found::-webkit-scrollbar {
-  display: none;
 }
 
 /*--------------------------------------------------------------
