@@ -1669,7 +1669,7 @@ section {
   box-shadow: 1px 2px 15px #ddd;
 }
 
-/* .portfolio .portfolio-container .portfolio-item .card .card-img-overlay {
+.portfolio .portfolio-container .portfolio-item .card .card-img-overlay {
   display: none;
   position: absolute;
   top: 0;
@@ -1695,7 +1695,7 @@ section {
 
 .portfolio .portfolio-container .portfolio-item .card:hover .card-img-overlay p {
   color: #eeeeee;
-} */
+}
 
 /*--------------------------------------------------------------
 # Portfolio Details
