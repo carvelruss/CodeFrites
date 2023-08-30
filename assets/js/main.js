@@ -315,7 +315,7 @@
   /**
    * 404 ERROR
    */
-  const custom404Link = "/pages/404/not-found.html";
+  const custom404Link = "/pages/error/page-not-found.html";
 
   function replaceEmptyLinks(elementContainer) {
     const emptyLinks = elementContainer.querySelectorAll('a[href="#"]');
