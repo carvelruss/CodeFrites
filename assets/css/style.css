@@ -2605,22 +2605,42 @@ section {
 # Page Not Found
 --------------------------------------------------------------*/
 .page-not-found {
-  width: 50%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.page-not-found .error-image img {
+  width: 500px;
+  height: 500px;
 }
 
 .page-not-found .back-to-home {
-  background: #c6a004;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #c6a004;
   color: #fff;
+  text-decoration: none;
+  border-radius: 0.25rem;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 767px) {
   .page-not-found {
-    width: 100%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 
-.page-not-found .back-to-home {
+  .page-not-found .error-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .page-not-found .back-to-home {
     background: #c6a004;
     font-size: 10px;
     color: #fff;
