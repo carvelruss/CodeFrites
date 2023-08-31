@@ -1700,7 +1700,7 @@ section {
 .portfolio .portfolio-container .portfolio-item .card:hover .card-img-overlay a.preview:hover {
   background: #263238;
   border: 1px solid #263238;
-  color: #fff;
+  color: #c6a004;
   box-shadow: inset 1px 2px 5px #1c2327;
 }
 
