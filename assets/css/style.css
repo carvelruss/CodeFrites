@@ -1670,7 +1670,7 @@ section {
 }
 
 .portfolio .portfolio-container .portfolio-item .card .card-img-overlay {
-  display: none;
+  display: none!important;
   position: absolute;
   top: 0;
   left: 0;
