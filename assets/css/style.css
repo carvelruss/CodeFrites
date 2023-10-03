@@ -1,6 +1,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+:root {
+  /* Font Family */
+  --heading-font: 'Poppins', sans-serif;
+  --subheading-font: 'Montserrat', sans-serif;
+  --paragraph-font: 'Anaheim', sans-serif;
+}
+
 body {
   font-family: 'Nunito Sans', sans-serif;
   color: #555C45;
@@ -85,21 +92,26 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 15px;
   z-index: 996;
   background: #555C45;
+  border: 2px solid #555C45;
   width: 40px;
   height: 40px;
-  border-radius: 4px;
+  border-radius: 50px;
   transition: all 0.4s;
+}
+
+.back-to-top:hover {
+  background: #f5edcb;
+  border: 2px solid #f5edcb;
 }
 
 .back-to-top i {
   font-size: 28px;
   color: #f5edcb;
   line-height: 0;
+  transition: all 0.4s;
 }
 
 .back-to-top:hover i {
-  background: #f5edcb;
-  border-radius: 3px;
   color: #555C45;
 }
 
@@ -120,38 +132,56 @@ h1, h2, h3, h4, h5, h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #555c45;
+  background: #f9fbff;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
   color: #fff;
   padding: 0;
 }
+
 #topbar .contact-info i {
   font-style: normal;
-  color: #fff;
+  color: #c6a004;
 }
+
 #topbar .contact-info i a, #topbar .contact-info i span {
   padding-left: 5px;
-  color: #fff;
+  color: #000;
 }
+
 #topbar .contact-info i a {
   line-height: 0;
   transition: 0.3s;
   transition: 0.3s;
 }
+
 #topbar .contact-info i a:hover {
-  color: #fff;
-  text-decoration: underline;
+  color: #c6a004;
 }
+
 #topbar .social-links a {
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 0;
-  transition: 0.3s;
-  margin-left: 20px;
+  padding-left: 15px;
+  display: inline-block;
+  line-height: 1px;
+  transition: 0.3s ease-in-out;
 }
+
 #topbar .social-links a:hover {
-  color: white;
+  transform: translate3d(0, -5px, 0);
+}
+
+#topbar .social-links a i.bi-facebook {
+  color: #1877F2;
+  transition: .3s;
+}
+
+#topbar .social-links a i.bi-instagram {
+  color: #E4405F;
+}
+
+#topbar .social-links a i.bi-linkedin {
+  color: #0088CC;
 }
 
 /*--------------------------------------------------------------
@@ -447,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   color: #555C45;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--heading-font);
 }
 
 #hero h1 span {
@@ -455,6 +485,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
+  font-family: var(--subheading-font);
   color: #555555;
   margin: 5px 0 30px 0;
   font-size: 18px;
@@ -579,6 +610,7 @@ section {
 }
 
 .section-title h3 {
+  font-family: var(--heading-font);
   margin: 15px 0 0 0;
   font-size: 32px;
   font-weight: 700;
@@ -1180,8 +1212,6 @@ section {
 .team .card .card-body:hover .see-profile-btn {
   visibility: visible;
 }
-
-
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -2621,6 +2651,33 @@ section {
 .page-not-found .error-image img {
   width: 500px;
   height: 500px;
+}
+
+.page-not-found .error-message {
+  position: relative;
+  margin-top: -70px;
+  padding: 0 25px;
+}
+
+.page-not-found .error-message h3 {
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.page-not-found .error-message p {
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+  width: 70%;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .page-not-found .error-message p {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .page-not-found .back-to-home {

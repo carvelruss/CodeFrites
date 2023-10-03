@@ -100,6 +100,15 @@
    */
   let backtotop = select(".back-to-top");
   if (backtotop) {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    backtotop.addEventListener("click", scrollToTop);
+
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         backtotop.classList.add("active");
@@ -107,6 +116,7 @@
         backtotop.classList.remove("active");
       }
     };
+
     window.addEventListener("load", toggleBacktotop);
     onscroll(document, toggleBacktotop);
   }
