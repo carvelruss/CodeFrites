@@ -21,7 +21,7 @@ function generatePageTitleAndBreadcrumbs() {
     { pageName: "index", text: "Home", url: "/index.html" },
     { pageName: "about", text: "About Us", url: "/pages/about.html" },
     { pageName: "services", text: "Services", url: "/pages/services.html" },
-    { pageName: "portfolio", text: "Portfolio", url: "/pages/portfolio.html" },
+    { pageName: "our-work", text: "Our Work", url: "/pages/our-work.html" },
     { pageName: "articles", text: "Articles", url: "/pages/articles.html" },
     { pageName: "contact", text: "Contact", url: "/pages/contact.html" },
 
@@ -76,54 +76,54 @@ function generatePageTitleAndBreadcrumbs() {
       parentPage: "services",
     },
 
-    //Portfolio
+    //Our Work
     {
       pageName: "concept-first",
       text: "Concept First",
-      url: "/pages/portfolio/concept-first.html",
-      parentPage: "portfolio",
+      url: "/pages/our-work/concept-first.html",
+      parentPage: "our-work",
     },
     {
       pageName: "achievers-dream",
       text: "Achievers Dream",
-      url: "/pages/portfolio/achievers-dream.html",
-      parentPage: "portfolio",
+      url: "/pages/our-work/achievers-dream.html",
+      parentPage: "our-work",
     },
     {
       pageName: "ad-plus",
       text: "Achievers Dream Student Portal",
-      url: "/pages/portfolio/ad-plus.html",
-      parentPage: "portfolio",
+      url: "/pages/our-work/ad-plus.html",
+      parentPage: "our-work",
     },
     {
       pageName: "northern-realty",
       text: "Northern Realty",
-      url: "/pages/portfolio/northern-realty.html",
-      parentPage: "portfolio",
+      url: "/pages/our-work/northern-realty.html",
+      parentPage: "our-work",
     },
     {
       pageName: "solar-x-charge",
       text: "Solar X-Charge",
-      url: "/pages/portfolio/solar-x-charge.html",
-      parentPage: "portfolio",
+      url: "/pages/our-work/solar-x-charge.html",
+      parentPage: "our-work",
     },
     {
       pageName: "advantedge-films",
       text: "AdvantEdge Films",
-      url: "/pages/portfolio/advantedge-films.html",
-      parentPage: "portfolio",
+      url: "/pages/our-work/advantedge-films.html",
+      parentPage: "our-work",
     },
     {
       pageName: "thunderbeeva",
       text: "Thunderbee VA",
-      url: "/pages/portfolio/thunderbeeva.html",
-      parentPage: "portfolio",
+      url: "/pages/our-work/thunderbeeva.html",
+      parentPage: "our-work",
     },
     {
       pageName: "grinders-choice",
       text: "Grinder`s Choice",
-      url: "/pages/portfolio/grinders-choice.html",
-      parentPage: "portfolio",
+      url: "/pages/our-work/grinders-choice.html",
+      parentPage: "our-work",
     },
 
     // Add more pages link here as needed

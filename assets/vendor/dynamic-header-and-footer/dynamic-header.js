@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { text: "Home", href: "/index.html" },
       { text: "About", href: "#" },
       { text: "Services", href: "#" },
-      { text: "Portfolio", href: "#" },
+      { text: "Our Work", href: "/pages/our-work.html" },
       { text: "Articles", href: "#" },
       // Add more navigation links as needed
       // Example for a dropdown link:

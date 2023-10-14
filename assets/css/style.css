@@ -6,6 +6,19 @@
   --heading-font: 'Poppins', sans-serif;
   --subheading-font: 'Montserrat', sans-serif;
   --paragraph-font: 'Anaheim', sans-serif;
+
+  /* Brand Colors */
+  /* HEX */
+  --color-default: #9db3be;
+  --color-primary: #314657;
+  --color-secondary: #58626e;
+  --color-warning: #cca152;
+
+  /* RGBA */
+  --color-rgba-default: rgba(157, 179, 190, 0.8);
+  --color-rgba-primary: rgba(49, 70, 87, 0.8);
+  --color-rgba-secondary: rgba(88, 98, 110, 0.8);
+  --color-rgba-warning: rgba(204, 167, 82, 0.8);
 }
 
 body {
@@ -14,17 +27,17 @@ body {
 }
 
 a {
-  color: #c6a004;
+  color: var(--color-warning);
   text-decoration: none;
 }
 
 a:hover {
-  color: #c6a004;
+  color: var(--color-warning);
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--heading-font);
 }
 
 /* ::-webkit-scrollbar {
@@ -195,9 +208,11 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(85, 92, 69, 0.2);
   /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); */
 }
+
 #header.fixed-top {
   height: 70px;
 }
+
 #header .logo {
   font-size: 30px;
   margin: 0;
@@ -207,12 +222,15 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.8px;
   font-family: "Poppins", sans-serif;
 }
+
 #header .logo a {
   color: #222222;
 }
+
 #header .logo a span {
   color: #106eea;
 }
+
 #header .logo img {
   max-height: 25px;
 }
@@ -486,14 +504,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h2 {
   font-family: var(--subheading-font);
-  color: #555555;
+  color: #000;
   margin: 5px 0 30px 0;
   font-size: 18px;
   font-weight: 400;
 }
 
 #hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--heading-font);
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
@@ -652,16 +670,25 @@ section {
   background-color: #f8f8f8;
   min-height: 40px;
 }
+
 .breadcrumbs h2 {
   font-size: 24px;
   font-weight: 300;
   margin: 0;
 }
+
 @media (max-width: 992px) {
   .breadcrumbs h2 {
     margin: 0 0 10px 0;
   }
 }
+
+.breadcrumbs #breadcrumbList {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
@@ -670,22 +697,27 @@ section {
   margin: 0;
   font-size: 14px;
 }
+
 .breadcrumbs ol li + li {
   padding-left: 10px;
 }
+
 .breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
   content: "/";
 }
+
 @media (max-width: 768px) {
   .breadcrumbs .d-flex {
     display: block !important;
   }
+
   .breadcrumbs ol {
     display: block;
   }
+
   .breadcrumbs ol li {
     display: inline-block;
   }
@@ -776,6 +808,37 @@ section {
   .about .content .start-conversation-btn {
     width: 100%;
   }
+}
+
+/* About Us: Introduction */
+.introduction h1 {
+  font-family: var(--heading-font);
+  font-size: 48px;
+  font-weight: 900;
+  color: #000;
+}
+
+.introduction h2 {
+  font-family: var(--subheading-font);
+  font-style: italic;
+  color: #000;
+}
+
+.introduction p {
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.introduction .business-owners .business-owner-one img {
+  border: 2px solid #fff;
+}
+
+.introduction .business-owners .business-owner-two img,
+.introduction .business-owners .business-owner-three img {
+  margin-left: -15px;
+  border: 2px solid #fff;
 }
 
 /*--------------------------------------------------------------
@@ -1449,6 +1512,10 @@ section {
 /*--------------------------------------------------------------
 # Technology Stacks
 --------------------------------------------------------------*/
+.tech-stack {
+  background: #f9fbff;
+}
+
 .tech-stack h2 {
   font-family: var(--heading-font);
   color: #000;
@@ -1459,6 +1526,11 @@ section {
   font-family: var(--heading-font);
   color: #000;
   font-weight: 600;
+}
+
+.tech-stack .card {
+  border-radius: 30px;
+  border: 2px solid #ddd;
 }
 
 /*--------------------------------------------------------------
@@ -1754,6 +1826,44 @@ section {
   color: #eeeeee;
 }
 
+.our-work h2 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: #000;
+}
+
+.our-work .card {
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.our-work .card img {
+  border: 1px solid #ececec;
+  border-radius: 20px;
+}
+
+.our-work .card img:hover {
+  border-radius: 20px;
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 1px 2px 15px #ececec;
+}
+
+.our-work .card .card-body h3 a {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  transition: 0.3s ease-in-out;
+}
+
+.our-work .card:hover .card-body h3 a {
+  color: #c6a004;
+}
+
+.our-work .card.coming-soon img {
+  border: 2px dashed #ececec;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1778,8 +1888,10 @@ section {
   background-color: #106eea;
 }
 .portfolio-details .portfolio-info {
+  background: #fff;
+  border-radius: 20px;
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(34, 34, 34, 0.08);
+  box-shadow: 0 0 30px rgba(34, 34, 34, 0.08);
 }
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
@@ -1806,6 +1918,33 @@ section {
 }
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Our Mission
+--------------------------------------------------------------*/
+.our-mission h5 {
+  font-family: var(--paragraph-font);
+  font-size: 16px;
+  color: #4d4d4d;
+}
+
+.our-mission h2 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: #000;
+}
+
+.our-mission .card {
+  background: #f6f9fc;
+  padding: 25px;
+  border: none;
+  border-radius: 30px;
+}
+
+.our-mission .card .card-body h3 {
+  font-family: var(--heading-font);
+  color: #000;
 }
 
 /*--------------------------------------------------------------
