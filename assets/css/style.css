@@ -666,14 +666,15 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 20px 0;
+  padding: 5px 0;
   background-color: #f8f8f8;
   min-height: 40px;
 }
 
 .breadcrumbs h2 {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 500;
+  display: none;
   margin: 0;
 }
 
@@ -684,8 +685,7 @@ section {
 }
 
 .breadcrumbs #breadcrumbList {
-  background: #fff;
-  padding: 10px;
+  padding: 10px 0;
   border-radius: 10px;
 }
 
@@ -695,7 +695,7 @@ section {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .breadcrumbs ol li + li {
@@ -1113,6 +1113,10 @@ section {
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+.team {
+  background: #f9fbff;
+}
+
 .team .team-member {
   overflow: hidden;
   background: #fff;
@@ -1870,29 +1874,40 @@ section {
 .portfolio-details {
   padding-top: 40px;
 }
+
+.portfolio-details .portfolio-details-slider {
+  border-radius: 30px;
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
+  border-radius: 30px;
 }
+
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
+
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #106eea;
+  border: 1px solid #c6a004;
 }
+
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #106eea;
+  background-color: #c6a004;
 }
+
 .portfolio-details .portfolio-info {
   background: #fff;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 0 30px rgba(34, 34, 34, 0.08);
 }
+
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 700;
@@ -1900,22 +1915,27 @@ section {
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
+
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
+
 .portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
+
 .portfolio-details .portfolio-description {
   padding-top: 30px;
 }
+
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
@@ -2865,11 +2885,10 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #fff;
+  background: #000;
   padding: 0 0 30px 0;
   color: #444444;
   font-size: 14px;
-  background: #f5edcb;
 }
 
 #footer .footer-newsletter {
@@ -3010,27 +3029,52 @@ section {
 }
 
 #footer .footer-top .footer-social-links a {
-  font-size: 18px;
+  font-size: 14px;
   display: inline-block;
-  background: #f5edcb;
-  color: #555c45;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
   border-radius: 4px;
   text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
+  width: 30px;
+  height: 30x;
 }
 
-#footer .footer-top .social-links a:hover {
-  background: #3b8af2;
+#footer .footer-top .footer-social-links .facebook {
+  background: #0866ff;
   color: #fff;
-  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+#footer .footer-top .footer-social-links .facebook:hover {
+  transform: translate3d(0, -5px, 0);
+}
+
+#footer .footer-top .footer-social-links a.instagram {
+  background-image: linear-gradient(380deg, rgb(254,218,117), rgb(250,126,30), rgb(214,41,118), rgb(150,47,191), rgb(79,91,213));
+  color: #fff;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+#footer .footer-top .footer-social-links .instagram:hover {
+  transform: translate3d(0, -5px, 0);
+}
+
+#footer .footer-top .footer-social-links a.linkedin {
+  background: #0077b5;
+  color: #fff;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+#footer .footer-top .footer-social-links a.linkedin:hover {
+  transform: translate3d(0, -5px, 0);
 }
 
 #footer .copyright {
+  color: #fff;
   text-align: center;
   float: left;
 }
@@ -3039,7 +3083,7 @@ section {
   float: right;
   text-align: center;
   font-size: 13px;
-  color: #444444;
+  color: #fff;
 }
 
 @media (max-width: 768px) {

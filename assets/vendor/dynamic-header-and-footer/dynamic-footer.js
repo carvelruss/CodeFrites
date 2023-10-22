@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     socialLinks: {
       facebook: "#",
       instagram: "#",
+      linkedin: "#",
       // Add or remove social links here as needed
     },
     usefulLinks: [
