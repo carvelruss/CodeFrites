@@ -621,7 +621,7 @@ section {
   padding: 8px 20px;
   margin: 0;
   background: #e7f1fd;
-  color: #555C45;
+  color: var(--color-primary);
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -658,7 +658,7 @@ section {
 }
 
 .section-header h2 {
-  color: #c6a004;
+  color: var(--color-primary);
   font-weight: 900;
 }
 
@@ -667,7 +667,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 5px 0;
-  background-color: #f8f8f8;
+  background: #f8f8f8;
   min-height: 40px;
 }
 
