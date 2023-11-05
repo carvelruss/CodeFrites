@@ -37,6 +37,11 @@ function generatePageTitleAndBreadcrumbs() {
       url: "/pages/request-quotation.html",
     },
     { pageName: "thank-you", text: "Thank You", url: "/pages/thank-you.html" },
+    {
+      pageName: "media-library",
+      text: "Media Library",
+      url: "/pages/media-library.html",
+    },
 
     //Services
     {
