@@ -1,13 +1,20 @@
-// dynamicHead.js
-
 // Function to dynamically include head content
 function includeHeadContent() {
-  var headContent = document.createElement("script");
-  headContent.src = "/head/head.html";
-  headContent.async = true;
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/head/head.html", true);
 
-  // Append element to head
-  document.head.appendChild(headContent);
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      // Create a script element and set its content
+      var headContent = document.createElement("script");
+      headContent.innerHTML = xhr.responseText;
+
+      // Append element to head
+      document.head.appendChild(headContent);
+    }
+  };
+
+  xhr.send();
 }
 
 // Call the function to include head content
