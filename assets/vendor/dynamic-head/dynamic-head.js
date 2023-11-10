@@ -1,24 +1,14 @@
 // dynamicHead.js
 
-// Function to dynamically create head elements for tracking codes
-function createDynamicHead() {
-  // Google Analytics gtag.js
-  var gtagScript = document.createElement("script");
-  gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-DMGJFG28FB";
-  gtagScript.async = true;
+// Function to dynamically include head content
+function includeHeadContent() {
+  var headContent = document.createElement("script");
+  headContent.src = "/head/head.html";
+  headContent.async = true;
 
-  var gtagConfigScript = document.createElement("script");
-  gtagConfigScript.textContent = `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DMGJFG28FB');
-  `;
-
-  // Append elements to head
-  document.head.appendChild(gtagScript);
-  document.head.appendChild(gtagConfigScript);
+  // Append element to head
+  document.head.appendChild(headContent);
 }
 
-// Call the function to create dynamic head elements
-createDynamicHead();
+// Call the function to include head content
+includeHeadContent();
