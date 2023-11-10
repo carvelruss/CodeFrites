@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { text: "Home", href: "/index.html" },
       { text: "About us", href: "#" },
       { text: "Services", href: "#" },
-      { text: "Our Work", href: "/pages/our-work.html" },
+      { text: "Our Work", href: "/p/our-work.html" },
       { text: "Articles", href: "#" },
       { text: "Terms of service", href: "#" },
       { text: "Privacy policy", href: "#" },

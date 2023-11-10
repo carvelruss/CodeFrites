@@ -3104,3 +3104,25 @@ section {
     padding: 2px 0;
   }
 }
+
+
+/*--------------------------------------------------------------
+# Tabs
+--------------------------------------------------------------*/
+#tabs .nav-tabs .tab-content img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+#tabs .nav-tabs .tab-content .tab-pane {
+  background: red!important;
+}
+
+#tabs .nav-tabs .tab-content h2 {
+  font-size: 15px!important;
+}

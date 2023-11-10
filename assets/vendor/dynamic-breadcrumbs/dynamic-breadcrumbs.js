@@ -19,65 +19,65 @@ function generatePageTitleAndBreadcrumbs() {
   const breadcrumbMapping = [
     //Header
     { pageName: "index", text: "Home", url: "/index.html" },
-    { pageName: "about", text: "About Us", url: "/pages/about.html" },
-    { pageName: "services", text: "Services", url: "/pages/services.html" },
-    { pageName: "our-work", text: "Our Work", url: "/pages/our-work.html" },
-    { pageName: "articles", text: "Articles", url: "/pages/articles.html" },
-    { pageName: "contact", text: "Contact", url: "/pages/contact.html" },
+    { pageName: "about", text: "About Us", url: "/p/about.html" },
+    { pageName: "services", text: "Services", url: "/p/services.html" },
+    { pageName: "our-work", text: "Our Work", url: "/p/our-work.html" },
+    { pageName: "articles", text: "Articles", url: "/p/articles.html" },
+    { pageName: "contact", text: "Contact", url: "/p/contact.html" },
 
     //Other Pages
     {
       pageName: "start-conversation",
       text: "Start Conversation",
-      url: "/pages/start-conversation.html",
+      url: "/p/start-conversation.html",
     },
     {
       pageName: "request-quotation",
       text: "Project Quotation",
-      url: "/pages/request-quotation.html",
+      url: "/p/request-quotation.html",
     },
-    { pageName: "thank-you", text: "Thank You", url: "/pages/thank-you.html" },
+    { pageName: "thank-you", text: "Thank You", url: "/p/thank-you.html" },
     {
       pageName: "media-library",
       text: "Media Library",
-      url: "/pages/media-library.html",
+      url: "/p/media-library.html",
     },
 
     //Services
     {
       pageName: "white-label-web-development",
       text: "White-Label Web Development",
-      url: "/pages/services/white-label-web-development.html",
+      url: "/p/services/white-label-web-development.html",
       parentPage: "services",
     },
     {
       pageName: "cms-integration",
       text: "CMS Integration",
-      url: "/pages/services/cms-integration.html",
+      url: "/p/services/cms-integration.html",
       parentPage: "services",
     },
     {
       pageName: "ecommerce-development",
       text: "E-commerce Development",
-      url: "/pages/services/ecommerce-development.html",
+      url: "/p/services/ecommerce-development.html",
       parentPage: "services",
     },
     {
       pageName: "frontend-development",
       text: "Front-End Development",
-      url: "/pages/services/frontend-development.html",
+      url: "/p/services/frontend-development.html",
       parentPage: "services",
     },
     {
       pageName: "backend-development",
       text: "Back-End Development",
-      url: "/pages/services/backend-development.html",
+      url: "/p/services/backend-development.html",
       parentPage: "services",
     },
     {
       pageName: "affiliates-services",
       text: "Affiliates Services",
-      url: "/pages/services/affiliates-services.html",
+      url: "/p/services/affiliates-services.html",
       parentPage: "services",
     },
 
@@ -85,49 +85,49 @@ function generatePageTitleAndBreadcrumbs() {
     {
       pageName: "concept-first",
       text: "Concept First",
-      url: "/pages/our-work/concept-first.html",
+      url: "/p/our-work/concept-first.html",
       parentPage: "our-work",
     },
     {
       pageName: "achievers-dream",
       text: "Achievers Dream",
-      url: "/pages/our-work/achievers-dream.html",
+      url: "/p/our-work/achievers-dream.html",
       parentPage: "our-work",
     },
     {
       pageName: "ad-plus",
       text: "Achievers Dream Student Portal",
-      url: "/pages/our-work/ad-plus.html",
+      url: "/p/our-work/ad-plus.html",
       parentPage: "our-work",
     },
     {
       pageName: "northern-realty",
       text: "Northern Realty",
-      url: "/pages/our-work/northern-realty.html",
+      url: "/p/our-work/northern-realty.html",
       parentPage: "our-work",
     },
     {
       pageName: "solar-x-charge",
       text: "Solar X-Charge",
-      url: "/pages/our-work/solar-x-charge.html",
+      url: "/p/our-work/solar-x-charge.html",
       parentPage: "our-work",
     },
     {
       pageName: "advantedge-films",
       text: "AdvantEdge Films",
-      url: "/pages/our-work/advantedge-films.html",
+      url: "/p/our-work/advantedge-films.html",
       parentPage: "our-work",
     },
     {
       pageName: "thunderbeeva",
       text: "Thunderbee VA",
-      url: "/pages/our-work/thunderbeeva.html",
+      url: "/p/our-work/thunderbeeva.html",
       parentPage: "our-work",
     },
     {
       pageName: "grinders-choice",
       text: "Grinder`s Choice",
-      url: "/pages/our-work/grinders-choice.html",
+      url: "/p/our-work/grinders-choice.html",
       parentPage: "our-work",
     },
 
