@@ -1,7 +1,7 @@
 // Function to dynamically include head content
 function includeHeadContent() {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/head/head.html", true);
+  xhr.open("GET", "/head/headContent.html", true);
 
   xhr.onload = function () {
     if (xhr.status >= 200 && xhr.status < 300) {
