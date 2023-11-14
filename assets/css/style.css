@@ -731,8 +731,8 @@ section {
 # About
 --------------------------------------------------------------*/
 .about .content h3 {
-  font-weight: 600;
-  font-size: 56px;
+  font-weight: 1000;
+  font-size: 36px;
   color: #000;
 }
 
@@ -850,7 +850,7 @@ section {
 --------------------------------------------------------------*/
 .why-us h3 {
   font-size: 52px;
-  font-weight: 900;
+  font-weight: 1000;
   color: #333;
 }
 
