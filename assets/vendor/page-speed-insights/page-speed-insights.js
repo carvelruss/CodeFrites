@@ -12,22 +12,26 @@ loadingIndicator.style.display = "block";
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
-    const performanceScore =
-      data.lighthouseResult.categories.performance.score * 100;
-    const accessibilityScore =
-      data.lighthouseResult.categories.accessibility.score * 100;
-    const bestPracticesScore =
-      data.lighthouseResult.categories["best-practices"].score * 100;
-    const seoScore = data.lighthouseResult.categories.seo.score * 100;
+    // Check if 'lighthouseResult' and 'categories' exist in the response
+    if (data && data.lighthouseResult && data.lighthouseResult.categories) {
+      const lighthouseData = data.lighthouseResult.categories;
+      const performanceScore = lighthouseData.performance.score * 100 || 0;
+      const accessibilityScore = lighthouseData.accessibility.score * 100 || 0;
+      const bestPracticesScore =
+        lighthouseData["best-practices"].score * 100 || 0;
+      const seoScore = lighthouseData.seo.score * 100 || 0;
 
-    const scoresContainer = document.getElementById("scores-container");
+      const scoresContainer = document.getElementById("scores-container");
 
-    scoresContainer.innerHTML = `
-                    <h2>Performance: ${performanceScore}</h2>
-                    <h2>Accessibility: ${accessibilityScore}</h2>
-                    <h2>Best Practices: ${bestPracticesScore}</h2>
-                    <h2>SEO: ${seoScore}</h2>
-                `;
+      scoresContainer.innerHTML = `
+                        <h2>Performance: ${performanceScore}</h2>
+                        <h2>Accessibility: ${accessibilityScore}</h2>
+                        <h2>Best Practices: ${bestPracticesScore}</h2>
+                        <h2>SEO: ${seoScore}</h2>
+                    `;
+    } else {
+      throw new Error("Invalid response structure from PageSpeed Insights API");
+    }
 
     // Hide loading indicator once data is fetched
     loadingIndicator.style.display = "none";
