@@ -12,6 +12,7 @@ loadingIndicator.style.display = "block";
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
+    console.log(data);
     // Check if 'lighthouseResult' and 'categories' exist in the response
     if (data && data.lighthouseResult && data.lighthouseResult.categories) {
       const lighthouseData = data.lighthouseResult.categories;
