@@ -8,7 +8,6 @@ const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
-    // Extract the specific metrics
     const performanceScore =
       data.lighthouseResult.categories.performance.score * 100;
     const accessibilityScore =
@@ -17,7 +16,6 @@ fetch(apiUrl)
       data.lighthouseResult.categories["best-practices"].score * 100;
     const seoScore = data.lighthouseResult.categories.seo.score * 100;
 
-    // Display the scores on your website
     const scoresContainer = document.getElementById("scores-container");
 
     scoresContainer.innerHTML = `
