@@ -509,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-#hero .btn-watch-video {
+#hero .btn-whatsapp {
   font-size: 16px;
   transition: 0.5s;
   margin-left: 25px;
@@ -519,7 +519,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-#hero .btn-watch-video i {
+#hero .btn-whatsapp i {
   color: var(--color-primary);
   font-size: 32px;
   transition: 0.3s;
@@ -527,11 +527,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 8px;
 }
 
-#hero .btn-watch-video:hover {
+#hero .btn-whatsapp:hover {
   color: var(--color-warning);
 }
 
-#hero .btn-watch-video:hover i {
+#hero .btn-whatsapp:hover i {
   color: var(--color-warning);
 }
 
