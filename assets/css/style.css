@@ -528,11 +528,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-watch-video:hover {
-  color: #106eea;
+  color: var(--color-warning);
 }
 
 #hero .btn-watch-video:hover i {
-  color: #3b8af2;
+  color: var(--color-warning);
 }
 
 #hero .hero-img {
