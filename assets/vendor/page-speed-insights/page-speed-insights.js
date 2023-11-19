@@ -1,4 +1,4 @@
-const apiKey = "AIzaSyCvzguDuWIwhrbJ2ri7RE-HVHZhf5N9WKs";
+const apiKey = "#";
 const urlToTest = "https://codefrites.com";
 
 const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(
