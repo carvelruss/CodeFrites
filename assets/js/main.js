@@ -352,36 +352,4 @@
 
   // Call the function to replace empty links
   replaceEmptyLinks(document.body);
-
-  /**
-   * Password Protected Page
-   */
-  const expectedPassword = "CarvelRuss091724*"; // Replace 'YourPasswordHere' with the desired password
-
-  let attempts = 0;
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const passwordInput = document.getElementById("password");
-    const submitButton = document.getElementById("submitButton");
-
-    submitButton.addEventListener("click", function () {
-      const enteredPassword = passwordInput.value;
-
-      if (enteredPassword === expectedPassword) {
-        // Correct password entered, show the protected content
-        content.style.display = "block";
-        passwordForm.style.display = "none"; // Hide the password input form
-      } else {
-        // Incorrect password entered
-        attempts++;
-        if (attempts >= 1) {
-          // Redirect or take action to 'kill' the site after 2 attempts
-          window.location.replace("/error/page-not-found.html"); // Redirect to an error page
-        } else {
-          // Display error message or take other action
-          alert("Incorrect password. Please try again.");
-        }
-      }
-    });
-  });
 })();
