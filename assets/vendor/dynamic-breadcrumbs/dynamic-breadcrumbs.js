@@ -136,7 +136,16 @@ function generatePageTitleAndBreadcrumbs() {
       parentPage: "our-work",
     },
 
-    // Add more pages link here as needed
+    // Jobs
+    { pageName: "jobs", text: "Job Openings", url: "/p/jobs.html" },
+
+    //Job Openings
+    {
+      pageName: "frontend-developer",
+      text: "Frontend Developer",
+      url: "/p/jobs/frontend-developer.html",
+      parentPage: "jobs",
+    },
   ];
 
   // Set the <h2> title based on the page name
