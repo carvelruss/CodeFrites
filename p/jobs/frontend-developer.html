@@ -247,33 +247,6 @@
 
               </div>
             </div>
-
-            <script>
-              // Get the button and count elements
-              var applyBtn = document.getElementById('apply-btn');
-              var countElement = document.getElementById('counts');
-
-              // Check if count is stored in localStorage and retrieve it
-              var storedCount = localStorage.getItem('count');
-              if (storedCount) {
-                countElement.innerText = storedCount;
-              }
-
-              // Add click event listener to the button
-              applyBtn.addEventListener('click', function () {
-                // Get the current count value
-                var currentCount = parseInt(countElement.innerText);
-
-                // Update the count by adding 1
-                var newCount = currentCount + 1;
-
-                // Update the count element with the new count
-                countElement.innerText = newCount;
-
-                // Store the new count in localStorage
-                localStorage.setItem('count', newCount);
-              });
-            </script>
           </div><!-- Job Details -->
         </div>
 
