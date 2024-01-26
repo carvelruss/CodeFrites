@@ -31,54 +31,6 @@
 
   <!-- Dynamic Head Tag -->
   <script src="/assets/vendor/dynamic-head/dynamic-head.js" defer></script>
-
-  <!-- Include the Firebase JavaScript SDK -->
-  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"></script>
-
-  <!-- Firebase Configuration Script -->
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyBlDjzJr7JoAGHqj6TpGFO7MIUPW87B1k0",
-      authDomain: "code-frites.firebaseapp.com",
-      projectId: "code-frites",
-      storageBucket: "code-frites.appspot.com",
-      messagingSenderId: "350027475741",
-      appId: "1:350027475741:web:8234402fddc46a8f0b8ff4"
-    };
-
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const analytics = firebase.getAnalytics(app);
-
-    // Get a reference to the Firestore database
-    const firestore = firebase.firestore();
-
-    // Function to load the count from Firestore
-    const loadCount = () => {
-      firestore.collection('counts').doc('counter').get().then(function (doc) {
-        var count = doc.exists ? doc.data().value : 0;
-        countElement.innerText = count;
-      });
-    };
-
-    // Function to update the count in Firestore
-    const updateCount = () => {
-      var currentCount = parseInt(countElement.innerText);
-      var newCount = currentCount + 1;
-
-      countElement.innerText = newCount;
-
-      firestore.collection('counts').doc('counter').set({ value: newCount });
-    };
-
-    // Load the count from Firestore on page load
-    document.addEventListener('DOMContentLoaded', loadCount);
-
-    // Add click event listener to the button
-    applyBtn.addEventListener('click', updateCount);
-  </script>
-
 </head>
 
 <body>
@@ -241,7 +193,7 @@
 
                   <div class="applicant-counts text-end w-50">
                     <p class="small">No. of Applicants</p>
-                    <h5><i class="bi bi-people me-2"></i><span id="counts">15</span></h5>
+                    <h5><i class="bi bi-people me-2"></i><span id="counts">34</span></h5>
                   </div>
                 </div>
 
