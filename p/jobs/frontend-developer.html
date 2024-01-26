@@ -31,6 +31,54 @@
 
   <!-- Dynamic Head Tag -->
   <script src="/assets/vendor/dynamic-head/dynamic-head.js" defer></script>
+
+  <!-- Include the Firebase JavaScript SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"></script>
+
+  <!-- Firebase Configuration Script -->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBlDjzJr7JoAGHqj6TpGFO7MIUPW87B1k0",
+      authDomain: "code-frites.firebaseapp.com",
+      projectId: "code-frites",
+      storageBucket: "code-frites.appspot.com",
+      messagingSenderId: "350027475741",
+      appId: "1:350027475741:web:8234402fddc46a8f0b8ff4"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.getAnalytics(app);
+
+    // Get a reference to the Firestore database
+    const firestore = firebase.firestore();
+
+    // Function to load the count from Firestore
+    const loadCount = () => {
+      firestore.collection('counts').doc('counter').get().then(function (doc) {
+        var count = doc.exists ? doc.data().value : 0;
+        countElement.innerText = count;
+      });
+    };
+
+    // Function to update the count in Firestore
+    const updateCount = () => {
+      var currentCount = parseInt(countElement.innerText);
+      var newCount = currentCount + 1;
+
+      countElement.innerText = newCount;
+
+      firestore.collection('counts').doc('counter').set({ value: newCount });
+    };
+
+    // Load the count from Firestore on page load
+    document.addEventListener('DOMContentLoaded', loadCount);
+
+    // Add click event listener to the button
+    applyBtn.addEventListener('click', updateCount);
+  </script>
+
 </head>
 
 <body>
@@ -131,10 +179,10 @@
           </div><!-- Job Description -->
 
           <div class="col-md-4">
-            <div class="card">
+            <div class="card mb-4">
               <div class="card-body">
 
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center mb-3">
                   <div class="job-img">
                     <img src="/assets/img/developer-img.png" width="50" class="rounded-circle me-3" alt="CodeFrites">
                   </div>
@@ -144,9 +192,10 @@
                   </div>
                 </div>
 
-                <div class="additional-details">
+                <div class="additional-details mb-4">
                   <ul class="list-unstyled">
                     <li><i class="bi bi-cash me-2"></i>₱25,000 - ₱30,000</li>
+                    <li><i class="bi bi-person me-2"></i>Entry Level</li>
                     <li><i class="bi bi-geo-alt me-2"></i>Remote (Philippines)</li>
                     <li><i class="bi bi-card-text me-2"></i>Contract</li>
                     <li><i class="bi bi-briefcase me-2"></i>Development</li>
@@ -154,14 +203,77 @@
                 </div>
 
                 <div class="d-flex align-items-center justify-content-between">
-                  <a href="#" class="btn btn-dark w-50 me-2 disabled">Apply</a>
-                  <!-- <span class="hiring-status upcoming w-50">Upcoming</span> -->
-                  <!-- <span class="hiring-status active w-50">Active</span> -->
-                  <span class="hiring-status in-active w-50">Inactive</span>
+                  <a href="#" id="apply-btn" class="btn btn-dark apply-btn w-75 me-2">Apply</a>
+                  <a href="#" id="upcoming"
+                    class="btn btn-dark apply-btn hiring-status upcoming d-none w-75 me-2">Upcoming</a>
+                  <a href="#" id="inactive"
+                    class="btn btn-dark apply-btn hiring-status inactive disabled d-none w-75 me-2">Inactive</a>
+
+                  <div class="dropdown">
+                    <button class="btn share-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="bi bi-share me-2"></i>Share
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-facebook me-2"></i>Facebook</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg me-2"></i>Copy Link</a></li>
+                    </ul>
+                  </div>
                 </div>
 
               </div>
             </div>
+
+            <div class="card">
+              <div class="card-body pb-2">
+
+                <div class="d-flex justify-content-between">
+                  <div class="countdown-timer w-50">
+                    <p class="small">Closing in:</p>
+                    <div id="timer" class="d-flex align-items-center">
+                      <p><span id="days">D</span></p>
+                      <p><span id="hours">H</span></p>
+                      <p><span id="minutes">M</span></p>
+                      <p><span id="seconds">S</span></p>
+                    </div>
+                  </div><!-- Countdown Timer -->
+
+                  <div class="applicant-counts text-end w-50">
+                    <p class="small">No. of Applicants</p>
+                    <h5><i class="bi bi-people me-2"></i><span id="counts">15</span></h5>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <script>
+              // Get the button and count elements
+              var applyBtn = document.getElementById('apply-btn');
+              var countElement = document.getElementById('counts');
+
+              // Check if count is stored in localStorage and retrieve it
+              var storedCount = localStorage.getItem('count');
+              if (storedCount) {
+                countElement.innerText = storedCount;
+              }
+
+              // Add click event listener to the button
+              applyBtn.addEventListener('click', function () {
+                // Get the current count value
+                var currentCount = parseInt(countElement.innerText);
+
+                // Update the count by adding 1
+                var newCount = currentCount + 1;
+
+                // Update the count element with the new count
+                countElement.innerText = newCount;
+
+                // Store the new count in localStorage
+                localStorage.setItem('count', newCount);
+              });
+            </script>
           </div><!-- Job Details -->
         </div>
 
@@ -267,6 +379,7 @@
   <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/countdown-timer/job-hiring-countdown.js"></script>
 
   <!-- Dynamic Script -->
   <script src="/assets/vendor/dynamic-header-and-footer/dynamic-header.js"></script>

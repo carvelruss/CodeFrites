@@ -23,7 +23,7 @@
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  color: #555C45;
+  color: #000000;
   scroll-behavior: smooth;
 }
 
@@ -3234,13 +3234,14 @@ section {
 #job-details .card .card-body .job-info h4 {
   font-size: 18px;
   color: #000000;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 #job-details .card .card-body .job-info p {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: #727272;
+  margin-top: -8px;
 }
 
 #job-details .card .card-body .additional-details ul li {
@@ -3259,6 +3260,7 @@ section {
 
 #job-details .card .card-body a.apply-btn {
   padding: 10px 60px;
+  border-radius: 8px;
 }
 
 #job-details .card .card-body .hiring-status {
@@ -3298,7 +3300,7 @@ section {
   color: #ffcd33;
 }
 
-#job-details .card .card-body .hiring-status.in-active {
+#job-details .card .card-body .hiring-status.inactive {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3311,4 +3313,33 @@ section {
 #job-details .card .card-body .hiring-status.active i,
 #job-details .card .card-body .hiring-status.in-active i {
   font-size: 5px;
+}
+
+#job-details .card .card-body .countdown-timer #timer {
+  margin-top: -10px;
+}
+
+#job-details .card .card-body .countdown-timer #timer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+}
+
+#job-details .card .card-body .countdown-timer #timer span {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#job-details .card .card-body .applicant-counts h5 i {
+  color: green;
+}
+
+#job-details .card .card-body .applicant-counts h5 span {
+  font-weight: 600;
 }
