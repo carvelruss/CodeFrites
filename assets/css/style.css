@@ -3372,7 +3372,7 @@ section {
 # Application Form
 --------------------------------------------------------------*/
 #application-form {
-  background-image: url('/assets/img/happy-team.png');
+  background-image: url('/assets/img/happy-team.png')!important;
   background-size: cover;
   background-repeat: no-repeat;
 }
