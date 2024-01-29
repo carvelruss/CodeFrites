@@ -3371,3 +3371,8 @@ section {
 /*--------------------------------------------------------------
 # Application Form
 --------------------------------------------------------------*/
+#application-form {
+  background-image: url('/assets/img/happy-team.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

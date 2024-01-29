@@ -87,11 +87,117 @@
 
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-9">
-                        <div class="card">
+
+                        <div id="get-quote-card" class="card bounce-animation mt-5" data-aos="fade-left">
                             <div class="card-body">
-                                <h4>Card</h4>
+                                <div class="row align-items-sm-center mb-5">
+                                    <div class="col-sm-auto order-sm-2 mb-3 mb-sm-0">
+                                        <img class="avatar avatar-xxl avatar-4x3" src="/assets/img/official-logo.svg"
+                                            width="80" alt="Code Frites" data-aos="fade-left" data-aos-delay="200">
+                                    </div>
+                                    <!-- End Col -->
+
+                                    <div class="col-sm" data-aos="fade-left" data-aos-delay="100">
+                                        <h5 class="card-title">Application Form</h5>
+                                        <p class="card-text">Thousands of companies are using website to build their
+                                            business.</p>
+                                    </div>
+                                    <!-- End Col -->
+                                </div><!-- End Row -->
+
+                                <script type="text/javascript">var submitted = false;</script>
+                                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){
+                                                  window.location='https://carvelruss.com';}"></iframe>
+
+                                <form id="quotation-form" class="quotation-form"
+                                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfU_oI9tDXTq8dAK-rSraX5qz5ruioURMtx0yZguQzeZt452Q/formResponse"
+                                    target="hidden_iframe" onsubmit="submitted=true" method="POST">
+                                    <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="300">
+                                        <input type="name" class="form-control" name="entry.239405152"
+                                            id="floatingInput" placeholder="Carvel Russ" required>
+                                        <label for="floatingInput">Full Name</label>
+                                    </div><!-- End Full Name -->
+
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-md" data-aos="fade-left" data-aos-delay="400">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" name="entry.1761077537"
+                                                    id="floatingInput" placeholder="name@example.com" required>
+                                                <label for="floatingInput">Email address</label>
+                                            </div>
+                                        </div><!-- Email Address -->
+
+                                        <div class="col-md" data-aos="fade-left" data-aos-delay="500">
+                                            <div class="form-floating">
+                                                <input type="telephone" class="form-control" name="entry.1666404025"
+                                                    id="floatingInputGrid" placeholder="Type your phone number">
+                                                <label for="floatingInputGrid">WhatsApp</label>
+                                            </div>
+                                        </div><!-- Phone Number -->
+                                    </div>
+
+                                    <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="700">
+                                        <input type="name" class="form-control" name="entry.90890331" id="floatingInput"
+                                            placeholder="https://carvelruss.com" pattern="https?://.+">
+                                        <label for="floatingInput">Website URL (Optional)</label>
+                                    </div><!-- Website URL -->
+
+                                    <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="700">
+                                        <input type="name" class="form-control" name="entry.647805734"
+                                            id="floatingInput" placeholder="https://carvelruss.com"
+                                            pattern="https?://.+" required>
+                                        <label for="floatingInput">Updated CV/Resume (Google Drive link)</label>
+                                    </div><!-- Updated CV/Resume URL -->
+
+                                    <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="600">
+                                        <input type="name" class="form-control" name="entry.980614058"
+                                            id="floatingInput" placeholder="Company Name" required>
+                                        <label for="floatingInput">Desired Role</label>
+                                    </div><!-- Desired Role -->
+
+                                    <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="600">
+                                        <input type="name" class="form-control" name="entry.1484980128"
+                                            id="floatingInput" placeholder="Company Name" required>
+                                        <label for="floatingInput">Expected Salary ( ₱ PHP )</label>
+                                    </div><!-- Expected Salary -->
+
+                                    <div class="form-floating mb-2" data-aos="fade-left" data-aos-delay="800">
+                                        <textarea class="form-control" name="entry.169997571"
+                                            placeholder="Leave a comment here" id="floatingTextarea"
+                                            style="height: 150px;" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip"
+                                            data-bs-title="Please introduce your self"></textarea>
+                                        <label for="floatingTextarea">Cover Letter</label>
+                                    </div><!-- Project Description -->
+
+                                    <div class="d-grid text-center" data-aos="fade-left" data-aos-delay="900">
+                                        <!-- <button type="submit" value="submit" class="btn btn-lg">Get Quote</button> -->
+                                        <button type="submit" value="submit" class="btn btn-dark btn-lg"
+                                            id="submit-button">Submit Application</button>
+                                        <span class="form-text mt-3">
+                                            <i class="bi bi-lock-fill me-1"></i>Your data is safe with us. Read our <a
+                                                class="link" href="#"><u>Privacy
+                                                    Policy</u></a> to learn more.</span>
+
+                                        <script>
+                                            const submitButton = document.getElementById('submit-button');
+
+                                            document.getElementById('quotation-form').addEventListener('submit', function () {
+                                                // Disable the submit button and change the text to "Submitting"
+                                                submitButton.disabled = true;
+                                                submitButton.innerText = 'Submitting...';
+
+                                                // Show a loading spinner
+                                                submitButton.innerHTML += '<span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>';
+                                            });
+                                        </script><!-- Button Loading Screen When Submitting -->
+
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
+
                     </div>
                 </div>
 
