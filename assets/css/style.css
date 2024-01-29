@@ -3353,19 +3353,19 @@ section {
 }
 
 #job-details .card.tech-stacks .card-body p span.bg-html {
-  background: #f34808;
+  background: #f34808!important;
 }
 
 #job-details .card.tech-stacks .card-body p span.bg-css {
-  background: #0878c0;
+  background: #0878c0!important;
 }
 
 #job-details .card.tech-stacks .card-body p span.bg-js {
-  background: #e5a42c;
+  background: #e5a42c!important;
 }
 
 #job-details .card.tech-stacks .card-body p span.bg-bootstrap {
-  background: #7330f9;
+  background: #7330f9!important;
 }
 
 /*--------------------------------------------------------------
