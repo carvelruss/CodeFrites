@@ -3213,6 +3213,7 @@ section {
 /*--------------------------------------------------------------
 # Job Details
 --------------------------------------------------------------*/
+/* Main Information */
 #job-details {
   background: #f9fbff;
 }
@@ -3341,5 +3342,12 @@ section {
 }
 
 #job-details .card .card-body .applicant-counts h5 span {
+  font-weight: 600;
+}
+
+/* More Informations */
+#job-details .card .card-body .card-title {
+  font-size: 18px;
+  color: #000000;
   font-weight: 600;
 }
