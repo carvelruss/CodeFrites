@@ -3351,3 +3351,23 @@ section {
   color: #000000;
   font-weight: 600;
 }
+
+#job-details .card.tech-stacks .card-body p span.bg-html {
+  background: #f34808;
+}
+
+#job-details .card.tech-stacks .card-body p span.bg-css {
+  background: #0878c0;
+}
+
+#job-details .card.tech-stacks .card-body p span.bg-js {
+  background: #e5a42c;
+}
+
+#job-details .card.tech-stacks .card-body p span.bg-bootstrap {
+  background: #7330f9;
+}
+
+/*--------------------------------------------------------------
+# Application Form
+--------------------------------------------------------------*/

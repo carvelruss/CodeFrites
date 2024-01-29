@@ -38,11 +38,6 @@ function generatePageTitleAndBreadcrumbs() {
     },
     { pageName: "thank-you", text: "Thank You", url: "/p/thank-you.html" },
     {
-      pageName: "application-form",
-      text: "Application Form",
-      url: "/p/application-form.html",
-    },
-    {
       pageName: "media-library",
       text: "Media Library",
       url: "/p/media-library.html",
@@ -137,7 +132,13 @@ function generatePageTitleAndBreadcrumbs() {
     },
 
     // Jobs
-    { pageName: "jobs", text: "Job Openings", url: "/p/jobs.html" },
+    { pageName: "jobs", text: "Jobs", url: "/p/jobs.html" },
+    {
+      pageName: "application-form",
+      text: "Application Form",
+      url: "/p/jobs/application-form.html",
+      parentPage: "jobs",
+    },
 
     //Job Openings
     {
