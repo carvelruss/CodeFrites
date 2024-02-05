@@ -132,7 +132,7 @@ function generatePageTitleAndBreadcrumbs() {
     },
 
     // Jobs
-    { pageName: "jobs", text: "Job Openings", url: "/p/jobs.html" },
+    { pageName: "jobs", text: "Jobs", url: "/p/jobs.html" },
     {
       pageName: "application-form",
       text: "Application Form",
@@ -146,6 +146,14 @@ function generatePageTitleAndBreadcrumbs() {
       text: "Frontend Developer",
       url: "/p/jobs/frontend-developer.html",
       parentPage: "jobs",
+    },
+
+    //Application Thank You Page
+    {
+      pageName: "thank-you",
+      text: "Thank You",
+      url: "/p/jobs/application-form/thank-you.html",
+      parentPage: "application-form",
     },
   ];
 

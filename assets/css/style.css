@@ -3376,3 +3376,15 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+#application-form label {
+  color: #555555;
+}
+
+#application-form input.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #c6a004;
+    outline: 0;
+    box-shadow: none!important;
+}
