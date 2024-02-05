@@ -1,5 +1,5 @@
 // Set the countdown date and time
-const countdownDate = new Date("February 6, 2024 12:45:00").getTime();
+const countdownDate = new Date("March 31, 2024 12:45:00").getTime();
 
 // Function to update the countdown
 function updateCountdown() {
