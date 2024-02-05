@@ -1,40 +1,43 @@
 // Set the countdown date and time
-const countdownDate = new Date("March 31, 2024 00:00:00").getTime();
+const countdownDate = new Date("February 6, 2024 12:45:00").getTime();
 
-// Update the countdown every second
-const timerInterval = setInterval(function () {
+// Function to update the countdown
+function updateCountdown() {
   const now = new Date().getTime();
   const distance = countdownDate - now;
 
-  // Calculate days, hours, minutes, and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = formatTime(
-    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  );
-  const minutes = formatTime(
-    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-  );
-  const seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
-
-  // Display the countdown
-  document.getElementById("days").innerHTML = `${days}`;
-  document.getElementById("hours").innerHTML = `${hours}`;
-  document.getElementById("minutes").innerHTML = `${minutes}`;
-  document.getElementById("seconds").innerHTML = `${seconds}`;
-
   // Check if the countdown is over
-  if (distance < 0) {
+  if (distance <= 0) {
     clearInterval(timerInterval);
+
+    // Hide "apply-btn" and show "inactive"
     document.getElementById("apply-btn").classList.add("d-none");
     document.getElementById("inactive").classList.remove("d-none");
 
-    // Set the content to "00" when the countdown ends
-    document.getElementById("days").innerHTML = "00";
-    document.getElementById("hours").innerHTML = "00";
-    document.getElementById("minutes").innerHTML = "00";
-    document.getElementById("seconds").innerHTML = "00";
+    // Show and update status text
+    document.getElementById("status-text").classList.remove("d-none");
+    document.getElementById("status-text").innerHTML = "Application closed!";
+  } else {
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = formatTime(
+      Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    );
+    const minutes = formatTime(
+      Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    );
+    const seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
+
+    // Display the countdown
+    document.getElementById("days").innerHTML = `${days}`;
+    document.getElementById("hours").innerHTML = `${hours}`;
+    document.getElementById("minutes").innerHTML = `${minutes}`;
+    document.getElementById("seconds").innerHTML = `${seconds}`;
   }
-}, 1000);
+}
+
+// Update the countdown every second
+const timerInterval = setInterval(updateCountdown, 1000);
 
 // Function to format time with two decimal places
 function formatTime(time) {
